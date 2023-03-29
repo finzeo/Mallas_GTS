@@ -326,7 +326,7 @@ addLayersControls
     }
 
     // Advanced settings
-    featureAngle 130; //60;
+    featureAngle 190; //130; //60;
     slipFeatureAngle 30;
     nRelaxIter 10; //3;
     nSmoothSurfaceNormals 1;

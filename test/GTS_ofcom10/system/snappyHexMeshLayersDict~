@@ -162,7 +162,7 @@ castellatedMeshControls
     (
         {
             file "GTS-Storms-v9.eMesh";
-            levels ((0.006 6)); // 5 celdas de nivel 6 en torno al borde
+            levels ((0.024 6)); // 20 celdas de nivel 6 en torno al borde
         }
     );
 
