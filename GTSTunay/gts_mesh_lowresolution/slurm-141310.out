@@ -1,0 +1,107 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : blockMesh
+Date   : Oct 05 2022
+Time   : 12:43:44
+Host   : "compute-0-15.local"
+PID    : 33882
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/polyMesh"
+Creating block mesh from
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 1.98462 .. 1.98462
+        j : 2
+        k : 1.93553 .. 1.93553
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-37.8 -18 -0.50401) (117 18 32.4)
+  nPoints: 27018
+  nCells: 23868
+  nFaces: 74640
+  nInternalFaces: 68568
+----------------
+Patches
+----------------
+  patch 0 (start: 68568 size: 2652) name: frontAndBack
+  patch 1 (start: 71220 size: 306) name: inletBB
+  patch 2 (start: 71526 size: 306) name: outletBB
+  patch 3 (start: 71832 size: 1404) name: lowerWallBB
+  patch 4 (start: 73236 size: 1404) name: upperWallBB
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : surfaceFeatures
+Date   : Oct 05 2022
+Time   : 12:43:45
+Host   : "compute-0-15.local"
+PID    : 33883
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "vehicleSurfaceMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+slurmstepd: error: *** JOB 141310 ON compute-0-15 CANCELLED AT 2022-10-05T12:47:46 ***

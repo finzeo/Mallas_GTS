@@ -1,0 +1,1320 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : blockMesh
+Date   : Oct 05 2022
+Time   : 22:04:05
+Host   : "compute-0-17.local"
+PID    : 34087
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/polyMesh"
+Creating block mesh from
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 1.98462 .. 1.98462
+        j : 2
+        k : 1.93553 .. 1.93553
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-37.8 -18 -0.50401) (117 18 32.4)
+  nPoints: 27018
+  nCells: 23868
+  nFaces: 74640
+  nInternalFaces: 68568
+----------------
+Patches
+----------------
+  patch 0 (start: 68568 size: 2652) name: frontAndBack
+  patch 1 (start: 71220 size: 306) name: inletBB
+  patch 2 (start: 71526 size: 306) name: outletBB
+  patch 3 (start: 71832 size: 1404) name: lowerWallBB
+  patch 4 (start: 73236 size: 1404) name: upperWallBB
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : surfaceFeatures
+Date   : Oct 05 2022
+Time   : 22:04:05
+Host   : "compute-0-17.local"
+PID    : 34088
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "vehicleSurfaceMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 147798
+Vertices     : 73901
+Bounding Box : (0.314288 0.013 0) (12.5143 2.613 3.6)
+
+
+Constructing feature set from included angle 179
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 82
+    feature edges  : 1634
+    of which
+        region edges   : 0
+        external edges : 1143
+        internal edges : 491
+
+
+Final feature set:
+points      : 1618
+edges       : 1634
+boundingBox : (0.314303 0.013 0) (12.5143 2.613 3.6)
+point classification :
+    convex feature points          :       63
+    concave feature points         :        0
+    mixed feature points           :       19
+    other (non-feature) points     :     1536
+edge classification :
+    external (convex angle) edges  :     1143
+    internal (concave angle) edges :      491
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/extendedFeatureEdgeMesh/vehicleSurfaceMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/triSurface/vehicleSurfaceMesh.eMesh"
+
+ExecutionTime = 0.64 s  ClockTime = 1 s
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : decomposePar -copyZero
+Date   : Oct 05 2022
+Time   : 22:04:06
+Host   : "compute-0-17.local"
+PID    : 34089
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+ Foam::decompositionMethod::New 
+{
+    numberOfSubdomains 40;
+    method          scotch;
+    simpleCoeffs
+    {
+        n               ( 4 1 1 );
+        delta           0.001;
+    }
+    hierarchicalCoeffs
+    {
+        n               ( 3 2 1 );
+        delta           0.001;
+        order           xyz;
+    }
+    manualCoeffs
+    {
+        dataFile        "cellDecomposition";
+    }
+    scotchCoeffs
+    {
+        processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+    }
+}
+
+Selecting decompositionMethod scotch
+
+Finished decomposition in 0.11 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 600
+    Number of faces shared with processor 4 = 55
+    Number of faces shared with processor 7 = 20
+    Number of faces shared with processor 8 = 49
+    Number of faces shared with processor 11 = 27
+    Number of faces shared with processor 12 = 13
+    Number of faces shared with processor 16 = 50
+    Number of faces shared with processor 19 = 4
+    Number of faces shared with processor 24 = 10
+    Number of faces shared with processor 32 = 117
+    Number of faces shared with processor 36 = 86
+    Number of faces shared with processor 39 = 24
+    Number of processor patches = 11
+    Number of processor faces = 455
+    Number of boundary faces = 67
+
+Processor 1
+    Number of cells = 601
+    Number of faces shared with processor 3 = 54
+    Number of faces shared with processor 13 = 3
+    Number of faces shared with processor 15 = 2
+    Number of faces shared with processor 17 = 46
+    Number of faces shared with processor 21 = 62
+    Number of faces shared with processor 27 = 66
+    Number of faces shared with processor 33 = 100
+    Number of faces shared with processor 35 = 6
+    Number of processor patches = 8
+    Number of processor faces = 339
+    Number of boundary faces = 141
+
+Processor 2
+    Number of cells = 597
+    Number of faces shared with processor 10 = 15
+    Number of faces shared with processor 12 = 62
+    Number of faces shared with processor 18 = 46
+    Number of faces shared with processor 26 = 42
+    Number of faces shared with processor 28 = 3
+    Number of faces shared with processor 34 = 131
+    Number of processor patches = 6
+    Number of processor faces = 299
+    Number of boundary faces = 199
+
+Processor 3
+    Number of cells = 601
+    Number of faces shared with processor 1 = 54
+    Number of faces shared with processor 7 = 19
+    Number of faces shared with processor 11 = 28
+    Number of faces shared with processor 15 = 23
+    Number of faces shared with processor 17 = 3
+    Number of faces shared with processor 19 = 52
+    Number of faces shared with processor 21 = 4
+    Number of faces shared with processor 23 = 5
+    Number of faces shared with processor 27 = 102
+    Number of faces shared with processor 31 = 28
+    Number of faces shared with processor 35 = 99
+    Number of processor patches = 11
+    Number of processor faces = 417
+    Number of boundary faces = 65
+
+Processor 4
+    Number of cells = 598
+    Number of faces shared with processor 0 = 55
+    Number of faces shared with processor 8 = 11
+    Number of faces shared with processor 12 = 93
+    Number of faces shared with processor 20 = 70
+    Number of faces shared with processor 24 = 2
+    Number of faces shared with processor 28 = 28
+    Number of faces shared with processor 36 = 113
+    Number of processor patches = 7
+    Number of processor faces = 372
+    Number of boundary faces = 144
+
+Processor 5
+    Number of cells = 600
+    Number of faces shared with processor 9 = 64
+    Number of faces shared with processor 13 = 18
+    Number of faces shared with processor 21 = 50
+    Number of faces shared with processor 25 = 16
+    Number of faces shared with processor 29 = 42
+    Number of faces shared with processor 33 = 40
+    Number of faces shared with processor 37 = 120
+    Number of processor patches = 7
+    Number of processor faces = 350
+    Number of boundary faces = 110
+
+Processor 6
+    Number of cells = 595
+    Number of faces shared with processor 14 = 55
+    Number of faces shared with processor 22 = 45
+    Number of faces shared with processor 30 = 10
+    Number of faces shared with processor 38 = 119
+    Number of processor patches = 4
+    Number of processor faces = 229
+    Number of boundary faces = 229
+
+Processor 7
+    Number of cells = 596
+    Number of faces shared with processor 0 = 20
+    Number of faces shared with processor 3 = 19
+    Number of faces shared with processor 8 = 13
+    Number of faces shared with processor 11 = 12
+    Number of faces shared with processor 15 = 22
+    Number of faces shared with processor 19 = 31
+    Number of faces shared with processor 23 = 90
+    Number of faces shared with processor 27 = 8
+    Number of faces shared with processor 31 = 40
+    Number of faces shared with processor 32 = 30
+    Number of faces shared with processor 39 = 112
+    Number of processor patches = 11
+    Number of processor faces = 397
+    Number of boundary faces = 89
+
+Processor 8
+    Number of cells = 601
+    Number of faces shared with processor 0 = 49
+    Number of faces shared with processor 4 = 11
+    Number of faces shared with processor 7 = 13
+    Number of faces shared with processor 19 = 8
+    Number of faces shared with processor 20 = 78
+    Number of faces shared with processor 23 = 72
+    Number of faces shared with processor 24 = 80
+    Number of faces shared with processor 32 = 38
+    Number of processor patches = 8
+    Number of processor faces = 349
+    Number of boundary faces = 137
+
+Processor 9
+    Number of cells = 592
+    Number of faces shared with processor 5 = 64
+    Number of faces shared with processor 25 = 80
+    Number of faces shared with processor 33 = 82
+    Number of processor patches = 3
+    Number of processor faces = 226
+    Number of boundary faces = 226
+
+Processor 10
+    Number of cells = 591
+    Number of faces shared with processor 2 = 15
+    Number of faces shared with processor 18 = 58
+    Number of faces shared with processor 26 = 64
+    Number of faces shared with processor 34 = 12
+    Number of faces shared with processor 38 = 75
+    Number of processor patches = 5
+    Number of processor faces = 224
+    Number of boundary faces = 208
+
+Processor 11
+    Number of cells = 591
+    Number of faces shared with processor 0 = 27
+    Number of faces shared with processor 3 = 28
+    Number of faces shared with processor 7 = 12
+    Number of faces shared with processor 19 = 60
+    Number of faces shared with processor 27 = 79
+    Number of faces shared with processor 36 = 70
+    Number of faces shared with processor 39 = 43
+    Number of processor patches = 7
+    Number of processor faces = 319
+    Number of boundary faces = 135
+
+Processor 12
+    Number of cells = 595
+    Number of faces shared with processor 0 = 13
+    Number of faces shared with processor 2 = 62
+    Number of faces shared with processor 4 = 93
+    Number of faces shared with processor 16 = 72
+    Number of faces shared with processor 22 = 5
+    Number of faces shared with processor 24 = 7
+    Number of faces shared with processor 26 = 4
+    Number of faces shared with processor 28 = 75
+    Number of faces shared with processor 34 = 32
+    Number of processor patches = 9
+    Number of processor faces = 363
+    Number of boundary faces = 113
+
+Processor 13
+    Number of cells = 592
+    Number of faces shared with processor 1 = 3
+    Number of faces shared with processor 5 = 18
+    Number of faces shared with processor 15 = 70
+    Number of faces shared with processor 17 = 67
+    Number of faces shared with processor 21 = 49
+    Number of faces shared with processor 29 = 76
+    Number of faces shared with processor 33 = 4
+    Number of faces shared with processor 37 = 23
+    Number of processor patches = 8
+    Number of processor faces = 310
+    Number of boundary faces = 138
+
+Processor 14
+    Number of cells = 593
+    Number of faces shared with processor 6 = 55
+    Number of faces shared with processor 18 = 46
+    Number of faces shared with processor 30 = 62
+    Number of faces shared with processor 34 = 28
+    Number of faces shared with processor 38 = 33
+    Number of processor patches = 5
+    Number of processor faces = 224
+    Number of boundary faces = 216
+
+Processor 15
+    Number of cells = 601
+    Number of faces shared with processor 1 = 2
+    Number of faces shared with processor 3 = 23
+    Number of faces shared with processor 7 = 22
+    Number of faces shared with processor 13 = 70
+    Number of faces shared with processor 17 = 6
+    Number of faces shared with processor 21 = 9
+    Number of faces shared with processor 23 = 51
+    Number of faces shared with processor 31 = 56
+    Number of faces shared with processor 35 = 57
+    Number of processor patches = 9
+    Number of processor faces = 296
+    Number of boundary faces = 166
+
+Processor 16
+    Number of cells = 591
+    Number of faces shared with processor 0 = 50
+    Number of faces shared with processor 12 = 72
+    Number of faces shared with processor 22 = 16
+    Number of faces shared with processor 24 = 62
+    Number of faces shared with processor 30 = 73
+    Number of faces shared with processor 32 = 63
+    Number of faces shared with processor 34 = 21
+    Number of processor patches = 7
+    Number of processor faces = 357
+    Number of boundary faces = 127
+
+Processor 17
+    Number of cells = 595
+    Number of faces shared with processor 1 = 46
+    Number of faces shared with processor 3 = 3
+    Number of faces shared with processor 13 = 67
+    Number of faces shared with processor 15 = 6
+    Number of faces shared with processor 25 = 49
+    Number of faces shared with processor 33 = 66
+    Number of faces shared with processor 35 = 60
+    Number of processor patches = 7
+    Number of processor faces = 297
+    Number of boundary faces = 179
+
+Processor 18
+    Number of cells = 601
+    Number of faces shared with processor 2 = 46
+    Number of faces shared with processor 10 = 58
+    Number of faces shared with processor 14 = 46
+    Number of faces shared with processor 34 = 56
+    Number of faces shared with processor 38 = 34
+    Number of processor patches = 5
+    Number of processor faces = 240
+    Number of boundary faces = 214
+
+Processor 19
+    Number of cells = 601
+    Number of faces shared with processor 0 = 4
+    Number of faces shared with processor 3 = 52
+    Number of faces shared with processor 7 = 31
+    Number of faces shared with processor 8 = 8
+    Number of faces shared with processor 11 = 60
+    Number of faces shared with processor 20 = 56
+    Number of faces shared with processor 23 = 50
+    Number of faces shared with processor 27 = 4
+    Number of faces shared with processor 35 = 61
+    Number of faces shared with processor 36 = 30
+    Number of processor patches = 10
+    Number of processor faces = 356
+    Number of boundary faces = 116
+
+Processor 20
+    Number of cells = 601
+    Number of faces shared with processor 4 = 70
+    Number of faces shared with processor 8 = 78
+    Number of faces shared with processor 19 = 56
+    Number of faces shared with processor 28 = 42
+    Number of faces shared with processor 36 = 48
+    Number of processor patches = 5
+    Number of processor faces = 294
+    Number of boundary faces = 166
+
+Processor 21
+    Number of cells = 601
+    Number of faces shared with processor 1 = 62
+    Number of faces shared with processor 3 = 4
+    Number of faces shared with processor 5 = 50
+    Number of faces shared with processor 13 = 49
+    Number of faces shared with processor 15 = 9
+    Number of faces shared with processor 27 = 15
+    Number of faces shared with processor 31 = 107
+    Number of faces shared with processor 33 = 29
+    Number of faces shared with processor 37 = 67
+    Number of processor patches = 9
+    Number of processor faces = 392
+    Number of boundary faces = 106
+
+Processor 22
+    Number of cells = 591
+    Number of faces shared with processor 6 = 45
+    Number of faces shared with processor 12 = 5
+    Number of faces shared with processor 16 = 16
+    Number of faces shared with processor 24 = 74
+    Number of faces shared with processor 26 = 40
+    Number of faces shared with processor 28 = 7
+    Number of faces shared with processor 30 = 63
+    Number of faces shared with processor 34 = 12
+    Number of faces shared with processor 38 = 56
+    Number of processor patches = 9
+    Number of processor faces = 318
+    Number of boundary faces = 140
+
+Processor 23
+    Number of cells = 601
+    Number of faces shared with processor 3 = 5
+    Number of faces shared with processor 7 = 90
+    Number of faces shared with processor 8 = 72
+    Number of faces shared with processor 15 = 51
+    Number of faces shared with processor 19 = 50
+    Number of faces shared with processor 35 = 16
+    Number of processor patches = 6
+    Number of processor faces = 284
+    Number of boundary faces = 182
+
+Processor 24
+    Number of cells = 600
+    Number of faces shared with processor 0 = 10
+    Number of faces shared with processor 4 = 2
+    Number of faces shared with processor 8 = 80
+    Number of faces shared with processor 12 = 7
+    Number of faces shared with processor 16 = 62
+    Number of faces shared with processor 22 = 74
+    Number of faces shared with processor 28 = 55
+    Number of faces shared with processor 32 = 17
+    Number of processor patches = 8
+    Number of processor faces = 307
+    Number of boundary faces = 139
+
+Processor 25
+    Number of cells = 592
+    Number of faces shared with processor 5 = 16
+    Number of faces shared with processor 9 = 80
+    Number of faces shared with processor 17 = 49
+    Number of faces shared with processor 29 = 64
+    Number of faces shared with processor 33 = 25
+    Number of processor patches = 5
+    Number of processor faces = 234
+    Number of boundary faces = 202
+
+Processor 26
+    Number of cells = 592
+    Number of faces shared with processor 2 = 42
+    Number of faces shared with processor 10 = 64
+    Number of faces shared with processor 12 = 4
+    Number of faces shared with processor 22 = 40
+    Number of faces shared with processor 28 = 70
+    Number of faces shared with processor 34 = 30
+    Number of faces shared with processor 38 = 40
+    Number of processor patches = 7
+    Number of processor faces = 290
+    Number of boundary faces = 146
+
+Processor 27
+    Number of cells = 601
+    Number of faces shared with processor 1 = 66
+    Number of faces shared with processor 3 = 102
+    Number of faces shared with processor 7 = 8
+    Number of faces shared with processor 11 = 79
+    Number of faces shared with processor 19 = 4
+    Number of faces shared with processor 21 = 15
+    Number of faces shared with processor 31 = 43
+    Number of faces shared with processor 39 = 36
+    Number of processor patches = 8
+    Number of processor faces = 353
+    Number of boundary faces = 135
+
+Processor 28
+    Number of cells = 592
+    Number of faces shared with processor 2 = 3
+    Number of faces shared with processor 4 = 28
+    Number of faces shared with processor 12 = 75
+    Number of faces shared with processor 20 = 42
+    Number of faces shared with processor 22 = 7
+    Number of faces shared with processor 24 = 55
+    Number of faces shared with processor 26 = 70
+    Number of processor patches = 7
+    Number of processor faces = 280
+    Number of boundary faces = 156
+
+Processor 29
+    Number of cells = 600
+    Number of faces shared with processor 5 = 42
+    Number of faces shared with processor 13 = 76
+    Number of faces shared with processor 25 = 64
+    Number of faces shared with processor 37 = 46
+    Number of processor patches = 4
+    Number of processor faces = 228
+    Number of boundary faces = 216
+
+Processor 30
+    Number of cells = 591
+    Number of faces shared with processor 6 = 10
+    Number of faces shared with processor 14 = 62
+    Number of faces shared with processor 16 = 73
+    Number of faces shared with processor 22 = 63
+    Number of faces shared with processor 34 = 72
+    Number of faces shared with processor 38 = 16
+    Number of processor patches = 6
+    Number of processor faces = 296
+    Number of boundary faces = 148
+
+Processor 31
+    Number of cells = 598
+    Number of faces shared with processor 3 = 28
+    Number of faces shared with processor 7 = 40
+    Number of faces shared with processor 15 = 56
+    Number of faces shared with processor 21 = 107
+    Number of faces shared with processor 27 = 43
+    Number of faces shared with processor 39 = 37
+    Number of processor patches = 6
+    Number of processor faces = 311
+    Number of boundary faces = 141
+
+Processor 32
+    Number of cells = 601
+    Number of faces shared with processor 0 = 117
+    Number of faces shared with processor 7 = 30
+    Number of faces shared with processor 8 = 38
+    Number of faces shared with processor 16 = 63
+    Number of faces shared with processor 24 = 17
+    Number of faces shared with processor 39 = 35
+    Number of processor patches = 6
+    Number of processor faces = 300
+    Number of boundary faces = 176
+
+Processor 33
+    Number of cells = 601
+    Number of faces shared with processor 1 = 100
+    Number of faces shared with processor 5 = 40
+    Number of faces shared with processor 9 = 82
+    Number of faces shared with processor 13 = 4
+    Number of faces shared with processor 17 = 66
+    Number of faces shared with processor 21 = 29
+    Number of faces shared with processor 25 = 25
+    Number of processor patches = 7
+    Number of processor faces = 346
+    Number of boundary faces = 116
+
+Processor 34
+    Number of cells = 593
+    Number of faces shared with processor 2 = 131
+    Number of faces shared with processor 10 = 12
+    Number of faces shared with processor 12 = 32
+    Number of faces shared with processor 14 = 28
+    Number of faces shared with processor 16 = 21
+    Number of faces shared with processor 18 = 56
+    Number of faces shared with processor 22 = 12
+    Number of faces shared with processor 26 = 30
+    Number of faces shared with processor 30 = 72
+    Number of faces shared with processor 38 = 34
+    Number of processor patches = 10
+    Number of processor faces = 428
+    Number of boundary faces = 76
+
+Processor 35
+    Number of cells = 601
+    Number of faces shared with processor 1 = 6
+    Number of faces shared with processor 3 = 99
+    Number of faces shared with processor 15 = 57
+    Number of faces shared with processor 17 = 60
+    Number of faces shared with processor 19 = 61
+    Number of faces shared with processor 23 = 16
+    Number of processor patches = 6
+    Number of processor faces = 299
+    Number of boundary faces = 167
+
+Processor 36
+    Number of cells = 596
+    Number of faces shared with processor 0 = 86
+    Number of faces shared with processor 4 = 113
+    Number of faces shared with processor 11 = 70
+    Number of faces shared with processor 19 = 30
+    Number of faces shared with processor 20 = 48
+    Number of processor patches = 5
+    Number of processor faces = 347
+    Number of boundary faces = 119
+
+Processor 37
+    Number of cells = 592
+    Number of faces shared with processor 5 = 120
+    Number of faces shared with processor 13 = 23
+    Number of faces shared with processor 21 = 67
+    Number of faces shared with processor 29 = 46
+    Number of processor patches = 4
+    Number of processor faces = 256
+    Number of boundary faces = 240
+
+Processor 38
+    Number of cells = 591
+    Number of faces shared with processor 6 = 119
+    Number of faces shared with processor 10 = 75
+    Number of faces shared with processor 14 = 33
+    Number of faces shared with processor 18 = 34
+    Number of faces shared with processor 22 = 56
+    Number of faces shared with processor 26 = 40
+    Number of faces shared with processor 30 = 16
+    Number of faces shared with processor 34 = 34
+    Number of processor patches = 8
+    Number of processor faces = 407
+    Number of boundary faces = 99
+
+Processor 39
+    Number of cells = 601
+    Number of faces shared with processor 0 = 24
+    Number of faces shared with processor 7 = 112
+    Number of faces shared with processor 11 = 43
+    Number of faces shared with processor 27 = 36
+    Number of faces shared with processor 31 = 37
+    Number of faces shared with processor 32 = 35
+    Number of processor patches = 6
+    Number of processor faces = 287
+    Number of boundary faces = 183
+
+Number of processor faces = 6338
+Max number of cells = 601 (0.72063% above average 596.7)
+Max number of processor patches = 11 (57.1429% above average 7)
+Max number of faces between processors = 455 (43.5784% above average 316.9)
+
+Processor 0: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor0/0"
+Processor 1: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor1/0"
+Processor 2: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor2/0"
+Processor 3: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor3/0"
+Processor 4: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor4/0"
+Processor 5: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor5/0"
+Processor 6: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor6/0"
+Processor 7: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor7/0"
+Processor 8: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor8/0"
+Processor 9: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor9/0"
+Processor 10: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor10/0"
+Processor 11: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor11/0"
+Processor 12: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor12/0"
+Processor 13: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor13/0"
+Processor 14: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor14/0"
+Processor 15: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor15/0"
+Processor 16: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor16/0"
+Processor 17: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor17/0"
+Processor 18: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor18/0"
+Processor 19: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor19/0"
+Processor 20: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor20/0"
+Processor 21: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor21/0"
+Processor 22: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor22/0"
+Processor 23: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor23/0"
+Processor 24: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor24/0"
+Processor 25: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor25/0"
+Processor 26: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor26/0"
+Processor 27: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor27/0"
+Processor 28: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor28/0"
+Processor 29: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor29/0"
+Processor 30: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor30/0"
+Processor 31: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor31/0"
+Processor 32: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor32/0"
+Processor 33: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor33/0"
+Processor 34: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor34/0"
+Processor 35: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor35/0"
+Processor 36: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor36/0"
+Processor 37: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor37/0"
+Processor 38: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor38/0"
+Processor 39: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor39/0"
+
+End
+
+[7] 
+[7] 
+[7] --> FOAM FATAL IO ERROR: 
+[7] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor7/constant/triSurface/topMesh.eMesh"
+[7] 
+[7] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[7] 
+[7]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[7]     in file refinementFeatures/refinementFeatures.C at line 98.
+[7] 
+FOAM parallel run exiting
+[7] 
+[11] 
+[11] 
+[11] --> FOAM FATAL IO ERROR: 
+[11] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor11/constant/triSurface/topMesh.eMesh"
+[11] 
+[11] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[11] 
+[11]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[11]     in file refinementFeatures/refinementFeatures.C at line 98.
+[11] 
+FOAM parallel run exiting
+[11] 
+[15] 
+[15] 
+[15] --> FOAM FATAL IO ERROR: 
+[15] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor15/constant/triSurface/topMesh.eMesh"
+[15] 
+[15] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[15] 
+[15]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[15]     in file refinementFeatures/refinementFeatures.C at line 98.
+[15] 
+FOAM parallel run exiting
+[15] 
+[25] 
+[25] 
+[25] --> FOAM FATAL IO ERROR: 
+[25] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor25/constant/triSurface/topMesh.eMesh"
+[25] 
+[25] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[25] 
+[25]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[25]     in file refinementFeatures/refinementFeatures.C at line 98.
+[25] 
+FOAM parallel run exiting
+[25] 
+[18] [34] 
+[34] 
+[34] --> FOAM FATAL IO ERROR: 
+[34] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor34/constant/triSurface/topMesh.eMesh"
+[34] 
+[34] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[34] 
+[34]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[34]     in file refinementFeatures/refinementFeatures.C at line 98.
+[34] 
+FOAM parallel run exiting
+[34] 
+
+[18] 
+[18] --> FOAM FATAL IO ERROR: 
+[18] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor18/constant/triSurface/topMesh.eMesh"
+[18] 
+[18] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[18] 
+[18]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[18] [30] 
+[30] 
+[30] --> FOAM FATAL IO ERROR: 
+[30] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor30/constant/triSurface/topMesh.eMesh"
+[30] 
+[30] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[30]     in file refinementFeatures/refinementFeatures.C at line 98.
+[18] 
+FOAM parallel run exiting
+[18] 
+
+[30]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[30]     in file refinementFeatures/refinementFeatures.C at line 98.
+[30] 
+FOAM parallel run exiting
+[30] 
+[5] 
+[5] 
+[5] --> FOAM FATAL IO ERROR: 
+[5] [16] 
+Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor5/constant/triSurface/topMesh.eMesh"
+[5] 
+[5] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[5] 
+[5]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[5]     in file refinementFeatures/refinementFeatures.C at line 98.
+[5] 
+FOAM parallel run exiting
+[5] 
+[16] 
+[16] --> FOAM FATAL IO ERROR: 
+[16] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor16/constant/triSurface/topMesh.eMesh"
+[16] 
+[16] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[16] 
+[16]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[16]     in file refinementFeatures/refinementFeatures.C at line 98.
+[16] 
+FOAM parallel run exiting
+[16] 
+[3] 
+[3] 
+[3] --> FOAM FATAL IO ERROR: 
+[3] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor3/constant/triSurface/topMesh.eMesh"
+[3] 
+[3] file: IOstream.castellatedMeshControls.features from line [26] 
+[26] 
+[26] --> FOAM FATAL IO ERROR: 
+[26] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor26/constant/triSurface/topMesh.eMesh"
+[26] 
+[26] file: [8] 
+[8] 
+[8] --> FOAM FATAL IO ERROR: 
+[8] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor8/constant/triSurface/topMesh.eMesh"
+[8] 
+[8] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[3] 
+[3]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[3]     in file refinementFeatures/refinementFeatures.C at line 98.
+[3] 
+FOAM parallel run exiting
+[3] 
+[28] 
+[28] 
+[28] --> FOAM FATAL IO ERROR: 
+[28] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor28/constant/triSurface/topMesh.eMesh"
+[28] 
+[28] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[28] 
+[28]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[28]     in file refinementFeatures/refinementFeatures.C at line 98.
+[14] 
+0 to line 0.
+[8] 
+[8]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[8]     in file refinementFeatures/refinementFeatures.C at line 98.
+[8] 
+FOAM parallel run exiting
+[8] 
+[38] 
+[38] 
+[38] --> FOAM FATAL IO ERROR: 
+[38] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor38/constant/triSurface/topMesh.eMesh"
+[38] 
+[38] file: IOstream.castellatedMeshControls.features from line [14] 
+[14] --> FOAM FATAL IO ERROR: 
+[14] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor14/constant/triSurface/topMesh.eMesh"
+[14] 
+[14] file: IOstream.castellatedMeshControls.features from line IOstream.castellatedMeshControls.features from line 0 to line 0.
+[26] 
+[26]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[26]     in file refinementFeatures/refinementFeatures.C at line 98.
+[26] 
+FOAM parallel run exiting
+[26] 
+0 to line 0.
+[14] 
+[14]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[14]     in file refinementFeatures/refinementFeatures.C at line 98.
+[14] 
+FOAM parallel run exiting
+[14] 
+0 to line 0.
+[38] 
+[38]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[38]     in file refinementFeatures/refinementFeatures.C at line 98.
+[38] 
+FOAM parallel run exiting
+[38] 
+[2] 
+[2] 
+[2] --> FOAM FATAL IO ERROR: 
+[2] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor2/constant/triSurface/topMesh.eMesh"
+[2] 
+[2] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[2] 
+[2]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[2]     in file refinementFeatures/refinementFeatures.C[19] 
+[19] 
+[19] --> FOAM FATAL IO ERROR: 
+[19] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor19/constant/triSurface/topMesh.eMesh"
+[19] 
+[19] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[19] 
+[19]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[19]     in file refinementFeatures/refinementFeatures.C[0]  at line 98.
+[19] 
+FOAM parallel run exiting
+[19] 
+ at line 98.
+[2] 
+FOAM parallel run exiting
+[2] 
+
+[0] 
+[0] --> FOAM FATAL IO ERROR: 
+[0] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor0/constant/triSurface/topMesh.eMesh"
+[0] 
+[0] file: /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/system/snappyHexMeshDict.castellatedMeshControls.features from line 129 to line 130.
+[0] 
+[4] 
+[4] 
+[4] --> FOAM FATAL IO ERROR: 
+[4] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor4/constant/triSurface/topMesh.eMesh"
+[4] 
+[4] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[4] 
+[4] [6] 
+[6] 
+[6] --> FOAM FATAL IO ERROR: 
+[6] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor6/constant/triSurface/topMesh.eMesh"
+[6] 
+[6] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[6] 
+[6]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[6]     in file [12] 
+[12] 
+[12] --> FOAM FATAL IO ERROR: 
+[12] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor12/constant/triSurface/topMesh.eMesh"
+[12] 
+[12] [28] 
+FOAM parallel run exiting
+[28] 
+[1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: 
+[1] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor1/constant/triSurface/topMesh.eMesh"
+[1] 
+[1] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[1] 
+[1]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[1]     in file refinementFeatures/refinementFeatures.C at line 98.
+[1] 
+FOAM parallel run exiting
+[1] 
+[0]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[0]     in file refinementFeatures/refinementFeatures.C at line 98.
+[0] 
+FOAM parallel run exiting
+[0] 
+    From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[4]     in file refinementFeatures/refinementFeatures.C at line 98.
+[4] 
+FOAM parallel run exiting
+[4] 
+refinementFeatures/refinementFeatures.C at line 98.
+[6] 
+FOAM parallel run exiting
+[6] 
+[13] 
+[13] 
+[13] --> FOAM FATAL IO ERROR: 
+[13] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor13/constant/triSurface/topMesh.eMesh"
+[13] 
+[13] file: IOstream.castellatedMeshControls.features from line file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[12] 
+[12]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[12]     in file refinementFeatures/refinementFeatures.C at line 98.
+[12] 
+FOAM parallel run exiting
+[12] 
+[39] 
+[39] 
+[39] --> FOAM FATAL IO ERROR: 
+[39] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor39/constant/triSurface/topMesh.eMesh"
+[39] 
+[39] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[39] 
+[39]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[39]     in file refinementFeatures/refinementFeatures.C at line 98.
+[39] 
+FOAM parallel run exiting
+[39] 
+0 to line 0.
+[13] 
+[13]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[13]     in file refinementFeatures/refinementFeatures.C at line 98.
+[13] 
+FOAM parallel run exiting
+[13] 
+[24] 
+[24] 
+[24] --> FOAM FATAL IO ERROR: 
+[24] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor24/constant/triSurface/topMesh.eMesh"
+[24] 
+[24] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[24] 
+[24]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[24]     in file refinementFeatures/refinementFeatures.C at line 98.
+[24] 
+FOAM parallel run exiting
+[24] 
+[10] 
+[10] 
+[10] --> FOAM FATAL IO ERROR: 
+[10] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor10/constant/triSurface/topMesh.eMesh"
+[10] 
+[10] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[10] 
+[10]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[10]     in file refinementFeatures/refinementFeatures.C at line 98.
+[10] 
+FOAM parallel run exiting
+[10] 
+[17] 
+[17] 
+[17] --> FOAM FATAL IO ERROR: 
+[17] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor17/constant/triSurface/topMesh.eMesh"
+[17] 
+[17] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[17] 
+[17]     From function [35] [9] 
+[9] 
+[9] --> FOAM FATAL IO ERROR: 
+[9] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor9/constant/triSurface/topMesh.eMesh"
+[9] 
+[9] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[9] 
+[9]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[9]     in file refinementFeatures/refinementFeatures.C at line 98.
+[9] 
+FOAM parallel run exiting
+[9] 
+void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[17]     in file refinementFeatures/refinementFeatures.C at line 98.
+[17] 
+FOAM parallel run exiting
+[17] 
+[20] 
+[20] 
+[20] --> FOAM FATAL IO ERROR: 
+[20] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor20/constant/triSurface/topMesh.eMesh"
+[20] 
+[20] file: IOstream.castellatedMeshControls.features from line 0 to line 0[23] 
+[23] 
+[23] --> FOAM FATAL IO ERROR: 
+[23] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor23/constant/triSurface/topMesh.eMesh"
+[23] 
+[23] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[23] 
+[35] 
+[35] --> FOAM FATAL IO ERROR: 
+[35] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor35/constant/triSurface/topMesh.eMesh"
+[35] 
+[35] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[35] 
+[35]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[35]     in file refinementFeatures/refinementFeatures.C at line 98.
+[35] 
+FOAM parallel run exiting
+[35] 
+
+[23]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[23]     in file refinementFeatures/refinementFeatures.C at line 98.
+[23] 
+FOAM parallel run exiting
+[23] 
+[21] 
+[21] 
+[21] --> FOAM FATAL IO ERROR: 
+[21] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor21/constant/triSurface/topMesh.eMesh"
+[21] 
+[21] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[21] 
+[21]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[21]     in file refinementFeatures/refinementFeatures.C at line 98.
+[21] 
+FOAM parallel run exiting
+[21] 
+.
+[20] 
+[20]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[20]     in file refinementFeatures/refinementFeatures.C at line 98.
+[20] 
+FOAM parallel run exiting
+[20] 
+[29] 
+[29] 
+[31] 
+[31] 
+[31] --> FOAM FATAL IO ERROR: [29] --> FOAM FATAL IO ERROR: 
+[29] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor29/constant/triSurface/topMesh.eMesh"
+[29] 
+[29] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[29] 
+[29]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[29]     in file refinementFeatures/refinementFeatures.C at line 98.
+[29] 
+FOAM parallel run exiting
+[29] 
+[32] 
+[32] 
+[32] --> FOAM FATAL IO ERROR: 
+[32] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor32/constant/triSurface/topMesh.eMesh"
+[32] 
+[32] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[32] 
+[32]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[32]     in file refinementFeatures/refinementFeatures.C at line 98.
+[32] 
+FOAM parallel run exiting
+[32] 
+[36] 
+[36] 
+[36] --> FOAM FATAL IO ERROR: 
+[36] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor36/constant/triSurface/topMesh.eMesh"
+[36] 
+[36] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[36] 
+[36]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+
+[31] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor31/constant/triSurface/topMesh.eMesh"
+[31] 
+[31] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[31] 
+[31]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[31]     in file refinementFeatures/refinementFeatures.C at line 98.
+[31] 
+FOAM parallel run exiting
+[31] 
+[27] 
+[27] 
+[27] --> FOAM FATAL IO ERROR: 
+[27] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor27/constant/triSurface/topMesh.eMesh"
+[27] 
+[27] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[27] 
+[27]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[27]     in file refinementFeatures/refinementFeatures.C at line 98.
+[27] 
+FOAM parallel run exiting
+[27] 
+[36]     in file refinementFeatures/refinementFeatures.C at line 98.
+[36] 
+FOAM parallel run exiting
+[36] 
+[33] 
+[33] 
+[33] --> FOAM FATAL IO ERROR: 
+[33] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor33/constant/triSurface/topMesh.eMesh"
+[33] 
+[33] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[33] 
+[33]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[33]     in file refinementFeatures/refinementFeatures.C at line 98.
+[33] 
+FOAM parallel run exiting
+[33] 
+[37] 
+[37] 
+[37] --> FOAM FATAL IO ERROR: 
+[37] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor37/constant/triSurface/topMesh.eMesh"
+[37] 
+[37] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[37] 
+[37]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[37]     in file refinementFeatures/refinementFeatures.C at line 98.
+[37] [22] 
+[22] 
+[22] --> FOAM FATAL IO ERROR: 
+[22] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor22/constant/triSurface/topMesh.eMesh"
+[22] 
+[22] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[22] 
+[22]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+
+FOAM parallel run exiting
+[37] 
+[22]     in file refinementFeatures/refinementFeatures.C at line 98.
+[22] 
+FOAM parallel run exiting
+[22] 
+[compute-0-17.local:34090] 39 more processes have sent help message help-mpi-api.txt / mpi-abort
+[compute-0-17.local:34090] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find patchField entry for inletBB
+
+file: /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0/p.boundaryField from line 11 to line 16.
+
+    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /share/apps/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 191.
+
+FOAM exiting
+

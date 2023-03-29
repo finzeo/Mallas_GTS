@@ -1,0 +1,5 @@
+Como hacer un bloque (NO celdas) prismatico usando blockmesh: ver como lo hice en el diccionario blockMeshDict
+Basicamente, ver seccion 5.3.5 de https://doc.cfd.direct/openfoam/user-guide-v10/blockmesh
+Basicamente, colapsar los vertices 6 y 7 en los vertices 5 y 4, respectivamente, y reemplazarlos en todo lo que aparezca 6 y 7 por 5 y 4, respectivamente.
+A la cara 4 5 5 4 ponerle type empty, dado que ya directamente no es una cara (cara de area nula)
+Siempre se crean celdas hexaedricas, pese a la forma del bloque. NO confundir bloque con celda.

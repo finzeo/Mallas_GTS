@@ -1,0 +1,17 @@
+#0  Foam::error::printStack(Foam::Ostream&) at ??:?
+#1  Foam::sigSegv::sigHandler(int) at ??:?
+#2  ? in /lib64/libc.so.6
+#3  ? at ??:?
+#4  __libc_start_main in /lib64/libc.so.6
+#5  ? at ??:?
+/var/spool/slurmd/job149170/slurm_script: línea 24: 177648 Violación de segmento  reconstructParMesh -mergeTol 1e-6 -constant > log.reconstructPar1
+
+
+--> FOAM FATAL ERROR: 
+Cannot find file "points" in directory "polyMesh" in times "constant" down to constant
+
+    From function virtual Foam::IOobject Foam::fileOperation::findInstance(const Foam::IOobject&, Foam::scalar, const Foam::word&) const
+    in file global/fileOperations/fileOperation/fileOperation.C at line 879.
+
+FOAM exiting
+

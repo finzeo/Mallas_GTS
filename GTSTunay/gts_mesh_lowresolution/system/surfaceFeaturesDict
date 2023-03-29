@@ -1,0 +1,147 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      surfaceFeaturesDict;
+}
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+surface1
+{
+	surfaces (
+		"vehicleSurfaceMesh.stl"
+		"bottomNoSlipMesh.stl"
+		"bottomSlipMesh.stl"
+		"inletMesh.stl"
+		"outletMesh.stl"
+		"leftMesh.stl"
+		"rightMesh.stl"
+		"topMesh.stl"
+	);
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       179;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+/*
+surface2
+{
+	surfaces ("bottomNoSlipMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+surface3
+{
+	surfaces ("bottomSlipMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+surface4
+{
+	surfaces ("inletMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+surface5
+{
+	surfaces ("outletMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+surface6
+{
+	surfaces ("lateralMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+
+surface7
+{
+	surfaces ("topMesh.stl");
+
+	// Identify a feature when angle between faces < includedAngle
+	includedAngle       150;
+
+	subsetFeatures
+	{
+	    // Keep nonManifold edges (edges with >2 connected faces)
+	    nonManifoldEdges       no;
+
+	    // Keep open edges (edges with 1 connected face)
+	    openEdges       yes;
+	}
+}
+*/	
+
+// ************************************************************************* //

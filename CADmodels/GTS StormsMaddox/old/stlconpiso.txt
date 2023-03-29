@@ -1,0 +1,3 @@
+Primero, probar con todo junto, total uso las mismas CBs para todo
+Segundo, probar usar stls distintas para cada parte, y tratarlos así en forma separada en snappy
+Si no funciona lo anterior, tratar de ver cómo definir grupos en solidworks

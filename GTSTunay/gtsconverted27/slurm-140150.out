@@ -1,0 +1,27 @@
+/var/spool/slurmd/job140150/slurm_script: línea 13: of7: no se encontró la orden
+/var/spool/slurmd/job140150/slurm_script: línea 14: blockMesh: no se encontró la orden
+/var/spool/slurmd/job140150/slurm_script: línea 15: surfaceFeatures: no se encontró la orden
+/var/spool/slurmd/job140150/slurm_script: línea 16: decomposePar: no se encontró la orden
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+[proxy:0:0@compute-0-21.local] HYDU_create_process (utils/launch/launch.c:75): execvp error on file snappyHexMesh (No such file or directory)
+/var/spool/slurmd/job140150/slurm_script: línea 18: reconstructParMesh: no se encontró la orden
+/var/spool/slurmd/job140150/slurm_script: línea 19: renumberMesh: no se encontró la orden
+/var/spool/slurmd/job140150/slurm_script: línea 20: checkMesh: no se encontró la orden

@@ -1,0 +1,11 @@
+# 1 "Make/options"
+# 1 "<interno>"
+# 1 "<línea-de-orden>"
+# 1 "Make/options"
+
+
+
+EXE_INC = -g 
+
+
+LIB_LIBS = -lOpenFOAM 

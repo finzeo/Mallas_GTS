@@ -1,0 +1,1082 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : snappyHexMesh -parallel -overwrite -dict ../system/snappyHexMeshLayersDict
+Date   : Oct 06 2022
+Time   : 00:50:51
+Host   : "compute-0-17.local"
+PID    : 34985
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_medresolution
+nProcs : 20
+Slaves : 
+19
+(
+"compute-0-17.local.34986"
+"compute-0-17.local.34987"
+"compute-0-17.local.34988"
+"compute-0-17.local.34989"
+"compute-0-17.local.34990"
+"compute-0-17.local.34991"
+"compute-0-17.local.34992"
+"compute-0-17.local.34993"
+"compute-0-17.local.34994"
+"compute-0-17.local.34995"
+"compute-0-17.local.34996"
+"compute-0-17.local.34997"
+"compute-0-17.local.34998"
+"compute-0-17.local.34999"
+"compute-0-17.local.35000"
+"compute-0-17.local.35001"
+"compute-0-17.local.35002"
+"compute-0-17.local.35003"
+"compute-0-17.local.35004"
+)
+
+Pstream initialized with:
+    floatTransfer      : 0
+    nProcsSimpleSum    : 0
+    commsType          : nonBlocking
+    polling iterations : 0
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 0.99 s
+
+Overall mesh bounding box  : (-37.8 -18 -0.504) (117 18 32.4)
+Relative tolerance         : 1e-06
+Absolute matching distance : 0.000162301
+
+Reading refinement surfaces.
+--> FOAM Warning : 
+    From function Foam::refinementSurfaces::refinementSurfaces(const Foam::searchableSurfaces&, const Foam::dictionary&, Foam::label)
+    in file refinementSurfaces/refinementSurfaces.C at line 221
+    Reading "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_medresolution/processor0/../system/snappyHexMeshLayersDict.castellatedMeshControls.refinementSurfaces" from line 142 to line 206
+    Not all entries in refinementSurfaces dictionary were used. The following entries were not used : 
+5
+(
+frontAndBack
+inlet
+lowerWall
+outlet
+upperWall
+)
+
+Read refinement surfaces in = 0.52 s
+
+Reading refinement shells.
+Refinement level according to distance to gtsModel
+    level 6 for all cells within 0.03 metre.
+Refinement level 1 for all cells inside refinementBox1
+Refinement level 2 for all cells inside refinementBox2
+Refinement level 3 for all cells inside refinementBox3
+Read refinement shells in = 0 s
+
+Setting refinement level of surface to be consistent with shells.
+Checked shell refinement in = 0 s
+
+Reading features.
+Read edgeMesh vehicleSurfaceMesh.eMesh
+    points      : 1756
+    edges       : 2058
+    boundingBox : (-12.2 -1.3 0) (0 1.3 3.6)
+
+Refinement level according to distance to "vehicleSurfaceMesh.eMesh" (1756 points, 2058 edges).
+    level 7 for all cells within 0 metre.
+Read features in = 0.01 s
+
+
+Determining initial surface intersections
+-----------------------------------------
+
+Edge intersection testing:
+    Number of edges             : 50869168
+    Number of edges to retest   : 50869168
+    Number of intersected edges : 2037395
+Calculated surface intersections in = 7.69 s
+
+Initial mesh : cells:16191730  faces:50869168  points:18500117
+[1]  Foam::decompositionMethod::New 
+[1] {
+[1]     numberOfSubdomains 20;
+[1]     method          scotch;
+[1]     simpleCoeffs
+[1]     {
+[1]         n               ( 4 1 1 );
+[1]         delta           0.001;
+[1]     }
+[1]     hierarchicalCoeffs
+[1]     {
+[1]         n               ( 3 2 1 );
+[1]         delta           0.001;
+[1]         order           xyz;
+[1]     }
+[1]     manualCoeffs
+[1]     {
+[1]         dataFile        "cellDecomposition";
+[1]     }
+[1]     scotchCoeffs
+[1]     {
+[1]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[1]     }
+[1] }
+[1] 
+[1] Selecting decompositionMethod scotch
+[2]  Foam::decompositionMethod::New 
+[2] {
+[2]     numberOfSubdomains 20;
+[2]     method          scotch;
+[2]     simpleCoeffs
+[2]     {
+[2]         n               ( 4 1 1 );
+[2]         delta           0.001;
+[2]     }
+[2]     hierarchicalCoeffs
+[2]     {
+[2]         n               ( 3 2 1 );
+[2]         delta           0.001;
+[2]         order           xyz;
+[2]     }
+[2]     manualCoeffs
+[2]     {
+[2]         dataFile        "cellDecomposition";
+[2]     }
+[2]     scotchCoeffs
+[2]     {
+[2]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[2]     }
+[2] }
+[2] 
+[2] Selecting decompositionMethod scotch
+[3]  Foam::decompositionMethod::New 
+[3] {
+[3]     numberOfSubdomains 20;
+[3]     method          scotch;
+[3]     simpleCoeffs
+[3]     {
+[3]         n               ( 4 1 1 );
+[3]         delta           0.001;
+[3]     }
+[3]     hierarchicalCoeffs
+[3]     {
+[3]         n               ( 3 2 1 );
+[3]         delta           0.001;
+[3]         order           xyz;
+[3]     }
+[3]     manualCoeffs
+[3]     {
+[3]         dataFile        "cellDecomposition";
+[3]     }
+[3]     scotchCoeffs
+[3]     {
+[3]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[3]     }
+[3] }
+[3] 
+[3] Selecting decompositionMethod scotch
+[4]  Foam::decompositionMethod::New 
+[4] {
+[4]     numberOfSubdomains 20;
+[4]     method          scotch;
+[4]     simpleCoeffs
+[4]     {
+[4]         n               ( 4 1 1 );
+[4]         delta           0.001;
+[4]     }
+[4]     hierarchicalCoeffs
+[4]     {
+[4]         n               ( 3 2 1 );
+[4]         delta           0.001;
+[4]         order           xyz;
+[4]     }
+[4]     manualCoeffs
+[4]     {
+[4]         dataFile        "cellDecomposition";
+[4]     }
+[4]     scotchCoeffs
+[4]     {
+[4]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[4]     }
+[4] }
+[4] 
+[4] Selecting decompositionMethod scotch
+[5]  Foam::decompositionMethod::New 
+[5] {
+[5]     numberOfSubdomains 20;
+[5]     method          scotch;
+[5]     simpleCoeffs
+[5]     {
+[5]         n               ( 4 1 1 );
+[5]         delta           0.001;
+[5]     }
+[5]     hierarchicalCoeffs
+[5]     {
+[5]         n               ( 3 2 1 );
+[5]         delta           0.001;
+[5]         order           xyz;
+[5]     }
+[5]     manualCoeffs
+[5]     {
+[5]         dataFile        "cellDecomposition";
+[5]     }
+[5]     scotchCoeffs
+[5]     {
+[5]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[5]     }
+[5] }
+[5] 
+[5] Selecting decompositionMethod scotch
+[6]  Foam::decompositionMethod::New 
+[6] {
+[6]     numberOfSubdomains 20;
+[6]     method          scotch;
+[6]     simpleCoeffs
+[6]     {
+[6]         n               ( 4 1 1 );
+[6]         delta           0.001;
+[6]     }
+[6]     hierarchicalCoeffs
+[6]     {
+[6]         n               ( 3 2 1 );
+[6]         delta           0.001;
+[6]         order           xyz;
+[6]     }
+[6]     manualCoeffs
+[6]     {
+[6]         dataFile        "cellDecomposition";
+[6]     }
+[6]     scotchCoeffs
+[6]     {
+[6]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[6]     }
+[6] }
+[6] 
+[6] Selecting decompositionMethod scotch
+[7]  Foam::decompositionMethod::New 
+[7] {
+[7]     numberOfSubdomains 20;
+[7]     method          scotch;
+[7]     simpleCoeffs
+[7]     {
+[7]         n               ( 4 1 1 );
+[7]         delta           0.001;
+[7]     }
+[7]     hierarchicalCoeffs
+[7]     {
+[7]         n               ( 3 2 1 );
+[7]         delta           0.001;
+[7]         order           xyz;
+[7]     }
+[7]     manualCoeffs
+[7]     {
+[7]         dataFile        "cellDecomposition";
+[7]     }
+[7]     scotchCoeffs
+[7]     {
+[7]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[7]     }
+[7] }
+[7] 
+[7] Selecting decompositionMethod scotch
+[8]  Foam::decompositionMethod::New 
+[8] {
+[8]     numberOfSubdomains 20;
+[8]     method          scotch;
+[8]     simpleCoeffs
+[8]     {
+[8]         n               ( 4 1 1 );
+[8]         delta           0.001;
+[8]     }
+[8]     hierarchicalCoeffs
+[8]     {
+[8]         n               ( 3 2 1 );
+[8]         delta           0.001;
+[8]         order           xyz;
+[8]     }
+[8]     manualCoeffs
+[8]     {
+[8]         dataFile        "cellDecomposition";
+[8]     }
+[8]     scotchCoeffs
+[8]     {
+[8]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[8]     }
+[8] }
+[8] 
+[8] Selecting decompositionMethod scotch
+[9]  Foam::decompositionMethod::New 
+[9] {
+[9]     numberOfSubdomains 20;
+[9]     method          scotch;
+[9]     simpleCoeffs
+[9]     {
+[9]         n               ( 4 1 1 );
+[9]         delta           0.001;
+[9]     }
+[9]     hierarchicalCoeffs
+[9]     {
+[9]         n               ( 3 2 1 );
+[9]         delta           0.001;
+[9]         order           xyz;
+[9]     }
+[9]     manualCoeffs
+[9]     {
+[9]         dataFile        "cellDecomposition";
+[9]     }
+[9]     scotchCoeffs
+[9]     {
+[9]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[9]     }
+[9] }
+[9] 
+[9] Selecting decompositionMethod scotch
+[10]  Foam::decompositionMethod::New 
+[10] {
+[10]     numberOfSubdomains 20;
+[10]     method          scotch;
+[10]     simpleCoeffs
+[10]     {
+[10]         n               ( 4 1 1 );
+[10]         delta           0.001;
+[10]     }
+[10]     hierarchicalCoeffs
+[10]     {
+[10]         n               ( 3 2 1 );
+[10]         delta           0.001;
+[10]         order           xyz;
+[10]     }
+[10]     manualCoeffs
+[10]     {
+[10]         dataFile        "cellDecomposition";
+[10]     }
+[10]     scotchCoeffs
+[10]     {
+[10]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[10]     }
+[10] }
+[10] 
+[10] Selecting decompositionMethod scotch
+[11]  Foam::decompositionMethod::New 
+[11] {
+[11]     numberOfSubdomains 20;
+[11]     method          scotch;
+[11]     simpleCoeffs
+[11]     {
+[11]         n               ( 4 1 1 );
+[11]         delta           0.001;
+[11]     }
+[11]     hierarchicalCoeffs
+[11]     {
+[11]         n               ( 3 2 1 );
+[11]         delta           0.001;
+[11]         order           xyz;
+[11]     }
+[11]     manualCoeffs
+[11]     {
+[11]         dataFile        "cellDecomposition";
+[11]     }
+[11]     scotchCoeffs
+[11]     {
+[11]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[11]     }
+[11] }
+[11] 
+[11] Selecting decompositionMethod scotch
+[12]  Foam::decompositionMethod::New 
+[12] {
+[12]     numberOfSubdomains 20;
+[12]     method          scotch;
+[12]     simpleCoeffs
+[12]     {
+[12]         n               ( 4 1 1 );
+[12]         delta           0.001;
+[12]     }
+[12]     hierarchicalCoeffs
+[12]     {
+[12]         n               ( 3 2 1 );
+[12]         delta           0.001;
+[12]         order           xyz;
+[12]     }
+[12]     manualCoeffs
+[12]     {
+[12]         dataFile        "cellDecomposition";
+[12]     }
+[12]     scotchCoeffs
+[12]     {
+[12]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[12]     }
+[12] }
+[12] 
+[12] Selecting decompositionMethod scotch
+[13]  Foam::decompositionMethod::New 
+[13] {
+[13]     numberOfSubdomains 20;
+[13]     method          scotch;
+[13]     simpleCoeffs
+[13]     {
+[13]         n               ( 4 1 1 );
+[13]         delta           0.001;
+[13]     }
+[13]     hierarchicalCoeffs
+[13]     {
+[13]         n               ( 3 2 1 );
+[13]         delta           0.001;
+[13]         order           xyz;
+[13]     }
+[13]     manualCoeffs
+[13]     {
+[13]         dataFile        "cellDecomposition";
+[13]     }
+[13]     scotchCoeffs
+[13]     {
+[13]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[13]     }
+[13] }
+[13] 
+[13] Selecting decompositionMethod scotch
+[14]  Foam::decompositionMethod::New 
+[14] {
+[14]     numberOfSubdomains 20;
+[14]     method          scotch;
+[14]     simpleCoeffs
+[14]     {
+[14]         n               ( 4 1 1 );
+[14]         delta           0.001;
+[14]     }
+[14]     hierarchicalCoeffs
+[14]     {
+[14]         n               ( 3 2 1 );
+[14]         delta           0.001;
+[14]         order           xyz;
+[14]     }
+[14]     manualCoeffs
+[14]     {
+[14]         dataFile        "cellDecomposition";
+[14]     }
+[14]     scotchCoeffs
+[14]     {
+[14]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[14]     }
+[14] }
+[14] 
+[14] Selecting decompositionMethod scotch
+[15]  Foam::decompositionMethod::New 
+[15] {
+[15]     numberOfSubdomains 20;
+[15]     method          scotch;
+[15]     simpleCoeffs
+[15]     {
+[15]         n               ( 4 1 1 );
+[15]         delta           0.001;
+[15]     }
+[15]     hierarchicalCoeffs
+[15]     {
+[15]         n               ( 3 2 1 );
+[15]         delta           0.001;
+[15]         order           xyz;
+[15]     }
+[15]     manualCoeffs
+[15]     {
+[15]         dataFile        "cellDecomposition";
+[15]     }
+[15]     scotchCoeffs
+[15]     {
+[15]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[15]     }
+[15] }
+[15] 
+[15] Selecting decompositionMethod scotch
+[16]  Foam::decompositionMethod::New 
+[16] {
+[16]     numberOfSubdomains 20;
+[16]     method          scotch;
+[16]     simpleCoeffs
+[16]     {
+[16]         n               ( 4 1 1 );
+[16]         delta           0.001;
+[16]     }
+[16]     hierarchicalCoeffs
+[16]     {
+[16]         n               ( 3 2 1 );
+[16]         delta           0.001;
+[16]         order           xyz;
+[16]     }
+[16]     manualCoeffs
+[16]     {
+[16]         dataFile        "cellDecomposition";
+[16]     }
+[16]     scotchCoeffs
+[16]     {
+[16]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[16]     }
+[16] }
+[16] 
+[16] Selecting decompositionMethod scotch
+[17]  Foam::decompositionMethod::New 
+[17] {
+[17]     numberOfSubdomains 20;
+[17]     method          scotch;
+[17]     simpleCoeffs
+[17]     {
+[17]         n               ( 4 1 1 );
+[17]         delta           0.001;
+[17]     }
+[17]     hierarchicalCoeffs
+[17]     {
+[17]         n               ( 3 2 1 );
+[17]         delta           0.001;
+[17]         order           xyz;
+[17]     }
+[17]     manualCoeffs
+[17]     {
+[17]         dataFile        "cellDecomposition";
+[17]     }
+[17]     scotchCoeffs
+[17]     {
+[17]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[17]     }
+[17] }
+[17] 
+[17] Selecting decompositionMethod scotch
+[18]  Foam::decompositionMethod::New 
+[18] {
+[18]     numberOfSubdomains 20;
+[18]     method          scotch;
+[18]     simpleCoeffs
+[18]     {
+[18]         n               ( 4 1 1 );
+[18]         delta           0.001;
+[18]     }
+[18]     hierarchicalCoeffs
+[18]     {
+[18]         n               ( 3 2 1 );
+[18]         delta           0.001;
+[18]         order           xyz;
+[18]     }
+[18]     manualCoeffs
+[18]     {
+[18]         dataFile        "cellDecomposition";
+[18]     }
+[18]     scotchCoeffs
+[18]     {
+[18]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[18]     }
+[18] }
+[18] 
+[18] Selecting decompositionMethod scotch
+[19]  Foam::decompositionMethod::New 
+[19] {
+[19]     numberOfSubdomains 20;
+[19]     method          scotch;
+[19]     simpleCoeffs
+[19]     {
+[19]         n               ( 4 1 1 );
+[19]         delta           0.001;
+[19]     }
+[19]     hierarchicalCoeffs
+[19]     {
+[19]         n               ( 3 2 1 );
+[19]         delta           0.001;
+[19]         order           xyz;
+[19]     }
+[19]     manualCoeffs
+[19]     {
+[19]         dataFile        "cellDecomposition";
+[19]     }
+[19]     scotchCoeffs
+[19]     {
+[19]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[19]     }
+[19] }
+[19] 
+[19] Selecting decompositionMethod scotch
+Cells per refinement level:
+    0	784840
+    1	471328
+    2	160592
+    3	2257857
+    4	479949
+    5	1868976
+    6	8884978
+    7	1283210
+
+Adding patches for surface regions
+----------------------------------
+
+Patch Type                Region                        
+----- ----                ------                        
+gtsModel:
+
+5     wall                gtsModel                      
+
+Added patches in = 0.01 s
+
+[0]  Foam::decompositionMethod::New 
+[0] {
+[0]     numberOfSubdomains 20;
+[0]     method          scotch;
+[0]     simpleCoeffs
+[0]     {
+[0]         n               ( 4 1 1 );
+[0]         delta           0.001;
+[0]     }
+[0]     hierarchicalCoeffs
+[0]     {
+[0]         n               ( 3 2 1 );
+[0]         delta           0.001;
+[0]         order           xyz;
+[0]     }
+[0]     manualCoeffs
+[0]     {
+[0]         dataFile        "cellDecomposition";
+[0]     }
+[0]     scotchCoeffs
+[0]     {
+[0]         processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+[0]     }
+[0] }
+[0] 
+[0] Selecting decompositionMethod scotch
+Layer thickness specified as final layer and expansion ratio.
+--> FOAM Warning : 
+    From function Foam::labelHashSet Foam::polyBoundaryMesh::patchSet(const Foam::UList<Foam::wordRe>&, bool, bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 804
+    Cannot find any patch or group names matching bottomNoSlip
+--> FOAM Warning : 
+    From function Foam::layerParameters::layerParameters(const Foam::dictionary&, const Foam::polyBoundaryMesh&)
+    in file snappyHexMeshDriver/layerParameters/layerParameters.C at line 279
+    Reading "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_medresolution/processor0/../system/snappyHexMeshLayersDict.addLayersControls.layers" from line 341 to line 353
+    Layer specification for bottomNoSlip does not match any patch.
+Valid patches are 
+11
+(
+frontAndBack
+inlet
+outlet
+lowerWall
+upperWall
+gtsModel
+procBoundary0to2
+procBoundary0to6
+procBoundary0to12
+procBoundary0to14
+procBoundary0to16
+)
+
+--> FOAM Warning : 
+    From function Foam::labelHashSet Foam::polyBoundaryMesh::patchSet(const Foam::UList<Foam::wordRe>&, bool, bool) const
+    in file meshes/polyMesh/polyBoundaryMesh/polyBoundaryMesh.C at line 804
+    Cannot find any patch or group names matching bottomSlip
+--> FOAM Warning : 
+    From function Foam::layerParameters::layerParameters(const Foam::dictionary&, const Foam::polyBoundaryMesh&)
+    in file snappyHexMeshDriver/layerParameters/layerParameters.C at line 279
+    Reading "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_medresolution/processor0/../system/snappyHexMeshLayersDict.addLayersControls.layers" from line 341 to line 353
+    Layer specification for bottomSlip does not match any patch.
+Valid patches are 
+11
+(
+frontAndBack
+inlet
+outlet
+lowerWall
+upperWall
+gtsModel
+procBoundary0to2
+procBoundary0to6
+procBoundary0to12
+procBoundary0to14
+procBoundary0to16
+)
+
+
+Shrinking and layer addition phase
+----------------------------------
+
+Using mesh parameters 
+{
+    maxNonOrtho     65;
+    maxBoundarySkewness 20;
+    maxInternalSkewness 4;
+    maxConcave      80;
+    minVol          1e-13;
+    minTetQuality   -1e+30;
+    minArea         -1;
+    minTwist        0.02;
+    minDeterminant  1e-05;
+    minFaceWeight   0.02;
+    minVolRatio     0.01;
+    minTriangleTwist -1;
+    nSmoothScale    4;
+    errorReduction  0.75;
+}
+
+
+
+Merging all faces of a cell
+---------------------------
+    - which are on the same patch
+    - which make an angle < 60 degrees
+      (cos:0.5)
+    - as long as the resulting face doesn't become concave by more than 90 degrees
+      (0=straight, 180=fully concave)
+
+Merging 614 sets of faces.
+
+Edge intersection testing:
+    Number of edges             : 50868374
+    Number of edges to retest   : 3548
+    Number of intersected edges : 2036658
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 6
+    faces on cells with determinant < 1e-05                : 0
+Masters that need to be restored:6
+Edge intersection testing:
+    Number of edges             : 50868380
+    Number of edges to retest   : 36
+    Number of intersected edges : 2036664
+
+
+Undo iteration 1
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+
+Merging all points on surface that
+- are used by only two boundary faces and
+- make an angle with a cosine of more than 0.5.
+
+Removing 860 straight edge points ...
+
+Edge intersection testing:
+    Number of edges             : 50868380
+    Number of edges to retest   : 6349
+    Number of intersected edges : 2036672
+
+Undo iteration 0
+----------------
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+
+Checking mesh manifoldness ...
+Outside of mesh is multiply connected across edges or points.
+This is not a fatal error but might cause some unexpected behaviour.
+
+
+Checking initial mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+
+Doing initial balancing
+-----------------------
+
+Found 0 zoned faces to keep together.
+Found 0 separated coupled faces to keep together.
+
+Adding in total 0 inter-processor patches to handle extrusion of non-manifold processor boundaries.
+
+Handling points with inconsistent layer specification ...
+
+Handling non-manifold points ...
+
+Checking patch manifoldness ...
+Outside of local patch is multiply connected across edges or points at 0 points.
+Set displacement to zero for all 0 non-manifold points
+
+Handling feature edges ...
+
+Handling cells with warped patch faces ...
+Set displacement to zero on 0 warped faces since layer would be > 0.5 of the size of the bounding box.
+
+patch     faces    layers avg thickness[m]
+                          near-wall overall
+-----     -----    ------ --------- -------
+lowerWall 62640    3      0.0651    0.309   
+gtsModel  2037376  3      0.00256   0.0122  
+
+Selecting externalDisplacementMeshMover displacementMedialAxis
+displacementMedialAxis : Calculating distance to Medial Axis ...
+displacementMedialAxis : Smoothing normals ...
+    Iteration 0   residual 0.00277095
+displacementMedialAxis : Inserting points on patch frontAndBack if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch inlet if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch outlet if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Inserting points on patch upperWall if angle to nearest layer patch > 30 degrees.
+displacementMedialAxis : Smoothing normals in interior ...
+    Iteration 0   residual 0.00627225
+
+Layer addition iteration 0
+--------------------------
+
+Determining displacement for added points according to pointNormal ...
+Detected 0 points with point normal pointing through faces.
+Reset displacement at 0 points to average of surrounding points.
+
+displacementMedialAxis : Smoothing using Medial Axis ...
+displacementMedialAxis : Reducing layer thickness at 7716 nodes where thickness to medial axis distance is large 
+displacementMedialAxis : Removing isolated regions ...
+displacementMedialAxis : Number of isolated points extrusion stopped : 0
+displacementMedialAxis : Smoothing field ...
+    Iteration 0   residual 1.43138e-05
+displacementMedialAxis : Moving mesh ...
+displacementMedialAxis : Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 2
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 8
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Iteration 1
+Moving mesh using displacement scaling : min:0.75  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Successfully moved mesh
+displacementMedialAxis : Finished moving mesh ...
+truncateDisplacement : Unextruded 0 faces due to non-consecutive vertices being extruded.
+truncateDisplacement : Unextruded 0 faces due to stringed edges with inconsistent extrusion.
+
+Setting up information for layer truncation ...
+
+Checking mesh with layer ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 2
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+Detected 2 illegal faces (concave, zero area or negative cell pyramid volume)
+Extruding 2100014 out of 2100016 faces (99.9999%). Removed extrusion at 2 faces.
+Added 6300048 out of 6300048 cells (100%).
+
+
+Layer addition iteration 1
+--------------------------
+
+Determining displacement for added points according to pointNormal ...
+Detected 0 points with point normal pointing through faces.
+Reset displacement at 0 points to average of surrounding points.
+
+displacementMedialAxis : Smoothing using Medial Axis ...
+displacementMedialAxis : Reducing layer thickness at 7716 nodes where thickness to medial axis distance is large 
+displacementMedialAxis : Removing isolated regions ...
+displacementMedialAxis : Number of isolated points extrusion stopped : 8
+displacementMedialAxis : Smoothing field ...
+    Iteration 0   residual 1.43219e-05
+displacementMedialAxis : Moving mesh ...
+displacementMedialAxis : Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 4
+    faces with face pyramid volume < 1e-13                 : 2
+    faces with concavity > 80  degrees                     : 2
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 6
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Iteration 1
+Moving mesh using displacement scaling : min:0.75  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 2
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Iteration 2
+Moving mesh using displacement scaling : min:0.5625  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Successfully moved mesh
+displacementMedialAxis : Finished moving mesh ...
+truncateDisplacement : Unextruded 0 faces due to non-consecutive vertices being extruded.
+truncateDisplacement : Unextruded 0 faces due to stringed edges with inconsistent extrusion.
+
+Setting up information for layer truncation ...
+
+Checking mesh with layer ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 2
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+Detected 2 illegal faces (concave, zero area or negative cell pyramid volume)
+Extruding 2100012 out of 2100016 faces (99.9998%). Removed extrusion at 2 faces.
+Added 6299958 out of 6300048 cells (99.9986%).
+
+
+Layer addition iteration 2
+--------------------------
+
+Determining displacement for added points according to pointNormal ...
+Detected 0 points with point normal pointing through faces.
+Reset displacement at 0 points to average of surrounding points.
+
+displacementMedialAxis : Smoothing using Medial Axis ...
+displacementMedialAxis : Reducing layer thickness at 7716 nodes where thickness to medial axis distance is large 
+displacementMedialAxis : Removing isolated regions ...
+displacementMedialAxis : Number of isolated points extrusion stopped : 8
+displacementMedialAxis : Smoothing field ...
+    Iteration 0   residual 1.43278e-05
+displacementMedialAxis : Moving mesh ...
+displacementMedialAxis : Iteration 0
+Moving mesh using displacement scaling : min:1  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 2
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 6
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Iteration 1
+Moving mesh using displacement scaling : min:0.75  max:1
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+displacementMedialAxis : Successfully moved mesh
+displacementMedialAxis : Finished moving mesh ...
+truncateDisplacement : Unextruded 0 faces due to non-consecutive vertices being extruded.
+truncateDisplacement : Unextruded 0 faces due to stringed edges with inconsistent extrusion.
+
+Setting up information for layer truncation ...
+
+Checking mesh with layer ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+Detected 0 illegal faces (concave, zero area or negative cell pyramid volume)
+Extruding 2100012 out of 2100016 faces (99.9998%). Removed extrusion at 0 faces.
+Added 6299890 out of 6300048 cells (99.9975%).
+Edge intersection testing:
+    Number of edges             : 69810607
+    Number of edges to retest   : 0
+    Number of intersected edges : 8146547
+
+Doing final balancing
+---------------------
+
+Writing 6299890 added cells to cellSet addedCells
+Writing 4199556 faces inside added layer to faceSet layerFaces
+
+Writing fields with layer information:
+    nSurfaceLayers    : actual number of layers
+    thickness         : overall layer thickness
+    thicknessFraction : overall layer thickness (fraction of desired thickness)
+
+
+patch     faces    layers   overall thickness
+                            [m]       [%]
+-----     -----    ------   ---       ---
+lowerWall 62640    3        0.297     92.8    
+gtsModel  2037376  3        0.0121    99.7    
+
+Layer mesh : cells:22491620  faces:69810607  points:24841500
+Cells per refinement level:
+    0	818800
+    1	512512
+    2	169592
+    3	2361633
+    4	479949
+    5	1868976
+    6	14234872
+    7	2045286
+Writing mesh to time constant
+Wrote mesh in = 237.1 s.
+Layers added in = 237.09 s.
+Checking final mesh ...
+Checking faces in error :
+    non-orthogonality > 65  degrees                        : 0
+    faces with face pyramid volume < 1e-13                 : 0
+    faces with concavity > 80  degrees                     : 0
+    faces with skewness > 4   (internal) or 20  (boundary) : 0
+    faces with interpolation weights (0..1)  < 0.02        : 0
+    faces with volume ratio of neighbour cells < 0.01      : 0
+    faces with face twist < 0.02                           : 0
+    faces on cells with determinant < 1e-05                : 0
+Finished meshing without any errors
+Finished meshing in = 249.54 s.
+End
+
+Finalising parallel run

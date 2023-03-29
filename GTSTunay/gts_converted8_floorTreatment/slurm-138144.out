@@ -1,0 +1,44 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : snappyHexMesh
+Date   : Jul 21 2022
+Time   : 12:20:32
+Host   : "compute-0-14.local"
+PID    : 137951
+I/O    : uncollated
+Case   : /share/storage/finzeo/gts_converted8_floorTreatment
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Create mesh for time = 0
+
+Read mesh in = 0.03 s
+
+Overall mesh bounding box  : (-38.8 -19 -1.504) (118 19 33.096)
+Relative tolerance         : 1e-06
+Absolute matching distance : 0.000165007
+
+Reading refinement surfaces.
+
+
+--> FOAM FATAL IO ERROR: 
+keyword level is undefined in dictionary "/share/storage/finzeo/gts_converted8_floorTreatment/system/snappyHexMeshDict.castellatedMeshControls.refinementSurfaces.inlet"
+
+file: /share/storage/finzeo/gts_converted8_floorTreatment/system/snappyHexMeshDict.castellatedMeshControls.refinementSurfaces.inlet from line 238 to line 239.
+
+    From function const Foam::entry& Foam::dictionary::lookupEntry(const Foam::word&, bool, bool) const
+    in file db/dictionary/dictionary.C at line 573.
+
+FOAM exiting
+

@@ -1,0 +1,109 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+vertices
+(
+    (-37.8 -18 -0.504)
+    (117 -18 -0.504)
+    (117 18 -0.504)
+    (-37.8 18 -0.504)
+    (-37.8 -18 32.096)
+    (117 -18 32.096)
+    (117 18 32.096)
+    (-37.8 18 32.096)
+
+    (-21.2 -10.8 -0.504) // Floor next to vehicle (8 9 10 11)
+    (27 -10.8 -0.504)
+    (27 10.8 -0.504)
+    (-21.2 10.8 -0.504)
+
+    (-21.2 -18 -0.504) // Split the rest of the floor around the vehicle (0 12 15 3) (12 13 9 8) (11 10 14 15) (13 1 2 14)
+    (27 -18 -0.504)
+    (27 18 -0.504)
+    (-21.2 18 -0.504)
+
+);
+// Dimensiones totales: 154.8 36 32.6
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (65 15 14) simpleGrading (1 1 1) // Para h aprox. 2.4 m
+);
+
+edges
+(
+);
+
+boundary
+(
+    frontAndBack
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+            (1 5 4 0)
+        );
+    }
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+    lowerWall
+    {
+        type wall;
+        faces
+        (
+            //(0 3 2 1)
+	    (0 3 15 12)
+	    (12 8 9 13)
+	    (11 15 14 10)
+	    (13 14 2 1)
+        );
+    }
+    nearLowerWall
+    {
+        type wall;
+        faces
+        (
+            (8 11 10 9)
+        );
+    }
+    upperWall
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+);
+
+// ************************************************************************* //

@@ -1,0 +1,16 @@
+Malla 1
+Primera malla pasada por Guillermo
+
+Malla 2
+Segunda malla pasada por Guillermo
+2.11 M celdas hexaedricas unicamente
+
+Malla 3
+Tercera malla pasada por Guillermo
+7.24 M celdas hexaedricas unicamente
+Densidad 1.5 veces mayor a la de la malla 2
+
+Malla 4
+Cuarta malla pasada por Guillermo
+11.40 M celdas hexaedricas unicamente
+Densidad 1.75 veces mayor a la de la malla 2 (creo que 2.11M*1.75*1.75*1.75)

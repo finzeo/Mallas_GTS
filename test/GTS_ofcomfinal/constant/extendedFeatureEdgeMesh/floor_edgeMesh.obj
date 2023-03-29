@@ -1,0 +1,19 @@
+# Wavefront OBJ file written 2023-03-22T17:06:28
+o floor_edgeMesh
+
+# points : 4
+# lines  : 4
+
+# <points count="4">
+v 4.37197 -1.55326 -0.0762
+v 4.37197 1.55326 -0.0762
+v -7.33423 -1.49474 -0.0762
+v -7.33423 1.49474 -0.0762
+# </points>
+
+# <edges count="4">
+l 1 2
+l 3 1
+l 2 4
+l 4 3
+# </edges>

@@ -1,0 +1,181 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : blockMesh
+Date   : Nov 11 2022
+Time   : 15:50:26
+Host   : "cluster62"
+PID    : 8187
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSRao/OF1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTSRao/OF1/constant/polyMesh"
+Creating block mesh from
+    "system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0751333 .. 0.0751333
+        j : 0.0751333
+        k : 0.0749148 .. 0.0749148
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-8.1144 -2.254 -0.063112) (11.27 2.254 4.0572)
+  nPoints: 884744
+  nCells: 851400
+  nFaces: 2587170
+  nInternalFaces: 2521230
+----------------
+Patches
+----------------
+  patch 0 (start: 2521230 size: 28380) name: frontAndBack
+  patch 1 (start: 2549610 size: 3300) name: inlet
+  patch 2 (start: 2552910 size: 3300) name: outlet
+  patch 3 (start: 2556210 size: 15480) name: lowerWall
+  patch 4 (start: 2571690 size: 15480) name: upperWall
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : surfaceFeatures
+Date   : Nov 11 2022
+Time   : 15:50:29
+Host   : "cluster62"
+PID    : 8476
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSRao/OF1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "vehicleSurfaceMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 1456
+Vertices     : 730
+Bounding Box : (-2.47489 -0.161925 -1.11022e-16) (0 0.161925 0.4508)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 730
+    feature edges  : 1095
+    of which
+        region edges   : 0
+        external edges : 1095
+        internal edges : 0
+
+
+Final feature set:
+points      : 730
+edges       : 1095
+boundingBox : (-2.47489 -0.161925 -1.11022e-16) (0 0.161925 0.4508)
+point classification :
+    convex feature points          :      730
+    concave feature points         :        0
+    mixed feature points           :        0
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :     1095
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "constant/extendedFeatureEdgeMesh/vehicleSurfaceMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "constant/triSurface/vehicleSurfaceMesh.eMesh"
+
+ExecutionTime = 0.01 s  ClockTime = 0 s
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  8
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 8
+Exec   : decomposePar -copyZero
+Date   : Nov 11 2022
+Time   : 15:50:30
+Host   : "cluster62"
+PID    : 8494
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSRao/OF1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+Selecting decompositionMethod scotch
+slurmstepd: error: *** JOB 142862 ON cluster62 CANCELLED AT 2022-11-11T15:50:32 ***

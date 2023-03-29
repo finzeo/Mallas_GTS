@@ -1,0 +1,2 @@
+Malla creada de acuerdo al paper de Storms, y con detalles secundarios indicados por Maddox (dimensiones del dominio)
+Se crea luego de estudiar los 4 apuntes y de ver video de Wolf Dynamics

@@ -1,0 +1,27 @@
+#How to run me:
+
+
+
+#To clean the directory, this is optional
+
+foamCleanTutorials
+
+foamCleanPolyMesh
+
+
+
+#Extract and convert edges
+
+surfaceFeatureConvert geo_ahmed/edge1.vtk constant/triSurface/edge1.eMesh
+
+surfaceFeatureExtract -dict system/surfaceFeatureExtractDict_V2 
+
+
+
+#To generate the mesh and check mesh quality. In serial:
+
+blockMesh
+
+snappyHexMesh -dict system/snappyHexMeshDict_coarse_V2
+
+checkMesh

@@ -1,0 +1,102 @@
+Subdirectorios comunes: gtsconverted28/0 y gtsconverted29/0
+Sólo en gtsconverted28/: checkMesh28_1.log
+Sólo en gtsconverted28/: checkMesh28_2.log
+Sólo en gtsconverted28/: checkMesh_28_3.log
+Sólo en gtsconverted28/: checkMesh_28_4.log
+Sólo en gtsconverted29/: checkMesh.log
+Subdirectorios comunes: gtsconverted28/constant y gtsconverted29/constant
+Sólo en gtsconverted28/: GTS_28_1.obj
+Sólo en gtsconverted28/: GTS_28_2.obj
+Sólo en gtsconverted28/: GTS_28_3.obj
+Sólo en gtsconverted28/: GTS_28_4.obj
+Sólo en gtsconverted28/: gtsconverted28_1.med
+Sólo en gtsconverted28/: gtsconverted28_2.med
+Sólo en gtsconverted28/: gtsconverted28_3.med
+Sólo en gtsconverted28/: gtsconverted28_4.med
+Sólo en gtsconverted29/: gtsconverted29_1.med
+Sólo en gtsconverted29/: gtsconverted29_2.med
+Sólo en gtsconverted29/: gtsconverted29.foam
+Sólo en gtsconverted29/: logpart1.snappyHexMesh
+Sólo en gtsconverted28/: logpart1.snappyHexMesh_28_4
+Sólo en gtsconverted29/: logpart2.snappyHexMesh
+Sólo en gtsconverted28/: logpart2.snappyHexMesh_28_4
+Sólo en gtsconverted29/: log.reconstructPar1
+Sólo en gtsconverted28/: log.reconstructPar1_28_1
+Sólo en gtsconverted28/: log.reconstructPar1_28_2
+Sólo en gtsconverted28/: log.reconstructPar1_28_3
+Sólo en gtsconverted28/: log.reconstructPar1_28_4
+Sólo en gtsconverted29/: log.reconstructPar2
+Sólo en gtsconverted28/: log.snappyHexMesh_28_1
+Sólo en gtsconverted28/: log.snappyHexMesh_28_2
+Sólo en gtsconverted28/: log.snappyHexMesh_28_3
+diff gtsconverted28/notapropia.txt gtsconverted29/notapropia.txt
+101a102,106
+> 
+> Malla 29
+> Conservando las mejoras hechas con las mallas 28_x, se agrega:
+> Se usa modelo geometrico hecho en SolidWorks, el cual esta mejor definido (sobre todo, en la region asociada al redondeado superior)
+> Se usa includedAngle 179.8 para poder detectar como borde todos los redondeados
+Sólo en gtsconverted29/: processor0
+Sólo en gtsconverted29/: processor1
+Sólo en gtsconverted29/: processor10
+Sólo en gtsconverted29/: processor11
+Sólo en gtsconverted29/: processor12
+Sólo en gtsconverted29/: processor13
+Sólo en gtsconverted29/: processor14
+Sólo en gtsconverted29/: processor15
+Sólo en gtsconverted29/: processor16
+Sólo en gtsconverted29/: processor17
+Sólo en gtsconverted29/: processor18
+Sólo en gtsconverted29/: processor19
+Sólo en gtsconverted29/: processor2
+Sólo en gtsconverted29/: processor3
+Sólo en gtsconverted29/: processor4
+Sólo en gtsconverted29/: processor5
+Sólo en gtsconverted29/: processor6
+Sólo en gtsconverted29/: processor7
+Sólo en gtsconverted29/: processor8
+Sólo en gtsconverted29/: processor9
+Sólo en gtsconverted28/: renumberMesh_28_1.log
+Sólo en gtsconverted28/: renumberMesh_28_2.log
+Sólo en gtsconverted28/: renumberMesh_28_3.log
+Sólo en gtsconverted28/: renumberMesh_28_4.log
+Sólo en gtsconverted29/: renumberMesh.log
+Sólo en gtsconverted29/: runjob2.sh
+Sólo en gtsconverted29/: runjob2.sh~
+Sólo en gtsconverted29/: runjoborig.sh
+diff gtsconverted28/runjob.sh gtsconverted29/runjob.sh
+17a18,19
+> #mpirun snappyHexMesh -parallel -dict ../system/snappyHexMeshDict > logpart1.snappyHexMesh
+> #mpirun snappyHexMesh -parallel -dict ../system/snappyHexMeshLayersDict > logpart2.snappyHexMesh
+18a21
+> reconstructPar -constant > log.reconstructPar2
+diff gtsconverted28/runjob.sh~ gtsconverted29/runjob.sh~
+17a18,19
+> #mpirun snappyHexMesh -parallel -dict ../system/snappyHexMeshDict > logpart1.snappyHexMesh
+> #mpirun snappyHexMesh -parallel -dict ../system/snappyHexMeshLayersDict > logpart2.snappyHexMesh
+18a21
+> reconstructPar -constant > log.reconstructPar2
+Sólo en gtsconverted29/: slurm-141353.out
+Sólo en gtsconverted29/: slurm-142877.out
+Sólo en gtsconverted29/: slurm-142880.out
+Sólo en gtsconverted29/: slurm-142881.out
+Sólo en gtsconverted29/: slurm-142884.out
+Sólo en gtsconverted29/: slurm-142885.out
+Sólo en gtsconverted29/: slurm-142890.out
+Sólo en gtsconverted29/: slurm-142891.out
+Sólo en gtsconverted29/: slurm-142892.out
+Sólo en gtsconverted29/: slurm-142893.out
+Sólo en gtsconverted29/: slurm-142894.out
+Sólo en gtsconverted29/: slurm-142898.out
+Sólo en gtsconverted29/: slurm-142900.out
+Sólo en gtsconverted29/: slurm-142902.out
+Sólo en gtsconverted29/: slurm-142903.out
+Sólo en gtsconverted29/: slurm-142904.out
+Sólo en gtsconverted29/: slurm-142905.out
+Sólo en gtsconverted29/: slurm-142906.out
+Sólo en gtsconverted29/: slurm-142935.out
+Sólo en gtsconverted28/: slurm_28_1-140924.out
+Sólo en gtsconverted28/: slurm_28_2-140928.out
+Sólo en gtsconverted28/: slurm_28_3-140954.out
+Sólo en gtsconverted28/: slurm_28_4-141006.out
+Subdirectorios comunes: gtsconverted28/system y gtsconverted29/system

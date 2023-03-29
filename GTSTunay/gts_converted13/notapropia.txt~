@@ -1,0 +1,10 @@
+Refinamiento sobre la superficie del vehículo:
+	10 capas
+	1.25 growth factor
+	0.4 tamaño en última capa
+	minThickness 0.04 (de forma que 1.25^10 sea menor a 0.4/0.04, ya que así se permite ese crecimiento de tamaño sobre la capa)
+El nivel 1 de refinamiento cubre todo el ancho, y toda la entrada
+nCellsBetweenLevels 3
+level (4 4) para la superficie del GTS (para que esté en concordancia con Explicit feature edge refinement)
+
+

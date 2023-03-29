@@ -1,0 +1,7 @@
+This application failed to start because it could not find or load the Qt platform plugin "xcb"
+in "".
+
+Available platform plugins are: eglfs, linuxfb, minimal, minimalegl, offscreen, xcb.
+
+Reinstalling the application may fix this problem.
+/var/spool/slurmd/job142880/slurm_script: línea 13:   987 Abortado                paraview

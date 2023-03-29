@@ -1,0 +1,69 @@
+AutoMPI: SUCCESS: command is:
+ "/share/apps/openmpi/2.1.2/bin/mpiexec" "-np" "20" "/share/apps/paraview/5.6.0/lib/pvserver" "--server-port=34925"
+AutoMPI: starting process server
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[47216,1],0] (PID 153511)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------- server output --------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots
+that were requested by the application:
+  /share/apps/paraview/5.6.0/lib/pvserver
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+AutoMPI: server never started.
+vtkProcessModuleAutoMPIInternals: Server never started.
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/ParaViewCore/ServerManager/Core/vtkSMSession.cxx, line 307
+Failed to automatically launch 'pvserver' for multi-core support. Defaulting to local session.
+
+[cluster62:153511] *** Process received signal ***
+[cluster62:153511] Signal: Segmentation fault (11)
+[cluster62:153511] Signal code: Address not mapped (1)
+[cluster62:153511] Failing at address: 0x85a1000
+[cluster62:153511] [ 0] /lib64/libpthread.so.0[0x3d8ac0f7e0]
+[cluster62:153511] [ 1] /lib64/libc.so.6(memcpy+0x2dc)[0x3d8a0899fc]
+[cluster62:153511] [ 2] /share/apps/paraview/5.6.0/lib/libvtkIOGeometry-pv5.6.so.1(+0x149788)[0x7f3efaa7e788]
+[cluster62:153511] [ 3] /share/apps/paraview/5.6.0/lib/libvtkIOGeometry-pv5.6.so.1(+0x14b091)[0x7f3efaa80091]
+[cluster62:153511] [ 4] /share/apps/paraview/5.6.0/lib/libvtkIOGeometry-pv5.6.so.1(+0x12a004)[0x7f3efaa5f004]
+[cluster62:153511] [ 5] /share/apps/paraview/5.6.0/lib/libvtkIOGeometry-pv5.6.so.1(+0x13d146)[0x7f3efaa72146]
+[cluster62:153511] [ 6] /share/apps/paraview/5.6.0/lib/libvtkIOGeometry-pv5.6.so.1(_ZN17vtkOpenFOAMReader11RequestDataEP14vtkInformationPP20vtkInformationVectorS3_+0x5cf)[0x7f3efaa74c4d]
+[cluster62:153511] [ 7] /share/apps/paraview/5.6.0/lib/libvtkIOParallel-pv5.6.so.1(_ZN18vtkPOpenFOAMReader11RequestDataEP14vtkInformationPP20vtkInformationVectorS3_+0x55)[0x7f3efb384ec3]
+[cluster62:153511] [ 8] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN29vtkMultiBlockDataSetAlgorithm14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0xa1)[0x7f3ef26bce61]
+[cluster62:153511] [ 9] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN12vtkExecutive13CallAlgorithmEP14vtkInformationiPP20vtkInformationVectorS3_+0x83)[0x7f3ef26a3ee9]
+[cluster62:153511] [10] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN23vtkDemandDrivenPipeline11ExecuteDataEP14vtkInformationPP20vtkInformationVectorS3_+0x67)[0x7f3ef269c0b9]
+[cluster62:153511] [11] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN24vtkCompositeDataPipeline11ExecuteDataEP14vtkInformationPP20vtkInformationVectorS3_+0x492)[0x7f3ef2692258]
+[cluster62:153511] [12] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN23vtkDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x46b)[0x7f3ef269b7e7]
+[cluster62:153511] [13] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN32vtkStreamingDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x932)[0x7f3ef26de33c]
+[cluster62:153511] [14] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN24vtkCompositeDataPipeline15ForwardUpstreamEP14vtkInformation+0x2d8)[0x7f3ef269492e]
+[cluster62:153511] [15] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN23vtkDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x3da)[0x7f3ef269b756]
+[cluster62:153511] [16] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN32vtkStreamingDemandDrivenPipeline14ProcessRequestEP14vtkInformationPP20vtkInformationVectorS3_+0x932)[0x7f3ef26de33c]
+[cluster62:153511] [17] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN23vtkDemandDrivenPipeline10UpdateDataEi+0x315)[0x7f3ef269bf15]
+[cluster62:153511] [18] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN32vtkStreamingDemandDrivenPipeline6UpdateEiP20vtkInformationVector+0x172)[0x7f3ef26de64a]
+[cluster62:153511] [19] /share/apps/paraview/5.6.0/lib/libvtkCommonExecutionModel-pv5.6.so.1(_ZN32vtkStreamingDemandDrivenPipeline6UpdateEi+0x30)[0x7f3ef26de4d6]
+[cluster62:153511] [20] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN16vtkSISourceProxy14UpdatePipelineEidb+0x1b8)[0x7f3f023b5b94]
+[cluster62:153511] [21] /share/apps/paraview/5.6.0/lib/libvtkPVServerManagerApplication-pv5.6.so.1(_Z23vtkSISourceProxyCommandP26vtkClientServerInterpreterP13vtkObjectBasePKcRK21vtkClientServerStreamRS5_Pv+0x712)[0x7f3f05974082]
+[cluster62:153511] [22] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter19CallCommandFunctionEPKcP13vtkObjectBaseS1_RK21vtkClientServerStreamRS4_+0x315)[0x7f3f0043686f]
+[cluster62:153511] [23] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter20ProcessCommandInvokeERK21vtkClientServerStreami+0x1c5)[0x7f3f00435043]
+[cluster62:153511] [24] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter17ProcessOneMessageERK21vtkClientServerStreami+0x135)[0x7f3f0043464d]
+[cluster62:153511] [25] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter13ProcessStreamERK21vtkClientServerStream+0x2f)[0x7f3f004344e7]
+[cluster62:153511] [26] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN16vtkPVSessionCore21ExecuteStreamInternalERK21vtkClientServerStreamb+0xde)[0x7f3f023682d4]
+[cluster62:153511] [27] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN16vtkPVSessionCore13ExecuteStreamEjRK21vtkClientServerStreamb+0x1f5)[0x7f3f023680d3]
+[cluster62:153511] [28] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN16vtkPVSessionBase13ExecuteStreamEjRK21vtkClientServerStreamb+0x5a)[0x7f3f02364700]
+[cluster62:153511] [29] /share/apps/paraview/5.6.0/lib/libvtkPVServerManagerCore-pv5.6.so.1(_ZN10vtkSMProxy13ExecuteStreamERK21vtkClientServerStreambj+0xaa)[0x7f3f02839ad6]
+[cluster62:153511] *** End of error message ***
+/share/apps/OpenFOAM/OpenFOAM-7/bin/paraFoam: line 63: 153511 Segmentation fault      paraview $_opt "$@"

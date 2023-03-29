@@ -1,0 +1,99 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+convertToMeters 1;
+
+// Sumo una unidad a cada lado, para contener a todo el volumen deseado
+vertices
+(
+/*    (-37.8 -18 -0.504)
+    (117 -18 -0.504)
+    (117 18 -0.504)
+    (-37.8 18 -0.504)
+    (-37.8 -18 32.096)
+    (117 -18 32.096)
+    (117 18 32.096)
+    (-37.8 18 32.096)
+*/
+
+    (-38.8 -19 -1.504)
+    (118 -19 -1.504)
+    (118 19 -1.504)
+    (-38.8 19 -1.504)
+    (-38.8 -19 33.096)
+    (118 -19 33.096)
+    (118 19 33.096)
+    (-38.8 19 33.096)
+);
+// Dimensiones totales: 154.8 36 32.6 (sin agrandar dominio contenedor)
+// Dimensiones totales: 156.6 38 34.6 (agrandando dominio contenedor en una unidad en cada borde)
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (130 32 29) simpleGrading (1 1 1) // Para h aprox. 1.2 m
+    // (65 15 14) para h aprox. 2.4 m
+);
+
+edges
+(
+);
+
+boundary
+(
+    frontAndBack
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+            (1 5 4 0)
+        );
+    }
+    inletBB
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outletBB
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+    lowerWallBB
+    {
+        type wall;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    upperWallBB
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+);
+
+// ************************************************************************* //

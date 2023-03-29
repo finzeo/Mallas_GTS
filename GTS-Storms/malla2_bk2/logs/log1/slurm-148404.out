@@ -1,0 +1,748 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : blockMesh
+Date   : Feb 27 2023
+Time   : 17:24:16
+Host   : "compute-0-10.local"
+PID    : 16591
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTS-Storms/malla1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/polyMesh"
+Creating block mesh from
+    "/share/storage/finzeo/Mallas/GTS-Storms/malla1/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.0762 .. 0.0762
+        j : 0.0762
+        k : 0.0762 .. 0.0762
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-7.41043 -1.6002 -0.1524) (4.47677 1.6002 2.1336)
+  nPoints: 209281
+  nCells: 196560
+  nFaces: 602172
+  nInternalFaces: 577188
+----------------
+Patches
+----------------
+  patch 0 (start: 577188 size: 9360) name: frontAndBack
+  patch 1 (start: 586548 size: 1260) name: inlet
+  patch 2 (start: 587808 size: 1260) name: outlet
+  patch 3 (start: 589068 size: 6552) name: lowerWall
+  patch 4 (start: 595620 size: 6552) name: upperWall
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : surfaceFeatures
+Date   : Feb 27 2023
+Time   : 17:24:17
+Host   : "compute-0-10.local"
+PID    : 16592
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTS-Storms/malla1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "GTS-Storms.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 466672
+Vertices     : 79704
+Bounding Box : (-2.47648 -0.161925 -0.0762) (0 0.161925 0.4508)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 77871
+    feature edges  : 127232
+    of which
+        region edges   : 127219
+        external edges : 8
+        internal edges : 5
+
+
+Final feature set:
+points      : 79122
+edges       : 127232
+boundingBox : (-2.47648 -0.161925 -0.0762) (0 0.161925 0.4508)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :    77871
+    other (non-feature) points     :     1251
+edge classification :
+    external (convex angle) edges  :        8
+    internal (concave angle) edges :        5
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :   127219
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/GTS-Storms.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/GTS-Storms.eMesh"
+
+Surface            : "inlet.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (-7.33423 -1.49474 -0.0762) (-7.33423 1.49474 2.0574)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (-7.33423 -1.49474 -0.0762) (-7.33423 1.49474 2.0574)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/inlet.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/inlet.eMesh"
+
+Surface            : "outlet.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (4.37197 -1.55326 -0.0762) (4.37197 1.55326 2.0574)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (4.37197 -1.55326 -0.0762) (4.37197 1.55326 2.0574)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/outlet.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/outlet.eMesh"
+
+Surface            : "left.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (-7.33423 -1.55326 -0.0762) (4.37197 -1.49474 2.0574)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (-7.33423 -1.55326 -0.0762) (4.37197 -1.49474 2.0574)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/left.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/left.eMesh"
+
+Surface            : "right.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (-7.33423 1.49474 -0.0762) (4.37197 1.55326 2.0574)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (-7.33423 1.49474 -0.0762) (4.37197 1.55326 2.0574)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/right.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/right.eMesh"
+
+Surface            : "floor.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (-7.33423 -1.55326 -0.0762) (4.37197 1.55326 -0.0762)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (-7.33423 -1.55326 -0.0762) (4.37197 1.55326 -0.0762)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/floor.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/floor.eMesh"
+
+Surface            : "top.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2
+Vertices     : 4
+Bounding Box : (-7.33423 -1.55326 2.0574) (4.37197 1.55326 2.0574)
+
+
+Constructing feature set from included angle 179.8
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4
+    of which
+        region edges   : 4
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 4
+edges       : 4
+boundingBox : (-7.33423 -1.55326 2.0574) (4.37197 1.55326 2.0574)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :        0
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :        4
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/extendedFeatureEdgeMesh/top.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/constant/triSurface/top.eMesh"
+
+ExecutionTime = 2.58 s  ClockTime = 3 s
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : decomposePar -copyZero
+Date   : Feb 27 2023
+Time   : 17:24:20
+Host   : "compute-0-10.local"
+PID    : 16593
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTS-Storms/malla1
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+ Foam::decompositionMethod::New 
+{
+    numberOfSubdomains 20;
+    method          scotch;
+    simpleCoeffs
+    {
+        n               ( 4 1 1 );
+        delta           0.001;
+    }
+    hierarchicalCoeffs
+    {
+        n               ( 3 2 1 );
+        delta           0.001;
+        order           xyz;
+    }
+    manualCoeffs
+    {
+        dataFile        "cellDecomposition";
+    }
+    scotchCoeffs
+    {
+        processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+    }
+}
+
+Selecting decompositionMethod scotch
+
+Finished decomposition in 0.92 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 9905
+    Number of faces shared with processor 1 = 480
+    Number of faces shared with processor 4 = 691
+    Number of faces shared with processor 5 = 91
+    Number of faces shared with processor 8 = 261
+    Number of faces shared with processor 12 = 139
+    Number of faces shared with processor 16 = 758
+    Number of faces shared with processor 17 = 89
+    Number of processor patches = 7
+    Number of processor faces = 2509
+    Number of boundary faces = 661
+
+Processor 1
+    Number of cells = 9853
+    Number of faces shared with processor 0 = 480
+    Number of faces shared with processor 5 = 570
+    Number of faces shared with processor 9 = 284
+    Number of faces shared with processor 13 = 271
+    Number of faces shared with processor 17 = 744
+    Number of processor patches = 5
+    Number of processor faces = 2349
+    Number of boundary faces = 659
+
+Processor 2
+    Number of cells = 9926
+    Number of faces shared with processor 6 = 308
+    Number of faces shared with processor 8 = 232
+    Number of faces shared with processor 10 = 422
+    Number of faces shared with processor 12 = 190
+    Number of faces shared with processor 14 = 627
+    Number of faces shared with processor 18 = 724
+    Number of processor patches = 6
+    Number of processor faces = 2503
+    Number of boundary faces = 665
+
+Processor 3
+    Number of cells = 9730
+    Number of faces shared with processor 7 = 797
+    Number of faces shared with processor 11 = 379
+    Number of faces shared with processor 15 = 221
+    Number of faces shared with processor 19 = 733
+    Number of processor patches = 4
+    Number of processor faces = 2130
+    Number of boundary faces = 1004
+
+Processor 4
+    Number of cells = 9660
+    Number of faces shared with processor 0 = 691
+    Number of faces shared with processor 12 = 480
+    Number of faces shared with processor 17 = 489
+    Number of processor patches = 3
+    Number of processor faces = 1660
+    Number of boundary faces = 1246
+
+Processor 5
+    Number of cells = 9750
+    Number of faces shared with processor 0 = 91
+    Number of faces shared with processor 1 = 570
+    Number of faces shared with processor 13 = 570
+    Number of faces shared with processor 16 = 389
+    Number of processor patches = 4
+    Number of processor faces = 1620
+    Number of boundary faces = 1370
+
+Processor 6
+    Number of cells = 9910
+    Number of faces shared with processor 2 = 308
+    Number of faces shared with processor 10 = 391
+    Number of faces shared with processor 14 = 484
+    Number of processor patches = 3
+    Number of processor faces = 1183
+    Number of boundary faces = 1753
+
+Processor 7
+    Number of cells = 9549
+    Number of faces shared with processor 3 = 797
+    Number of faces shared with processor 15 = 587
+    Number of processor patches = 2
+    Number of processor faces = 1384
+    Number of boundary faces = 1734
+
+Processor 8
+    Number of cells = 9926
+    Number of faces shared with processor 0 = 261
+    Number of faces shared with processor 2 = 232
+    Number of faces shared with processor 12 = 543
+    Number of faces shared with processor 16 = 443
+    Number of faces shared with processor 18 = 575
+    Number of processor patches = 5
+    Number of processor faces = 2054
+    Number of boundary faces = 1090
+
+Processor 9
+    Number of cells = 9926
+    Number of faces shared with processor 1 = 284
+    Number of faces shared with processor 11 = 801
+    Number of faces shared with processor 13 = 439
+    Number of faces shared with processor 17 = 404
+    Number of processor patches = 4
+    Number of processor faces = 1928
+    Number of boundary faces = 1182
+
+Processor 10
+    Number of cells = 9901
+    Number of faces shared with processor 2 = 422
+    Number of faces shared with processor 6 = 391
+    Number of faces shared with processor 18 = 420
+    Number of processor patches = 3
+    Number of processor faces = 1233
+    Number of boundary faces = 1771
+
+Processor 11
+    Number of cells = 9926
+    Number of faces shared with processor 3 = 379
+    Number of faces shared with processor 9 = 801
+    Number of faces shared with processor 13 = 138
+    Number of faces shared with processor 15 = 417
+    Number of faces shared with processor 19 = 454
+    Number of processor patches = 5
+    Number of processor faces = 2189
+    Number of boundary faces = 1017
+
+Processor 12
+    Number of cells = 9926
+    Number of faces shared with processor 0 = 139
+    Number of faces shared with processor 2 = 190
+    Number of faces shared with processor 4 = 480
+    Number of faces shared with processor 8 = 543
+    Number of faces shared with processor 14 = 630
+    Number of processor patches = 5
+    Number of processor faces = 1982
+    Number of boundary faces = 1082
+
+Processor 13
+    Number of cells = 9926
+    Number of faces shared with processor 1 = 271
+    Number of faces shared with processor 5 = 570
+    Number of faces shared with processor 9 = 439
+    Number of faces shared with processor 11 = 138
+    Number of faces shared with processor 15 = 548
+    Number of processor patches = 5
+    Number of processor faces = 1966
+    Number of boundary faces = 1080
+
+Processor 14
+    Number of cells = 9740
+    Number of faces shared with processor 2 = 627
+    Number of faces shared with processor 6 = 484
+    Number of faces shared with processor 12 = 630
+    Number of processor patches = 3
+    Number of processor faces = 1741
+    Number of boundary faces = 1327
+
+Processor 15
+    Number of cells = 9694
+    Number of faces shared with processor 3 = 221
+    Number of faces shared with processor 7 = 587
+    Number of faces shared with processor 11 = 417
+    Number of faces shared with processor 13 = 548
+    Number of processor patches = 4
+    Number of processor faces = 1773
+    Number of boundary faces = 1219
+
+Processor 16
+    Number of cells = 9926
+    Number of faces shared with processor 0 = 758
+    Number of faces shared with processor 5 = 389
+    Number of faces shared with processor 8 = 443
+    Number of processor patches = 3
+    Number of processor faces = 1590
+    Number of boundary faces = 1402
+
+Processor 17
+    Number of cells = 9730
+    Number of faces shared with processor 0 = 89
+    Number of faces shared with processor 1 = 744
+    Number of faces shared with processor 4 = 489
+    Number of faces shared with processor 9 = 404
+    Number of processor patches = 4
+    Number of processor faces = 1726
+    Number of boundary faces = 1472
+
+Processor 18
+    Number of cells = 9730
+    Number of faces shared with processor 2 = 724
+    Number of faces shared with processor 8 = 575
+    Number of faces shared with processor 10 = 420
+    Number of processor patches = 3
+    Number of processor faces = 1719
+    Number of boundary faces = 1455
+
+Processor 19
+    Number of cells = 9926
+    Number of faces shared with processor 3 = 733
+    Number of faces shared with processor 11 = 454
+    Number of processor patches = 2
+    Number of processor faces = 1187
+    Number of boundary faces = 1795
+
+Number of processor faces = 18213
+Max number of cells = 9926 (0.997151% above average 9828)
+Max number of processor patches = 7 (75% above average 4)
+Max number of faces between processors = 2509 (37.7587% above average 1821.3)
+
+Processor 0: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor0/0"
+Processor 1: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor1/0"
+Processor 2: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor2/0"
+Processor 3: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor3/0"
+Processor 4: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor4/0"
+Processor 5: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor5/0"
+Processor 6: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor6/0"
+Processor 7: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor7/0"
+Processor 8: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor8/0"
+Processor 9: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor9/0"
+Processor 10: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor10/0"
+Processor 11: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor11/0"
+Processor 12: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor12/0"
+Processor 13: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor13/0"
+Processor 14: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor14/0"
+Processor 15: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor15/0"
+Processor 16: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor16/0"
+Processor 17: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor17/0"
+Processor 18: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor18/0"
+Processor 19: copying "/share/storage/finzeo/Mallas/GTS-Storms/malla1/0"
+ to "/share/storage/finzeo/Mallas/GTS-Storms/malla1/processor19/0"
+
+End
+
+[1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: 
+[1] keyword relaxed is undefined in dictionary "IOstream.meshQualityControls"
+[1] 
+[1] file: IOstream.meshQualityControls from line 0 to line 0.
+[1] 
+[1]     From function const Foam::dictionary& Foam::dictionary::subDict(const Foam::word&) const
+[1]     in file db/dictionary/dictionary.C at line 708.
+[1] 
+FOAM parallel run exiting
+[1] 
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find patchField entry for gtsModel
+
+file: /share/storage/finzeo/Mallas/GTS-Storms/malla1/0/p.boundaryField from line 11 to line 16.
+
+    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /share/apps/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 191.
+
+FOAM exiting
+

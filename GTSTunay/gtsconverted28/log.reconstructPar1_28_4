@@ -1,0 +1,311 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : reconstructParMesh -mergeTol 1e-6 -constant
+Date   : Sep 21 2022
+Time   : 11:32:35
+Host   : "compute-0-6.local"
+PID    : 170980
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gtsconverted28
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+This is an experimental tool which tries to merge individual processor
+meshes back into one master mesh. Use it if the original master mesh has
+been deleted or if the processor meshes have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge tolerance : 1e-06
+Write tolerance : 1e-06
+Doing geometric matching on correct procBoundaries only.
+This assumes a correct decomposition.
+Found 20 processor directories
+
+Reading database "gtsconverted28/processor0"
+Reading database "gtsconverted28/processor1"
+Reading database "gtsconverted28/processor2"
+Reading database "gtsconverted28/processor3"
+Reading database "gtsconverted28/processor4"
+Reading database "gtsconverted28/processor5"
+Reading database "gtsconverted28/processor6"
+Reading database "gtsconverted28/processor7"
+Reading database "gtsconverted28/processor8"
+Reading database "gtsconverted28/processor9"
+Reading database "gtsconverted28/processor10"
+Reading database "gtsconverted28/processor11"
+Reading database "gtsconverted28/processor12"
+Reading database "gtsconverted28/processor13"
+Reading database "gtsconverted28/processor14"
+Reading database "gtsconverted28/processor15"
+Reading database "gtsconverted28/processor16"
+Reading database "gtsconverted28/processor17"
+Reading database "gtsconverted28/processor18"
+Reading database "gtsconverted28/processor19"
+Time = constant
+
+Reading points from "gtsconverted28/processor0" for time = constant
+
+Reading points from "gtsconverted28/processor1" for time = constant
+
+Reading points from "gtsconverted28/processor2" for time = constant
+
+Reading points from "gtsconverted28/processor3" for time = constant
+
+Reading points from "gtsconverted28/processor4" for time = constant
+
+Reading points from "gtsconverted28/processor5" for time = constant
+
+Reading points from "gtsconverted28/processor6" for time = constant
+
+Reading points from "gtsconverted28/processor7" for time = constant
+
+Reading points from "gtsconverted28/processor8" for time = constant
+
+Reading points from "gtsconverted28/processor9" for time = constant
+
+Reading points from "gtsconverted28/processor10" for time = constant
+
+Reading points from "gtsconverted28/processor11" for time = constant
+
+Reading points from "gtsconverted28/processor12" for time = constant
+
+Reading points from "gtsconverted28/processor13" for time = constant
+
+Reading points from "gtsconverted28/processor14" for time = constant
+
+Reading points from "gtsconverted28/processor15" for time = constant
+
+Reading points from "gtsconverted28/processor16" for time = constant
+
+Reading points from "gtsconverted28/processor17" for time = constant
+
+Reading points from "gtsconverted28/processor18" for time = constant
+
+Reading points from "gtsconverted28/processor19" for time = constant
+
+Overall mesh bounding box  : (-37.8 -18 -0.504) (117 18 32.4)
+Relative tolerance         : 1e-06
+Absolute matching distance : 0.000162301
+
+Merging mesh 0 with 1
+Merging mesh 2 with 3
+Merging mesh 4 with 5
+Merging mesh 6 with 7
+Merging mesh 8 with 9
+Merging mesh 10 with 11
+Merging mesh 12 with 13
+Merging mesh 14 with 15
+Merging mesh 16 with 17
+Merging mesh 18 with 19
+Merging mesh 0 with 2
+Merging mesh 4 with 6
+Merging mesh 8 with 10
+Merging mesh 12 with 14
+Merging mesh 16 with 18
+Merging mesh 0 with 4
+Merging mesh 8 with 12
+Merging mesh 0 with 8
+Merging mesh 0 with 16
+Reading mesh to add from "gtsconverted28/processor0" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor1" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor2" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor3" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor4" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor5" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor6" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor7" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor8" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor9" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor10" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor11" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor12" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor13" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor14" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor15" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor16" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor17" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor18" for time = constant
+
+
+Reading mesh to add from "gtsconverted28/processor19" for time = constant
+
+
+mergeSharedPoints : detected 0 points that are to be merged.
+
+Writing merged mesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted28/constant"
+
+Reconstructing the addressing from the processor meshes to the newly reconstructed mesh
+
+Reading processor 0 mesh from "gtsconverted28/processor0"
+Writing pointProcAddressing to "gtsconverted28/processor0/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor0/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor0/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor0/constant/polyMesh"
+
+Reading processor 1 mesh from "gtsconverted28/processor1"
+Writing pointProcAddressing to "gtsconverted28/processor1/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor1/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor1/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor1/constant/polyMesh"
+
+Reading processor 2 mesh from "gtsconverted28/processor2"
+Writing pointProcAddressing to "gtsconverted28/processor2/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor2/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor2/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor2/constant/polyMesh"
+
+Reading processor 3 mesh from "gtsconverted28/processor3"
+Writing pointProcAddressing to "gtsconverted28/processor3/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor3/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor3/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor3/constant/polyMesh"
+
+Reading processor 4 mesh from "gtsconverted28/processor4"
+Writing pointProcAddressing to "gtsconverted28/processor4/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor4/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor4/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor4/constant/polyMesh"
+
+Reading processor 5 mesh from "gtsconverted28/processor5"
+Writing pointProcAddressing to "gtsconverted28/processor5/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor5/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor5/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor5/constant/polyMesh"
+
+Reading processor 6 mesh from "gtsconverted28/processor6"
+Writing pointProcAddressing to "gtsconverted28/processor6/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor6/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor6/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor6/constant/polyMesh"
+
+Reading processor 7 mesh from "gtsconverted28/processor7"
+Writing pointProcAddressing to "gtsconverted28/processor7/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor7/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor7/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor7/constant/polyMesh"
+
+Reading processor 8 mesh from "gtsconverted28/processor8"
+Writing pointProcAddressing to "gtsconverted28/processor8/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor8/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor8/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor8/constant/polyMesh"
+
+Reading processor 9 mesh from "gtsconverted28/processor9"
+Writing pointProcAddressing to "gtsconverted28/processor9/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor9/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor9/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor9/constant/polyMesh"
+
+Reading processor 10 mesh from "gtsconverted28/processor10"
+Writing pointProcAddressing to "gtsconverted28/processor10/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor10/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor10/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor10/constant/polyMesh"
+
+Reading processor 11 mesh from "gtsconverted28/processor11"
+Writing pointProcAddressing to "gtsconverted28/processor11/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor11/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor11/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor11/constant/polyMesh"
+
+Reading processor 12 mesh from "gtsconverted28/processor12"
+Writing pointProcAddressing to "gtsconverted28/processor12/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor12/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor12/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor12/constant/polyMesh"
+
+Reading processor 13 mesh from "gtsconverted28/processor13"
+Writing pointProcAddressing to "gtsconverted28/processor13/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor13/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor13/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor13/constant/polyMesh"
+
+Reading processor 14 mesh from "gtsconverted28/processor14"
+Writing pointProcAddressing to "gtsconverted28/processor14/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor14/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor14/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor14/constant/polyMesh"
+
+Reading processor 15 mesh from "gtsconverted28/processor15"
+Writing pointProcAddressing to "gtsconverted28/processor15/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor15/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor15/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor15/constant/polyMesh"
+
+Reading processor 16 mesh from "gtsconverted28/processor16"
+Writing pointProcAddressing to "gtsconverted28/processor16/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor16/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor16/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor16/constant/polyMesh"
+
+Reading processor 17 mesh from "gtsconverted28/processor17"
+Writing pointProcAddressing to "gtsconverted28/processor17/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor17/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor17/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor17/constant/polyMesh"
+
+Reading processor 18 mesh from "gtsconverted28/processor18"
+Writing pointProcAddressing to "gtsconverted28/processor18/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor18/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor18/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor18/constant/polyMesh"
+
+Reading processor 19 mesh from "gtsconverted28/processor19"
+Writing pointProcAddressing to "gtsconverted28/processor19/constant/polyMesh"
+Writing faceProcAddressing to "gtsconverted28/processor19/constant/polyMesh"
+Writing cellProcAddressing to "gtsconverted28/processor19/constant/polyMesh"
+Writing boundaryProcAddressing to "gtsconverted28/processor19/constant/polyMesh"
+
+End.
+

@@ -1,0 +1,8 @@
+[0] 
+[0] 
+[0] --> FOAM FATAL ERROR: 
+[0] checkMesh: cannot open case directory "/share/storage/finzeo/Mallas/test/GTS_ofcom4/processor0"
+[0] 
+[0] 
+FOAM parallel run exiting
+[0] 

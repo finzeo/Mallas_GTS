@@ -1,0 +1,128 @@
+/*--------------------------------*- C++ -*----------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  v2012                                 |
+|   \\  /    A nd           | Website:  www.openfoam.com                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+FoamFile
+{
+    version     2.0;
+    format      ascii;
+    class       dictionary;
+    object      blockMeshDict;
+}
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+
+scale   1;
+
+// Parametros****
+
+// Dimensiones finales
+Lmin_dom  -7.33423095;
+Lmax_dom   4.40056905;
+Wmin_dom  -1.524;
+Wmax_dom   1.524;
+Hmin_dom  -0.0762;
+Hmax_dom   2.0574;
+
+// Con dimensiones contenedoras finales
+/*
+Lmin_dom  -7.41043095;
+Lmax_dom   4.47676905;
+Wmin_dom  -1.6002;
+Wmax_dom   1.6002; 
+Hmin_dom  -0.1524;
+Hmax_dom   2.1336;
+*/
+
+// Dimensiones totales de acuerdo a Storms y Maddox (L W H): 36.147w       9.412w*   6.588w    [m]   (w=0.32385m)   
+//						     	     11.70620595   3.048*    2.1336    [m]
+// Dimensiones finales (L W H)**:			     11.7348       3.048     2.1336    [m]   (para h=0.0762m y n=(154 40 28)) 
+// Dimensiones contenedoras finales (L W H)***:		     11.8872       3.2004    2.286     [m]   (se agrega h a cada lado del dominio, y asi n=(156 42 30))
+
+// *El ancho del dominio varia a lo largo de aquel, debido a que hay una divergencia de la pared de 1% de acuerdo a Storms;
+// aqui se considera el ancho medio, que es el que esta en la parte central del dominio.
+// **Anadiendo un poco de longitud sobre la frontera de salida, se logra que, con h=0.0762m, se tiene facilidad de lograr un paso uniforme h en todas
+// las direcciones, considerando n=(154 40 28) (ver razonamiento en hoja 11 impresa del trabajo de Storms)
+// ***A fin de que el bloque definido aqui en blockMesh contenga a las superficies dadas en los archivos .stl, y manteniendo las convenientes
+// definiciones previas de h y n, se agrega un elemento sobre cada frontera, de forma tal que n=(156 42 30) (en teoria, al ejecutarse snappy,
+// deberian quitarse, entonces, 1 elemento de cada lado; tener en cuenta que debido a la divergencia de las paredes laterales, no va a ser
+// todo exacto).
+// **** Se cumple todo lo dicho previamente sobre las dimensiones finales, y buscando contener minimamente el dominio (-7.335;4.373)x(-1.554;1.554)x(-0.0762;2.0574)
+
+vertices
+(
+    ($Lmin_dom  $Wmin_dom $Hmin_dom)
+    ($Lmax_dom  $Wmin_dom $Hmin_dom)
+    ($Lmax_dom  $Wmax_dom $Hmin_dom)
+    ($Lmin_dom  $Wmax_dom $Hmin_dom)
+    ($Lmin_dom  $Wmin_dom $Hmax_dom)
+    ($Lmax_dom  $Wmin_dom $Hmax_dom)
+    ($Lmax_dom  $Wmax_dom $Hmax_dom)
+    ($Lmin_dom  $Wmax_dom $Hmax_dom)
+);
+
+blocks
+(
+    hex (0 1 2 3 4 5 6 7) (156 42 30) simpleGrading (1 1 1)
+);
+
+edges
+(
+);
+
+boundary
+(
+    inlet
+    {
+        type patch;
+        faces
+        (
+            (0 4 7 3)
+        );
+    }
+    outlet
+    {
+        type patch;
+        faces
+        (
+            (2 6 5 1)
+        );
+    }
+    left
+    {
+        type patch;
+        faces
+        (
+            (1 5 4 0)
+        );
+    }
+    right
+    {
+        type patch;
+        faces
+        (
+            (3 7 6 2)
+        );
+    }
+    floor
+    {
+        type wall;
+        faces
+        (
+            (0 3 2 1)
+        );
+    }
+    top
+    {
+        type patch;
+        faces
+        (
+            (4 5 6 7)
+        );
+    }
+);
+
+// ************************************************************************* //

@@ -1,0 +1,120 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : reconstructParMesh -latestTime
+Date   : Aug 22 2022
+Time   : 15:59:59
+Host   : "compute-0-5.local"
+PID    : 53542
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gtsconverted25
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+This is an experimental tool which tries to merge individual processor
+meshes back into one master mesh. Use it if the original master mesh has
+been deleted or if the processor meshes have been modified (topology change).
+This tool will write the resulting mesh to a new time step and construct
+xxxxProcAddressing files in the processor meshes so reconstructPar can be
+used to regenerate the fields on the master mesh.
+
+Not well tested & use at your own risk!
+
+Merge tolerance : 1e-07
+Write tolerance : 1e-06
+Doing geometric matching on correct procBoundaries only.
+This assumes a correct decomposition.
+Found 80 processor directories
+
+Reading database "gtsconverted25/processor0"
+Reading database "gtsconverted25/processor1"
+Reading database "gtsconverted25/processor2"
+Reading database "gtsconverted25/processor3"
+Reading database "gtsconverted25/processor4"
+Reading database "gtsconverted25/processor5"
+Reading database "gtsconverted25/processor6"
+Reading database "gtsconverted25/processor7"
+Reading database "gtsconverted25/processor8"
+Reading database "gtsconverted25/processor9"
+Reading database "gtsconverted25/processor10"
+Reading database "gtsconverted25/processor11"
+Reading database "gtsconverted25/processor12"
+Reading database "gtsconverted25/processor13"
+Reading database "gtsconverted25/processor14"
+Reading database "gtsconverted25/processor15"
+Reading database "gtsconverted25/processor16"
+Reading database "gtsconverted25/processor17"
+Reading database "gtsconverted25/processor18"
+Reading database "gtsconverted25/processor19"
+Reading database "gtsconverted25/processor20"
+Reading database "gtsconverted25/processor21"
+Reading database "gtsconverted25/processor22"
+Reading database "gtsconverted25/processor23"
+Reading database "gtsconverted25/processor24"
+Reading database "gtsconverted25/processor25"
+Reading database "gtsconverted25/processor26"
+Reading database "gtsconverted25/processor27"
+Reading database "gtsconverted25/processor28"
+Reading database "gtsconverted25/processor29"
+Reading database "gtsconverted25/processor30"
+Reading database "gtsconverted25/processor31"
+Reading database "gtsconverted25/processor32"
+Reading database "gtsconverted25/processor33"
+Reading database "gtsconverted25/processor34"
+Reading database "gtsconverted25/processor35"
+Reading database "gtsconverted25/processor36"
+Reading database "gtsconverted25/processor37"
+Reading database "gtsconverted25/processor38"
+Reading database "gtsconverted25/processor39"
+Reading database "gtsconverted25/processor40"
+Reading database "gtsconverted25/processor41"
+Reading database "gtsconverted25/processor42"
+Reading database "gtsconverted25/processor43"
+Reading database "gtsconverted25/processor44"
+Reading database "gtsconverted25/processor45"
+Reading database "gtsconverted25/processor46"
+Reading database "gtsconverted25/processor47"
+Reading database "gtsconverted25/processor48"
+Reading database "gtsconverted25/processor49"
+Reading database "gtsconverted25/processor50"
+Reading database "gtsconverted25/processor51"
+Reading database "gtsconverted25/processor52"
+Reading database "gtsconverted25/processor53"
+Reading database "gtsconverted25/processor54"
+Reading database "gtsconverted25/processor55"
+Reading database "gtsconverted25/processor56"
+Reading database "gtsconverted25/processor57"
+Reading database "gtsconverted25/processor58"
+Reading database "gtsconverted25/processor59"
+Reading database "gtsconverted25/processor60"
+Reading database "gtsconverted25/processor61"
+Reading database "gtsconverted25/processor62"
+Reading database "gtsconverted25/processor63"
+Reading database "gtsconverted25/processor64"
+Reading database "gtsconverted25/processor65"
+Reading database "gtsconverted25/processor66"
+Reading database "gtsconverted25/processor67"
+Reading database "gtsconverted25/processor68"
+Reading database "gtsconverted25/processor69"
+Reading database "gtsconverted25/processor70"
+Reading database "gtsconverted25/processor71"
+Reading database "gtsconverted25/processor72"
+Reading database "gtsconverted25/processor73"
+Reading database "gtsconverted25/processor74"
+Reading database "gtsconverted25/processor75"
+Reading database "gtsconverted25/processor76"
+Reading database "gtsconverted25/processor77"
+Reading database "gtsconverted25/processor78"
+Reading database "gtsconverted25/processor79"
+End.
+

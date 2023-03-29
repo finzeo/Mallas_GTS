@@ -1,0 +1,459 @@
+AutoMPI: SUCCESS: command is:
+ "/share/apps/openmpi/2.1.2/bin/mpiexec" "-np" "20" "/share/apps/paraview/5.6.0/lib/pvserver" "--server-port=38552"
+AutoMPI: starting process server
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[37400,1],0] (PID 29193)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------- server output --------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots
+that were requested by the application:
+  /share/apps/paraview/5.6.0/lib/pvserver
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+AutoMPI: server never started.
+vtkProcessModuleAutoMPIInternals: Server never started.
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/ParaViewCore/ServerManager/Core/vtkSMSession.cxx, line 307
+Failed to automatically launch 'pvserver' for multi-core support. Defaulting to local session.
+
+[VGL] ERROR: in resize--
+[VGL]    128: Window has been deleted by window manager
+[VGL] WARNING: glXMakeContextCurrent() called with a previously-destroyed context
+[VGL] WARNING: glXMakeContextCurrent() called with a previously-destroyed context
+[VGL] WARNING: glXMakeContextCurrent() called with a previously-destroyed context
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 112
+Error in cache state for GL_BLEND
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 118
+Error in cache state for GL_DEPTH_TEST
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 131
+Error in cache state for GL_MULTISAMPLE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 157
+Error in cache state for GL_VIEWPORT
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 168
+Error in cache state for GL_SCISSOR_BOX
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 180
+Error in cache state for GL_DEPTH_FUNC
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 186
+Error in cache state for GL_BLEND_SRC_RGB
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 204
+Error in cache state for GL_BLEND_DST_ALPHA
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 217
+Error in cache state for GL_COLOR_CLEAR_VALUE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 224
+at stack loc
+0x7f1f1e388025 : vtksys::SystemInformationImplementation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f1e383166 : vtksys::SystemInformation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f2cb72ec3 : vtkOpenGLState::CheckState() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb74cd0 : vtkOpenGLState::vtkglGetBooleanv(unsigned int, unsigned char*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2f8138d8 : vtkOpenGLState::ScopedglEnableDisable::ScopedglEnableDisable(vtkOpenGLState*, unsigned int) [(libvtkPVVTKExtensionsRendering-pv5.6.so.1) ???:-1]
+0x7f1f2ca61ce2 : vtkCameraPass::Render(vtkRenderState const*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb5b09d : vtkOpenGLRenderer::DeviceRender() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f25a1c916 : vtkRenderer::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a1a2d9 : vtkRendererCollection::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35f3a : vtkRenderWindow::DoStereoRender() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35d2d : vtkRenderWindow::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f2cb575dc : vtkOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca9c61b : vtkGenericOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f32252a45 : vtkPVRenderView::Render(bool, bool) [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f32251ca0 : vtkPVRenderView::StillRender() [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f345a1972 : vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) [(libvtkPVServerManagerApplication-pv5.6.so.1) ???:-1]
+0x7f1f2eecf86f : vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eece043 : vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd64d : vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd4e7 : vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f30e012d4 : vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30e010d3 : vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30dfd700 : vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f312d2ad6 : vtkSMProxy::ExecuteStream(vtkClientServerStream const&, bool, unsigned int) [(libvtkPVServerManagerCore-pv5.6.so.1) ???:-1]
+0x7f1f328a6ef3 : vtkSMViewProxy::StillRender() [(libvtkPVServerManagerRendering-pv5.6.so.1) ???:-1]
+0x7f1f34f5c3b9 : pqView::forceRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f5c30a : pqView::tryRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f74ec1 : ??? [(???) ???:-1]
+0x7f1f1ea90f0f : QMetaObject::activate(QObject*, int, int, void**) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea9e228 : QTimer::timerEvent(QTimerEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f330e8189 : pqTimer::timerEvent(QTimerEvent*) [(libQtTesting-pv5.6.so) ???:-1]
+0x7f1f1ea9248b : QObject::event(QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1f85f39c : QApplicationPrivate::notify_helper(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1f863700 : QApplication::notify(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1ea67df0 : QCoreApplication::notifyInternal2(QObject*, QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab68be : QTimerInfoList::activateTimers() [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab6dc1 : ??? [(???) ???:-1]
+0x3d8bc40642 : g_main_context_dispatch [(libglib-2.0.so.0) ???:-1]
+0x3d8bc44c98 : ??? [(???) ???:-1]
+0x3d8bc44e4c : g_main_context_iteration [(libglib-2.0.so.0) ???:-1]
+0x7f1f1eab7a67 : QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea65e3a : QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea6dc9d : QCoreApplication::exec() [(libQt5Core.so.5) ???:-1]
+0x410991 : main [(paraview) ???:-1]
+0x3d8a01ed20 : __libc_start_main [(libc.so.6) ???:-1]
+0x4106a9 : ??? [(???) ???:-1]
+
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 112
+Error in cache state for GL_BLEND
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 118
+Error in cache state for GL_DEPTH_TEST
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 131
+Error in cache state for GL_MULTISAMPLE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 157
+Error in cache state for GL_VIEWPORT
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 168
+Error in cache state for GL_SCISSOR_BOX
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 180
+Error in cache state for GL_DEPTH_FUNC
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 186
+Error in cache state for GL_BLEND_SRC_RGB
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 204
+Error in cache state for GL_BLEND_DST_ALPHA
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 217
+Error in cache state for GL_COLOR_CLEAR_VALUE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 224
+at stack loc
+0x7f1f1e388025 : vtksys::SystemInformationImplementation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f1e383166 : vtksys::SystemInformation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f2cb72ec3 : vtkOpenGLState::CheckState() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb74520 : vtkOpenGLState::vtkglViewport(int, int, int, int) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca61d09 : vtkCameraPass::Render(vtkRenderState const*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb5b09d : vtkOpenGLRenderer::DeviceRender() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f25a1c916 : vtkRenderer::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a1a2d9 : vtkRendererCollection::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35f3a : vtkRenderWindow::DoStereoRender() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35d2d : vtkRenderWindow::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f2cb575dc : vtkOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca9c61b : vtkGenericOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f32252a45 : vtkPVRenderView::Render(bool, bool) [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f32251ca0 : vtkPVRenderView::StillRender() [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f345a1972 : vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) [(libvtkPVServerManagerApplication-pv5.6.so.1) ???:-1]
+0x7f1f2eecf86f : vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eece043 : vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd64d : vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd4e7 : vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f30e012d4 : vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30e010d3 : vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30dfd700 : vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f312d2ad6 : vtkSMProxy::ExecuteStream(vtkClientServerStream const&, bool, unsigned int) [(libvtkPVServerManagerCore-pv5.6.so.1) ???:-1]
+0x7f1f328a6ef3 : vtkSMViewProxy::StillRender() [(libvtkPVServerManagerRendering-pv5.6.so.1) ???:-1]
+0x7f1f34f5c3b9 : pqView::forceRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f5c30a : pqView::tryRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f74ec1 : ??? [(???) ???:-1]
+0x7f1f1ea90f0f : QMetaObject::activate(QObject*, int, int, void**) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea9e228 : QTimer::timerEvent(QTimerEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f330e8189 : pqTimer::timerEvent(QTimerEvent*) [(libQtTesting-pv5.6.so) ???:-1]
+0x7f1f1ea9248b : QObject::event(QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1f85f39c : QApplicationPrivate::notify_helper(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1f863700 : QApplication::notify(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1ea67df0 : QCoreApplication::notifyInternal2(QObject*, QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab68be : QTimerInfoList::activateTimers() [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab6dc1 : ??? [(???) ???:-1]
+0x3d8bc40642 : g_main_context_dispatch [(libglib-2.0.so.0) ???:-1]
+0x3d8bc44c98 : ??? [(???) ???:-1]
+0x3d8bc44e4c : g_main_context_iteration [(libglib-2.0.so.0) ???:-1]
+0x7f1f1eab7a67 : QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea65e3a : QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea6dc9d : QCoreApplication::exec() [(libQt5Core.so.5) ???:-1]
+0x410991 : main [(paraview) ???:-1]
+0x3d8a01ed20 : __libc_start_main [(libc.so.6) ???:-1]
+0x4106a9 : ??? [(???) ???:-1]
+
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 112
+Error in cache state for GL_BLEND
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 118
+Error in cache state for GL_DEPTH_TEST
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 131
+Error in cache state for GL_MULTISAMPLE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 157
+Error in cache state for GL_VIEWPORT
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 168
+Error in cache state for GL_SCISSOR_BOX
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 180
+Error in cache state for GL_DEPTH_FUNC
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 186
+Error in cache state for GL_BLEND_SRC_RGB
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 204
+Error in cache state for GL_BLEND_DST_ALPHA
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 217
+Error in cache state for GL_COLOR_CLEAR_VALUE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 224
+at stack loc
+0x7f1f1e388025 : vtksys::SystemInformationImplementation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f1e383166 : vtksys::SystemInformation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f2cb72ec3 : vtkOpenGLState::CheckState() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb7495f : vtkOpenGLState::SetEnumState(unsigned int, bool) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2f813919 : vtkOpenGLState::ScopedglEnableDisable::~ScopedglEnableDisable() [(libvtkPVVTKExtensionsRendering-pv5.6.so.1) ???:-1]
+0x7f1f2ca626b2 : vtkCameraPass::Render(vtkRenderState const*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb5b09d : vtkOpenGLRenderer::DeviceRender() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f25a1c916 : vtkRenderer::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a1a2d9 : vtkRendererCollection::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35f3a : vtkRenderWindow::DoStereoRender() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35d2d : vtkRenderWindow::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f2cb575dc : vtkOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca9c61b : vtkGenericOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f32252a45 : vtkPVRenderView::Render(bool, bool) [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f32251ca0 : vtkPVRenderView::StillRender() [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f345a1972 : vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) [(libvtkPVServerManagerApplication-pv5.6.so.1) ???:-1]
+0x7f1f2eecf86f : vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eece043 : vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd64d : vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd4e7 : vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f30e012d4 : vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30e010d3 : vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30dfd700 : vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f312d2ad6 : vtkSMProxy::ExecuteStream(vtkClientServerStream const&, bool, unsigned int) [(libvtkPVServerManagerCore-pv5.6.so.1) ???:-1]
+0x7f1f328a6ef3 : vtkSMViewProxy::StillRender() [(libvtkPVServerManagerRendering-pv5.6.so.1) ???:-1]
+0x7f1f34f5c3b9 : pqView::forceRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f5c30a : pqView::tryRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f74ec1 : ??? [(???) ???:-1]
+0x7f1f1ea90f0f : QMetaObject::activate(QObject*, int, int, void**) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea9e228 : QTimer::timerEvent(QTimerEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f330e8189 : pqTimer::timerEvent(QTimerEvent*) [(libQtTesting-pv5.6.so) ???:-1]
+0x7f1f1ea9248b : QObject::event(QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1f85f39c : QApplicationPrivate::notify_helper(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1f863700 : QApplication::notify(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1ea67df0 : QCoreApplication::notifyInternal2(QObject*, QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab68be : QTimerInfoList::activateTimers() [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab6dc1 : ??? [(???) ???:-1]
+0x3d8bc40642 : g_main_context_dispatch [(libglib-2.0.so.0) ???:-1]
+0x3d8bc44c98 : ??? [(???) ???:-1]
+0x3d8bc44e4c : g_main_context_iteration [(libglib-2.0.so.0) ???:-1]
+0x7f1f1eab7a67 : QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea65e3a : QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea6dc9d : QCoreApplication::exec() [(libQt5Core.so.5) ???:-1]
+0x410991 : main [(paraview) ???:-1]
+0x3d8a01ed20 : __libc_start_main [(libc.so.6) ???:-1]
+0x4106a9 : ??? [(???) ???:-1]
+
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 112
+Error in cache state for GL_BLEND
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 118
+Error in cache state for GL_DEPTH_TEST
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 131
+Error in cache state for GL_MULTISAMPLE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 157
+Error in cache state for GL_VIEWPORT
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 168
+Error in cache state for GL_SCISSOR_BOX
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 180
+Error in cache state for GL_DEPTH_FUNC
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 186
+Error in cache state for GL_BLEND_SRC_RGB
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 204
+Error in cache state for GL_BLEND_DST_ALPHA
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 217
+Error in cache state for GL_COLOR_CLEAR_VALUE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 224
+at stack loc
+0x7f1f1e388025 : vtksys::SystemInformationImplementation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f1e383166 : vtksys::SystemInformation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f2cb72ec3 : vtkOpenGLState::CheckState() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb7478a : vtkOpenGLState::vtkglScissor(int, int, int, int) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb74758 : vtkOpenGLState::Scissor(std::array<int, 4ul>) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2d3f7463 : vtkOpenGLState::ScopedValue<std::array<int, 4ul> >::~ScopedValue() [(libvtkRenderingParallel-pv5.6.so.1) ???:-1]
+0x7f1f2ca63502 : vtkOpenGLState::ScopedglScissor::~ScopedglScissor() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca626c6 : vtkCameraPass::Render(vtkRenderState const*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb5b09d : vtkOpenGLRenderer::DeviceRender() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f25a1c916 : vtkRenderer::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a1a2d9 : vtkRendererCollection::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35f3a : vtkRenderWindow::DoStereoRender() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35d2d : vtkRenderWindow::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f2cb575dc : vtkOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca9c61b : vtkGenericOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f32252a45 : vtkPVRenderView::Render(bool, bool) [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f32251ca0 : vtkPVRenderView::StillRender() [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f345a1972 : vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) [(libvtkPVServerManagerApplication-pv5.6.so.1) ???:-1]
+0x7f1f2eecf86f : vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eece043 : vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd64d : vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd4e7 : vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f30e012d4 : vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30e010d3 : vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30dfd700 : vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f312d2ad6 : vtkSMProxy::ExecuteStream(vtkClientServerStream const&, bool, unsigned int) [(libvtkPVServerManagerCore-pv5.6.so.1) ???:-1]
+0x7f1f328a6ef3 : vtkSMViewProxy::StillRender() [(libvtkPVServerManagerRendering-pv5.6.so.1) ???:-1]
+0x7f1f34f5c3b9 : pqView::forceRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f5c30a : pqView::tryRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f74ec1 : ??? [(???) ???:-1]
+0x7f1f1ea90f0f : QMetaObject::activate(QObject*, int, int, void**) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea9e228 : QTimer::timerEvent(QTimerEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f330e8189 : pqTimer::timerEvent(QTimerEvent*) [(libQtTesting-pv5.6.so) ???:-1]
+0x7f1f1ea9248b : QObject::event(QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1f85f39c : QApplicationPrivate::notify_helper(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1f863700 : QApplication::notify(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1ea67df0 : QCoreApplication::notifyInternal2(QObject*, QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab68be : QTimerInfoList::activateTimers() [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab6dc1 : ??? [(???) ???:-1]
+0x3d8bc40642 : g_main_context_dispatch [(libglib-2.0.so.0) ???:-1]
+0x3d8bc44c98 : ??? [(???) ???:-1]
+0x3d8bc44e4c : g_main_context_iteration [(libglib-2.0.so.0) ???:-1]
+0x7f1f1eab7a67 : QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea65e3a : QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea6dc9d : QCoreApplication::exec() [(libQt5Core.so.5) ???:-1]
+0x410991 : main [(paraview) ???:-1]
+0x3d8a01ed20 : __libc_start_main [(libc.so.6) ???:-1]
+0x4106a9 : ??? [(???) ???:-1]
+
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 112
+Error in cache state for GL_BLEND
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 118
+Error in cache state for GL_DEPTH_TEST
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 131
+Error in cache state for GL_MULTISAMPLE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 157
+Error in cache state for GL_VIEWPORT
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 180
+Error in cache state for GL_DEPTH_FUNC
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 186
+Error in cache state for GL_BLEND_SRC_RGB
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 204
+Error in cache state for GL_BLEND_DST_ALPHA
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 217
+Error in cache state for GL_COLOR_CLEAR_VALUE
+
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/VTK/Rendering/OpenGL2/vtkOpenGLState.cxx, line 224
+at stack loc
+0x7f1f1e388025 : vtksys::SystemInformationImplementation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f1e383166 : vtksys::SystemInformation::GetProgramStack(int, int) [(libvtksys-pv5.6.so.1) ???:-1]
+0x7f1f2cb72ec3 : vtkOpenGLState::CheckState() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb74520 : vtkOpenGLState::vtkglViewport(int, int, int, int) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb744ee : vtkOpenGLState::Viewport(std::array<int, 4ul>) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2d3f7463 : vtkOpenGLState::ScopedValue<std::array<int, 4ul> >::~ScopedValue() [(libvtkRenderingParallel-pv5.6.so.1) ???:-1]
+0x7f1f2d3f73b4 : vtkOpenGLState::ScopedglViewport::~ScopedglViewport() [(libvtkRenderingParallel-pv5.6.so.1) ???:-1]
+0x7f1f2ca626da : vtkCameraPass::Render(vtkRenderState const*) [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2cb5b09d : vtkOpenGLRenderer::DeviceRender() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f25a1c916 : vtkRenderer::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a1a2d9 : vtkRendererCollection::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35f3a : vtkRenderWindow::DoStereoRender() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f25a35d2d : vtkRenderWindow::Render() [(libvtkRenderingCore-pv5.6.so.1) ???:-1]
+0x7f1f2cb575dc : vtkOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f2ca9c61b : vtkGenericOpenGLRenderWindow::Render() [(libvtkRenderingOpenGL2-pv5.6.so.1) ???:-1]
+0x7f1f32252a45 : vtkPVRenderView::Render(bool, bool) [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f32251ca0 : vtkPVRenderView::StillRender() [(libvtkPVClientServerCoreRendering-pv5.6.so.1) ???:-1]
+0x7f1f345a1972 : vtkPVRenderViewCommand(vtkClientServerInterpreter*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&, void*) [(libvtkPVServerManagerApplication-pv5.6.so.1) ???:-1]
+0x7f1f2eecf86f : vtkClientServerInterpreter::CallCommandFunction(char const*, vtkObjectBase*, char const*, vtkClientServerStream const&, vtkClientServerStream&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eece043 : vtkClientServerInterpreter::ProcessCommandInvoke(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd64d : vtkClientServerInterpreter::ProcessOneMessage(vtkClientServerStream const&, int) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f2eecd4e7 : vtkClientServerInterpreter::ProcessStream(vtkClientServerStream const&) [(libvtkClientServer-pv5.6.so.1) ???:-1]
+0x7f1f30e012d4 : vtkPVSessionCore::ExecuteStreamInternal(vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30e010d3 : vtkPVSessionCore::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f30dfd700 : vtkPVSessionBase::ExecuteStream(unsigned int, vtkClientServerStream const&, bool) [(libvtkPVServerImplementationCore-pv5.6.so.1) ???:-1]
+0x7f1f312d2ad6 : vtkSMProxy::ExecuteStream(vtkClientServerStream const&, bool, unsigned int) [(libvtkPVServerManagerCore-pv5.6.so.1) ???:-1]
+0x7f1f328a6ef3 : vtkSMViewProxy::StillRender() [(libvtkPVServerManagerRendering-pv5.6.so.1) ???:-1]
+0x7f1f34f5c3b9 : pqView::forceRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f5c30a : pqView::tryRender() [(libvtkpqCore-pv5.6.so.1) ???:-1]
+0x7f1f34f74ec1 : ??? [(???) ???:-1]
+0x7f1f1ea90f0f : QMetaObject::activate(QObject*, int, int, void**) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea9e228 : QTimer::timerEvent(QTimerEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f330e8189 : pqTimer::timerEvent(QTimerEvent*) [(libQtTesting-pv5.6.so) ???:-1]
+0x7f1f1ea9248b : QObject::event(QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1f85f39c : QApplicationPrivate::notify_helper(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1f863700 : QApplication::notify(QObject*, QEvent*) [(libQt5Widgets.so.5) ???:-1]
+0x7f1f1ea67df0 : QCoreApplication::notifyInternal2(QObject*, QEvent*) [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab68be : QTimerInfoList::activateTimers() [(libQt5Core.so.5) ???:-1]
+0x7f1f1eab6dc1 : ??? [(???) ???:-1]
+0x3d8bc40642 : g_main_context_dispatch [(libglib-2.0.so.0) ???:-1]
+0x3d8bc44c98 : ??? [(???) ???:-1]
+0x3d8bc44e4c : g_main_context_iteration [(libglib-2.0.so.0) ???:-1]
+0x7f1f1eab7a67 : QEventDispatcherGlib::processEvents(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea65e3a : QEventLoop::exec(QFlags<QEventLoop::ProcessEventsFlag>) [(libQt5Core.so.5) ???:-1]
+0x7f1f1ea6dc9d : QCoreApplication::exec() [(libQt5Core.so.5) ???:-1]
+0x410991 : main [(paraview) ???:-1]
+0x3d8a01ed20 : __libc_start_main [(libc.so.6) ???:-1]
+0x4106a9 : ??? [(???) ???:-1]
+
+
+terminate called without an active exception
+[cluster62:29193] *** Process received signal ***
+[cluster62:29193] Signal: Abortado (6)
+[cluster62:29193] Signal code:  (-6)
+[cluster62:29193] [ 0] /lib64/libpthread.so.0[0x3d8ac0f7e0]
+[cluster62:29193] [ 1] /lib64/libc.so.6(gsignal+0x35)[0x3d8a0324f5]
+[cluster62:29193] [ 2] /lib64/libc.so.6(abort+0x175)[0x3d8a033cd5]
+[cluster62:29193] [ 3] /share/apps/gcc/4.9.4/lib64/libstdc++.so.6(_ZN9__gnu_cxx27__verbose_terminate_handlerEv+0x15d)[0x7f1f1d55eb4d]
+[cluster62:29193] [ 4] /share/apps/gcc/4.9.4/lib64/libstdc++.so.6(+0x5db86)[0x7f1f1d55cb86]
+[cluster62:29193] [ 5] /share/apps/gcc/4.9.4/lib64/libstdc++.so.6(+0x5dbd1)[0x7f1f1d55cbd1]
+[cluster62:29193] [ 6] /share/apps/gcc/4.9.4/lib64/libstdc++.so.6(__gxx_personality_v0+0x2dd)[0x7f1f1d55c5dd]
+[cluster62:29193] [ 7] /usr/lib64/libvglfaker.so(+0xabba4)[0x7f1f36385ba4]
+[cluster62:29193] [ 8] /usr/lib64/libvglfaker.so(+0xabdb7)[0x7f1f36385db7]
+[cluster62:29193] [ 9] /usr/lib64/libvglfaker.so(glViewport+0x89d)[0x7f1f362e78ad]
+[cluster62:29193] [10] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN14vtkOpenGLState13vtkglViewportEiiii+0xad)[0x7f1f2cb745a7]
+[cluster62:29193] [11] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN14vtkOpenGLState8ViewportESt5arrayIiLm4EE+0x84)[0x7f1f2cb744ee]
+[cluster62:29193] [12] /share/apps/paraview/5.6.0/lib/libvtkRenderingParallel-pv5.6.so.1(_ZN14vtkOpenGLState11ScopedValueISt5arrayIiLm4EEED1Ev+0x71)[0x7f1f2d3f7463]
+[cluster62:29193] [13] /share/apps/paraview/5.6.0/lib/libvtkRenderingParallel-pv5.6.so.1(_ZN14vtkOpenGLState16ScopedglViewportD1Ev+0x18)[0x7f1f2d3f73b4]
+[cluster62:29193] [14] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN13vtkCameraPass6RenderEPK14vtkRenderState+0xd4c)[0x7f1f2ca626da]
+[cluster62:29193] [15] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN17vtkOpenGLRenderer12DeviceRenderEv+0xc7)[0x7f1f2cb5b09d]
+[cluster62:29193] [16] /share/apps/paraview/5.6.0/lib/libvtkRenderingCore-pv5.6.so.1(_ZN11vtkRenderer6RenderEv+0xc42)[0x7f1f25a1c916]
+[cluster62:29193] [17] /share/apps/paraview/5.6.0/lib/libvtkRenderingCore-pv5.6.so.1(_ZN21vtkRendererCollection6RenderEv+0xc9)[0x7f1f25a1a2d9]
+[cluster62:29193] [18] /share/apps/paraview/5.6.0/lib/libvtkRenderingCore-pv5.6.so.1(_ZN15vtkRenderWindow14DoStereoRenderEv+0xfe)[0x7f1f25a35f3a]
+[cluster62:29193] [19] /share/apps/paraview/5.6.0/lib/libvtkRenderingCore-pv5.6.so.1(_ZN15vtkRenderWindow6RenderEv+0x3bb)[0x7f1f25a35d2d]
+[cluster62:29193] [20] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN21vtkOpenGLRenderWindow6RenderEv+0x18)[0x7f1f2cb575dc]
+[cluster62:29193] [21] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN28vtkGenericOpenGLRenderWindow6RenderEv+0x33)[0x7f1f2ca9c61b]
+[cluster62:29193] [22] /share/apps/paraview/5.6.0/lib/libvtkPVClientServerCoreRendering-pv5.6.so.1(_ZN15vtkPVRenderView6RenderEbb+0xcdd)[0x7f1f32252a45]
+[cluster62:29193] [23] /share/apps/paraview/5.6.0/lib/libvtkPVClientServerCoreRendering-pv5.6.so.1(_ZN15vtkPVRenderView11StillRenderEv+0x9a)[0x7f1f32251ca0]
+[cluster62:29193] [24] /share/apps/paraview/5.6.0/lib/libvtkPVServerManagerApplication-pv5.6.so.1(_Z22vtkPVRenderViewCommandP26vtkClientServerInterpreterP13vtkObjectBasePKcRK21vtkClientServerStreamRS5_Pv+0xf24)[0x7f1f345a1972]
+[cluster62:29193] [25] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter19CallCommandFunctionEPKcP13vtkObjectBaseS1_RK21vtkClientServerStreamRS4_+0x315)[0x7f1f2eecf86f]
+[cluster62:29193] [26] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter20ProcessCommandInvokeERK21vtkClientServerStreami+0x1c5)[0x7f1f2eece043]
+[cluster62:29193] [27] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter17ProcessOneMessageERK21vtkClientServerStreami+0x135)[0x7f1f2eecd64d]
+[cluster62:29193] [28] /share/apps/paraview/5.6.0/lib/libvtkClientServer-pv5.6.so.1(_ZN26vtkClientServerInterpreter13ProcessStreamERK21vtkClientServerStream+0x2f)[0x7f1f2eecd4e7]
+[cluster62:29193] [29] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN16vtkPVSessionCore21ExecuteStreamInternalERK21vtkClientServerStreamb+0xde)[0x7f1f30e012d4]
+[cluster62:29193] *** End of error message ***
+/var/spool/slurmd/job142900/slurm_script: línea 13: 29193 Abortado                vglrun paraview

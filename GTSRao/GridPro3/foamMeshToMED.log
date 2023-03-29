@@ -1,0 +1,47 @@
+/*---------------------------------------------------------------------------*\
+| =========                 |                                                 |
+| \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox           |
+|  \\    /   O peration     | Version:  4.x                                   |
+|   \\  /    A nd           | Web:      www.OpenFOAM.org                      |
+|    \\/     M anipulation  |                                                 |
+\*---------------------------------------------------------------------------*/
+Build  : 4.x
+Exec   : foamMeshToMED
+Date   : Oct 26 2022
+Time   : 16:14:53
+Host   : "cluster62"
+PID    : 123065
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_soft_3
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Read the mesh
+
+Creating MEDfile
+Writing Comment
+Creating Mesh
+Translating time = 0
+wrote 7237728 prisms with each 8 nodes
+going to write face patches to med 
+doing to write face prisms for 204
+going throught the data
+writing to med
+wrote 228240 face prisms with each 4 nodes
+wrote families for 204
+going to write families
+wrote familyinfo for patch floor
+wrote familyinfo for patch rightSide
+wrote familyinfo for patch inlet
+wrote familyinfo for patch GTSf_r_f
+wrote familyinfo for patch leftSide
+wrote familyinfo for patch outlet
+wrote familyinfo for patch GTSright
+wrote familyinfo for patch roof
+wrote familyinfo for patch GTSleft
+wrote familyinfo for patch GTSrear
+End

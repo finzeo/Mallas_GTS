@@ -1,0 +1,326 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : blockMesh
+Date   : Oct 05 2022
+Time   : 15:07:17
+Host   : "cluster62"
+PID    : 194258
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/polyMesh"
+Creating block mesh from
+    "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 1.98462 .. 1.98462
+        j : 2
+        k : 1.93553 .. 1.93553
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-37.8 -18 -0.50401) (117 18 32.4)
+  nPoints: 27018
+  nCells: 23868
+  nFaces: 74640
+  nInternalFaces: 68568
+----------------
+Patches
+----------------
+  patch 0 (start: 68568 size: 2652) name: frontAndBack
+  patch 1 (start: 71220 size: 306) name: inletBB
+  patch 2 (start: 71526 size: 306) name: outletBB
+  patch 3 (start: 71832 size: 1404) name: lowerWallBB
+  patch 4 (start: 73236 size: 1404) name: upperWallBB
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : surfaceFeatures
+Date   : Oct 05 2022
+Time   : 15:07:17
+Host   : "cluster62"
+PID    : 194260
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "vehicleSurfaceMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 147798
+Vertices     : 73901
+Bounding Box : (0.314288 0.013 0) (12.5143 2.613 3.6)
+
+
+Constructing feature set from included angle 179
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 82
+    feature edges  : 1634
+    of which
+        region edges   : 0
+        external edges : 1143
+        internal edges : 491
+
+
+Final feature set:
+points      : 1618
+edges       : 1634
+boundingBox : (0.314303 0.013 0) (12.5143 2.613 3.6)
+point classification :
+    convex feature points          :       63
+    concave feature points         :        0
+    mixed feature points           :       19
+    other (non-feature) points     :     1536
+edge classification :
+    external (convex angle) edges  :     1143
+    internal (concave angle) edges :      491
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/extendedFeatureEdgeMesh/vehicleSurfaceMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/constant/triSurface/vehicleSurfaceMesh.eMesh"
+
+ExecutionTime = 0.61 s  ClockTime = 1 s
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : decomposePar -copyZero
+Date   : Oct 05 2022
+Time   : 15:07:19
+Host   : "cluster62"
+PID    : 194265
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+ Foam::decompositionMethod::New 
+{
+    numberOfSubdomains 4;
+    method          scotch;
+    simpleCoeffs
+    {
+        n               ( 4 1 1 );
+        delta           0.001;
+    }
+    hierarchicalCoeffs
+    {
+        n               ( 3 2 1 );
+        delta           0.001;
+        order           xyz;
+    }
+    manualCoeffs
+    {
+        dataFile        "cellDecomposition";
+    }
+    scotchCoeffs
+    {
+        processorWeights ( 1 1 1 1 );
+    }
+}
+
+Selecting decompositionMethod scotch
+
+Finished decomposition in 0.06 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 5994
+    Number of faces shared with processor 2 = 342
+    Number of faces shared with processor 3 = 306
+    Number of processor patches = 2
+    Number of processor faces = 648
+    Number of boundary faces = 1386
+
+Processor 1
+    Number of cells = 5967
+    Number of faces shared with processor 3 = 323
+    Number of processor patches = 1
+    Number of processor faces = 323
+    Number of boundary faces = 1671
+
+Processor 2
+    Number of cells = 5940
+    Number of faces shared with processor 0 = 342
+    Number of processor patches = 1
+    Number of processor faces = 342
+    Number of boundary faces = 1650
+
+Processor 3
+    Number of cells = 5967
+    Number of faces shared with processor 0 = 306
+    Number of faces shared with processor 1 = 323
+    Number of processor patches = 2
+    Number of processor faces = 629
+    Number of boundary faces = 1365
+
+Number of processor faces = 971
+Max number of cells = 5994 (0.452489% above average 5967)
+Max number of processor patches = 2 (33.3333% above average 1.5)
+Max number of faces between processors = 648 (33.4706% above average 485.5)
+
+Processor 0: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor0/0"
+Processor 1: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor1/0"
+Processor 2: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor2/0"
+Processor 3: copying "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor3/0"
+
+End
+
+[1] 
+[1] 
+[1] --> FOAM FATAL IO ERROR: 
+[1] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor1/constant/triSurface/topMesh.eMesh"
+[1] 
+[1] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[1] 
+[1]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[1]     in file refinementFeatures/refinementFeatures.C at line 98.
+[1] 
+FOAM parallel run exiting
+[1] 
+[2] 
+[2] 
+[2] --> FOAM FATAL IO ERROR: 
+[2] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor2/constant/triSurface/topMesh.eMesh"
+[2] 
+[2] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[2] 
+[2]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[2]     in file refinementFeatures/refinementFeatures.C at line 98.
+[2] 
+FOAM parallel run exiting
+[2] 
+[0] 
+[0] 
+[0] --> FOAM FATAL IO ERROR: 
+[0] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor0/constant/triSurface/topMesh.eMesh"
+[0] 
+[0] file: /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/system/snappyHexMeshDict.castellatedMeshControls.features from line 129 to line 130.
+[0] 
+[0]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[0]     in file refinementFeatures/refinementFeatures.C at line 98.
+[0] 
+FOAM parallel run exiting
+[0] 
+[3] 
+[3] 
+[3] --> FOAM FATAL IO ERROR: 
+[3] Could not open "/share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/processor3/constant/triSurface/topMesh.eMesh"
+[3] 
+[3] file: IOstream.castellatedMeshControls.features from line 0 to line 0.
+[3] 
+[3]     From function void Foam::refinementFeatures::read(const Foam::objectRegistry&, const Foam::PtrList<Foam::dictionary>&)
+[3]     in file refinementFeatures/refinementFeatures.C at line 98.
+[3] 
+FOAM parallel run exiting
+[3] 
+[cluster62:194273] 3 more processes have sent help message help-mpi-api.txt / mpi-abort
+[cluster62:194273] Set MCA parameter "orte_base_help_aggregate" to 0 to see all help / error messages
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find patchField entry for inletBB
+
+file: /share/storage/finzeo/Mallas/GTSTunay/gts_mesh_lowresolution/0/p.boundaryField from line 11 to line 16.
+
+    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /share/apps/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 191.
+
+FOAM exiting
+

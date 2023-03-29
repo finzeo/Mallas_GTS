@@ -1,0 +1,106 @@
+Refinamiento sobre la superficie del vehículo:
+	10 capas
+	1.20 growth factor
+	0.65 tamaño en última capa
+	minThickness 0.09 (de forma que 1.20^10 sea menor a 0.65/0.09, ya que así se permite ese crecimiento de tamaño sobre la capa)
+El nivel 1 de refinamiento cubre todo el ancho, y toda la entrada
+nCellsBetweenLevels 3
+level (4 4) para la superficie del GTS (para que esté en concordancia con Explicit feature edge refinement)
+ERROR
+
+Se intenta colocar minThickness 0.1
+ERROR (igual al anterior)
+
+Se coloca 0.3 tamaño en última capa y minThickness 0.04 (quizás llevando hacia abajo los valores, y acercándolos, mejore)
+
+Ahora se coloca 0.3 tamaño en última capa y minThickness 0.01 (quizás llevando hacia abajo los valores, y acercándolos, mejore)
+
+Malla 18
+Ahora se coloca resolveFeatureAngle 15 (antes 30; para resolver mejor las regiones angulosas) y level (4 5) para el surface refinement de la superficie del vehículo
+Se resolvió la falta de capa estructurada de malla en alguna zona en torno al vehículo. Por el momento, ningún defecto de malla a destacar.
+Tiene el inconveniente de que hubo una equivocación en la altura total del dominio (es 32.904, y no 32.6)
+
+Malla 19
+Se cambia la altura total del dominio de 32.6 a 32.904 (tal como indica Rao)
+Se intenta resolver el achaflanado de las esquinas con edge refinement en snappy
+
+Malla 20
+Los .stl usados se crean a partir de celdas hexaédricas fundamentalmente, y con mejor refinamiento (en vista de lograr finalmente una malla lo más simétrica
+posible respecto del plano vertical medio)
+Se usan límites del dominio de blockMesh coincidentes con los del dominio final (antes, se había extendido 1 m en cada borde)
+Se crean más niveles de refinamiento (7), fundamentalmente, cerca del vehículo, y asociados a regiones más alargadas sobre la estela.
+Se pasa de nCellsBetweenLevels=3 a nCellsBetweenLevels=8
+
+Malla 21
+Dado que la malla anterior sobrepasaba el límite de celdas que arbitrariamente elegí (70 M), quité un nivel de refinamiento (ahora son 6), con el último
+nivel muy próximo al vehículo. El refinamiento de la superficie del GTS está dado por (3 6).
+Me detecta los patchs upperWallBB, lowerWallBB, top, lateral, inlet y outlet
+Sí se generan las capas de celdas hexaédricas adyacentes al vehículo
+
+Malla 22
+Se intenta refinar la superficie del GTS con (6 6) e
+incrementar la zona de refinamiento 6 (apenas)
+Además, se redimensionan convenientemente los diferentes niveles de refinamiento, a fin de minimizar el número de celdas sin perder la calidad de la malla requerida
+Todo esto se hizo habiendo pensado (erróneamente) que la malla 21 venía sin capas de celdas adyacentes a la pared del vehículo.
+
+Malla 23
+Dado que en la malla anterior no se logró tener un buen valor de yplus aunque se haya refinado en gran medida, se aborda de la siguiente manera:
+Se estima yplus con https://www.cfd-online.com/Tools/yplus.php, y se determina una distancia estimada de 1.7e-5 para lograr yplus=1,
+con lo cual se busca refinar la malla hasta nivel 5, con una capa de 35 celdas con crecimiento de 1.2 y tamaño relativo de la última capa de 0.3
+Dado que en Rao se ve que los detalles más relevantes de la estela se extienden hasta 1L aproximadamente desde la parte trasera del vehículo, usar un nivel de
+refinamiento acorde a dicha distancia.
+Se generó sin capa de celdas adyacentes a la pared (por 6 millones de caras con faces on cells with determinant < 0.001, probablemente, por ser tan alargadas las
+celdas próximas a la pared)
+
+Malla 24
+Para poder evitar el problema de la malla anterior (no genera capa de celdas adyacentes a la pared por celdas con determinanete < 0.001), se usa un menor número de
+capas (22), con crecimiento de 1.2 y tamaño relativo de última capa de 0.3.
+Se acorta la longitud de la zona de refinamiento 3.
+La zona de refinamiento 5 ahora no es una región dada por un paralelepípedo, sino que se da en torno al modelo GTS (refinar a nivel 5 hasta una distancia de 0.3 en torno a aquel)
+No se logra una adición de capas completa (en las cuatro esquinas falla en generarse)
+
+Malla 25
+Para evitar problema de malla anterior (no generarse capas de celdas adyacentes a la pared sobre las esquinas) se usa refinamiento (7 8) sobre la superficie
+y nivel 7 sobre una región extra en torno al vehículo.
+growth factor de 1.25 y 15 capas.
+
+Malla 25_2:
+Basandose en la malla 25, se achica zona de 7 (nCellsBetweenLevels 3), al nivel 3 se lo pone cerca del 4, a los niveles 3 y 4 se les saca altura y ancho, y se añaden 3 capas a lowerWallBB. Se agrega en meshQualityDict, minDeterminant 0.0001 (por default es 0.001).
+Sobre el GTS, 16 capas con growth factor de 1.3.
+Se obtiene una malla de 74 M de celdas, formandose bien las capas de celdas consideradas
+
+Malla 26_3
+Se considera tamaño base de malla de blockMesh de 0.6 m (casi como el nivel 1 original)
+Se consideran en blockMesh medidas apenas mas grandes de las necesarias (por 0.001), para usar los archivos .stl como patches y evitar cualquier eventual problema
+Se eliminan refinementBoxs de niveles 3, 5 y 6 (2, 4 y 5 de los niveles actuales) (se generan automaticamente como transicion, para los niveles 4 y 7 (3 y 6 de los actuales)
+Se usa nivel (6 7) en torno al GTS
+Se generan refinementBoxs sobre la entrada y la salida, de 4 capas de espesor, de nivel 2
+Capa limite: 19 para suelo y 17 para GTS, con growth factor de 1.3
+nCellsBetweenLevels 4 (con 3 daba irregularidades)
+
+Malla 27
+Gran cambio
+Se usa un unico archivo .stl (vehiculo), para ver si esto es responsable de achaflanarse las esquinas
+resolveFeatureAngle 10, y includedAngle 165
+level (6 7) para GTS
+Capa limite: 19 para suelo y 17 para GTS, con growth factor de 1.3
+
+Malla 28_1
+Aplicacion de cuestiones explicadas por Horacio (15/09)
+Medidas exteriores exactas en blockmesh
+refinementBox nivel 2 manual para que no haya mala transicion entre niveles 2 y 3
+Capa limite: 4 para suelo y 11 para GTS, con growth factor de 1.5 y finalLayerThickness 0.66 (valor reciproco de 1.5)
+includedAngle 179 (se observo en Paraview que con esto se reconocen bien todos los bordes del GTS)
+Sigue sin generarse las capas en torno a los bordes redondeados frontales
+Malla 28_2
+A lo anterior, se agrega desactivar tet quality
+Se genera bien la capa de celdas, pero la solucion diverge (o quizas por CBs en el suelo?)
+Malla 28_3
+A lo anterior, se cambia a false true true el Feature snapping
+Malla 28_4
+Se activa tet quality pero no en la etapa de addlayers, y permanece lo demas hecho
+
+Malla 29
+Conservando las mejoras hechas con las mallas 28_x, se agrega:
+Se usa modelo geometrico hecho en SolidWorks, el cual esta mejor definido (sobre todo, en la region asociada al redondeado superior)
+Se usa includedAngle 179.8 para poder detectar como borde todos los redondeados

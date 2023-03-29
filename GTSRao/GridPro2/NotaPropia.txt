@@ -1,0 +1,6 @@
+Malla 1
+Primera malla pasada por Guillermo
+
+Malla 2
+Segunda malla pasada por Guillermo
+2.11 M celdas hexaedricas unicamente

@@ -1,0 +1,1122 @@
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : blockMesh
+Date   : Aug 25 2022
+Time   : 16:28:13
+Host   : "compute-0-8.local"
+PID    : 73023
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gtsconverted26
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Deleting polyMesh directory
+    "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/polyMesh"
+Creating block mesh from
+    "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/system/blockMeshDict"
+Creating block edges
+No non-planar block faces defined
+Creating topology blocks
+Creating topology patches
+
+Creating block mesh topology
+
+Check topology
+
+	Basic statistics
+		Number of internal faces : 0
+		Number of boundary faces : 6
+		Number of defined boundary faces : 6
+		Number of undefined boundary faces : 0
+	Checking patch -> block consistency
+
+Creating block offsets
+Creating merge list .
+
+Creating polyMesh from blockMesh
+Creating patches
+Creating cells
+Creating points with scale 1
+    Block 0 cell size :
+        i : 0.6 .. 0.6
+        j : 0.6
+        k : 0.598255 .. 0.598255
+
+There are no merge patch pairs edges
+
+Writing polyMesh
+----------------
+Mesh Information
+----------------
+  boundingBox: (-37.8 -18 -0.50401) (117 18 32.4)
+  nPoints: 884744
+  nCells: 851400
+  nFaces: 2587170
+  nInternalFaces: 2521230
+----------------
+Patches
+----------------
+  patch 0 (start: 2521230 size: 28380) name: frontAndBack
+  patch 1 (start: 2549610 size: 3300) name: inletBB
+  patch 2 (start: 2552910 size: 3300) name: outletBB
+  patch 3 (start: 2556210 size: 15480) name: lowerWallBB
+  patch 4 (start: 2571690 size: 15480) name: upperWallBB
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : surfaceFeatures
+Date   : Aug 25 2022
+Time   : 16:28:16
+Host   : "compute-0-8.local"
+PID    : 73024
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gtsconverted26
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+Reading surfaceFeaturesDict
+
+Surface            : "vehicleSurfaceMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 1566370
+Vertices     : 783187
+Bounding Box : (-12.2 -1.3 0) (0 1.3 3.6)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 4026
+    of which
+        region edges   : 0
+        external edges : 3719
+        internal edges : 307
+
+
+Final feature set:
+points      : 4026
+edges       : 4026
+boundingBox : (-12.185 -1.3 0) (0 1.3 3.6)
+point classification :
+    convex feature points          :        4
+    concave feature points         :        0
+    mixed feature points           :        0
+    other (non-feature) points     :     4022
+edge classification :
+    external (convex angle) edges  :     3719
+    internal (concave angle) edges :      307
+    flat region edges              :        0
+    open edges                     :        0
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/vehicleSurfaceMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/vehicleSurfaceMesh.eMesh"
+
+Surface            : "bottomNoSlipMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 2592
+Vertices     : 1375
+Bounding Box : (-21.2 -10.8 -0.504) (27 10.8 -0.504)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 156
+    of which
+        region edges   : 156
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 156
+edges       : 156
+boundingBox : (-21.2 -10.8 -0.504) (27 10.8 -0.504)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :      152
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      156
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/bottomNoSlipMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/bottomNoSlipMesh.eMesh"
+
+Surface            : "bottomSlipMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 11232
+Vertices     : 5906
+Bounding Box : (-37.8 -18 -0.504) (117 18 -0.504)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 8
+    feature edges  : 580
+    of which
+        region edges   : 580
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 580
+edges       : 580
+boundingBox : (-37.8 -18 -0.504) (117 18 -0.504)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        8
+    other (non-feature) points     :      572
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      580
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/bottomSlipMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/bottomSlipMesh.eMesh"
+
+Surface            : "inletMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 26400
+Vertices     : 13431
+Bounding Box : (-37.8 -18 -0.504) (-37.8 18 32.4)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 460
+    of which
+        region edges   : 460
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 460
+edges       : 460
+boundingBox : (-37.8 -18 -0.504) (-37.8 18 32.4)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :      456
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      460
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/inletMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/inletMesh.eMesh"
+
+Surface            : "outletMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 26400
+Vertices     : 13431
+Bounding Box : (117 -18 -0.504) (117 18 32.4)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 460
+    of which
+        region edges   : 460
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 460
+edges       : 460
+boundingBox : (117 -18 -0.504) (117 18 32.4)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :      456
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      460
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/outletMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/outletMesh.eMesh"
+
+Surface            : "lateralMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 25456
+Vertices     : 13148
+Bounding Box : (-37.8 -18 -0.504) (117 18 32.4)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 8
+    feature edges  : 836
+    of which
+        region edges   : 836
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 836
+edges       : 836
+boundingBox : (-37.8 -18 -0.504) (117 18 32.4)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        8
+    other (non-feature) points     :      828
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      836
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/lateralMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/lateralMesh.eMesh"
+
+Surface            : "topMesh.stl"
+
+
+Feature line extraction is only valid on closed manifold surfaces.
+Statistics:
+Triangles    : 13760
+Vertices     : 7093
+Bounding Box : (-37.8 -18 32.4) (117 18 32.4)
+
+
+Constructing feature set from included angle 150
+Selecting edges purely based on geometric tests: no
+Removing all non-manifold edges (edges with > 2 connected faces) unless they cross multiple regions
+
+Initial feature set:
+    feature points : 4
+    feature edges  : 424
+    of which
+        region edges   : 424
+        external edges : 0
+        internal edges : 0
+
+
+Final feature set:
+points      : 424
+edges       : 424
+boundingBox : (-37.8 -18 32.4) (117 18 32.4)
+point classification :
+    convex feature points          :        0
+    concave feature points         :        0
+    mixed feature points           :        4
+    other (non-feature) points     :      420
+edge classification :
+    external (convex angle) edges  :        0
+    internal (concave angle) edges :        0
+    flat region edges              :        0
+    open edges                     :      424
+    multiply connected edges       :        0
+
+Writing extendedFeatureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/extendedFeatureEdgeMesh/topMesh.extendedFeatureEdgeMesh"
+
+Writing featureEdgeMesh to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/constant/triSurface/topMesh.eMesh"
+
+ExecutionTime = 7.89 s  ClockTime = 8 s
+
+End
+
+/*---------------------------------------------------------------------------*\
+  =========                 |
+  \\      /  F ield         | OpenFOAM: The Open Source CFD Toolbox
+   \\    /   O peration     | Website:  https://openfoam.org
+    \\  /    A nd           | Version:  7
+     \\/     M anipulation  |
+\*---------------------------------------------------------------------------*/
+Build  : 7
+Exec   : decomposePar -copyZero
+Date   : Aug 25 2022
+Time   : 16:28:24
+Host   : "compute-0-8.local"
+PID    : 73025
+I/O    : uncollated
+Case   : /share/storage/finzeo/Mallas/GTSTunay/gtsconverted26
+nProcs : 1
+sigFpe : Enabling floating point exception trapping (FOAM_SIGFPE).
+fileModificationChecking : Monitoring run-time modified files using timeStampMaster (fileModificationSkew 10)
+allowSystemOperations : Allowing user-supplied system call operations
+
+// * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * * //
+Create time
+
+
+
+Decomposing mesh region0
+
+Create mesh
+
+Calculating distribution of cells
+ Foam::decompositionMethod::New 
+{
+    numberOfSubdomains 40;
+    method          scotch;
+    simpleCoeffs
+    {
+        n               ( 4 1 1 );
+        delta           0.001;
+    }
+    hierarchicalCoeffs
+    {
+        n               ( 3 2 1 );
+        delta           0.001;
+        order           xyz;
+    }
+    manualCoeffs
+    {
+        dataFile        "cellDecomposition";
+    }
+    scotchCoeffs
+    {
+        processorWeights ( 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 1 );
+    }
+}
+
+Selecting decompositionMethod scotch
+
+Finished decomposition in 4.37 s
+
+Calculating original mesh data
+
+Distributing cells to processors
+
+Distributing faces to processors
+
+Distributing points to processors
+
+Constructing processor meshes
+
+Processor 0
+    Number of cells = 21451
+    Number of faces shared with processor 2 = 660
+    Number of faces shared with processor 4 = 20
+    Number of faces shared with processor 8 = 393
+    Number of faces shared with processor 12 = 978
+    Number of faces shared with processor 16 = 165
+    Number of faces shared with processor 18 = 33
+    Number of faces shared with processor 20 = 207
+    Number of faces shared with processor 22 = 222
+    Number of faces shared with processor 28 = 305
+    Number of faces shared with processor 30 = 523
+    Number of faces shared with processor 32 = 1147
+    Number of faces shared with processor 34 = 388
+    Number of processor patches = 12
+    Number of processor faces = 5041
+    Number of boundary faces = 901
+
+Processor 1
+    Number of cells = 21073
+    Number of faces shared with processor 9 = 593
+    Number of faces shared with processor 11 = 237
+    Number of faces shared with processor 17 = 671
+    Number of faces shared with processor 19 = 758
+    Number of faces shared with processor 25 = 324
+    Number of faces shared with processor 33 = 1116
+    Number of processor patches = 6
+    Number of processor faces = 3699
+    Number of boundary faces = 1937
+
+Processor 2
+    Number of cells = 21497
+    Number of faces shared with processor 0 = 660
+    Number of faces shared with processor 6 = 612
+    Number of faces shared with processor 8 = 14
+    Number of faces shared with processor 10 = 455
+    Number of faces shared with processor 12 = 86
+    Number of faces shared with processor 14 = 295
+    Number of faces shared with processor 18 = 826
+    Number of faces shared with processor 22 = 616
+    Number of faces shared with processor 26 = 316
+    Number of faces shared with processor 30 = 895
+    Number of faces shared with processor 34 = 1420
+    Number of faces shared with processor 38 = 152
+    Number of processor patches = 12
+    Number of processor faces = 6347
+    Number of boundary faces = 167
+
+Processor 3
+    Number of cells = 21148
+    Number of faces shared with processor 4 = 497
+    Number of faces shared with processor 15 = 183
+    Number of faces shared with processor 19 = 752
+    Number of faces shared with processor 31 = 667
+    Number of faces shared with processor 35 = 1065
+    Number of faces shared with processor 36 = 511
+    Number of faces shared with processor 39 = 282
+    Number of processor patches = 7
+    Number of processor faces = 3957
+    Number of boundary faces = 1779
+
+Processor 4
+    Number of cells = 21497
+    Number of faces shared with processor 0 = 20
+    Number of faces shared with processor 3 = 497
+    Number of faces shared with processor 7 = 58
+    Number of faces shared with processor 8 = 308
+    Number of faces shared with processor 12 = 210
+    Number of faces shared with processor 16 = 372
+    Number of faces shared with processor 20 = 559
+    Number of faces shared with processor 24 = 1054
+    Number of faces shared with processor 28 = 390
+    Number of faces shared with processor 31 = 89
+    Number of faces shared with processor 32 = 314
+    Number of faces shared with processor 35 = 343
+    Number of faces shared with processor 36 = 982
+    Number of faces shared with processor 39 = 295
+    Number of processor patches = 14
+    Number of processor faces = 5491
+    Number of boundary faces = 473
+
+Processor 5
+    Number of cells = 21289
+    Number of faces shared with processor 9 = 196
+    Number of faces shared with processor 13 = 580
+    Number of faces shared with processor 17 = 477
+    Number of faces shared with processor 21 = 363
+    Number of faces shared with processor 25 = 854
+    Number of faces shared with processor 29 = 45
+    Number of faces shared with processor 33 = 345
+    Number of faces shared with processor 37 = 1284
+    Number of processor patches = 8
+    Number of processor faces = 4144
+    Number of boundary faces = 1396
+
+Processor 6
+    Number of cells = 21113
+    Number of faces shared with processor 2 = 612
+    Number of faces shared with processor 14 = 151
+    Number of faces shared with processor 18 = 417
+    Number of faces shared with processor 22 = 1022
+    Number of faces shared with processor 26 = 518
+    Number of faces shared with processor 30 = 360
+    Number of faces shared with processor 38 = 1379
+    Number of processor patches = 7
+    Number of processor faces = 4459
+    Number of boundary faces = 1317
+
+Processor 7
+    Number of cells = 21323
+    Number of faces shared with processor 4 = 58
+    Number of faces shared with processor 11 = 107
+    Number of faces shared with processor 16 = 885
+    Number of faces shared with processor 23 = 579
+    Number of faces shared with processor 27 = 729
+    Number of faces shared with processor 28 = 179
+    Number of faces shared with processor 35 = 278
+    Number of faces shared with processor 39 = 1111
+    Number of processor patches = 8
+    Number of processor faces = 3926
+    Number of boundary faces = 1718
+
+Processor 8
+    Number of cells = 21251
+    Number of faces shared with processor 0 = 393
+    Number of faces shared with processor 2 = 14
+    Number of faces shared with processor 4 = 308
+    Number of faces shared with processor 18 = 100
+    Number of faces shared with processor 20 = 818
+    Number of faces shared with processor 22 = 858
+    Number of faces shared with processor 24 = 657
+    Number of faces shared with processor 32 = 707
+    Number of processor patches = 8
+    Number of processor faces = 3855
+    Number of boundary faces = 1439
+
+Processor 9
+    Number of cells = 21225
+    Number of faces shared with processor 1 = 593
+    Number of faces shared with processor 5 = 196
+    Number of faces shared with processor 13 = 850
+    Number of faces shared with processor 25 = 895
+    Number of faces shared with processor 33 = 528
+    Number of processor patches = 5
+    Number of processor faces = 3062
+    Number of boundary faces = 2280
+
+Processor 10
+    Number of cells = 21103
+    Number of faces shared with processor 2 = 455
+    Number of faces shared with processor 14 = 667
+    Number of faces shared with processor 26 = 689
+    Number of faces shared with processor 34 = 610
+    Number of faces shared with processor 38 = 237
+    Number of processor patches = 5
+    Number of processor faces = 2658
+    Number of boundary faces = 2310
+
+Processor 11
+    Number of cells = 21386
+    Number of faces shared with processor 1 = 237
+    Number of faces shared with processor 7 = 107
+    Number of faces shared with processor 17 = 552
+    Number of faces shared with processor 19 = 534
+    Number of faces shared with processor 21 = 443
+    Number of faces shared with processor 23 = 583
+    Number of faces shared with processor 27 = 716
+    Number of faces shared with processor 33 = 60
+    Number of faces shared with processor 35 = 497
+    Number of faces shared with processor 39 = 86
+    Number of processor patches = 10
+    Number of processor faces = 3815
+    Number of boundary faces = 1441
+
+Processor 12
+    Number of cells = 21497
+    Number of faces shared with processor 0 = 978
+    Number of faces shared with processor 2 = 86
+    Number of faces shared with processor 4 = 210
+    Number of faces shared with processor 18 = 158
+    Number of faces shared with processor 20 = 690
+    Number of faces shared with processor 28 = 953
+    Number of faces shared with processor 32 = 53
+    Number of faces shared with processor 34 = 721
+    Number of faces shared with processor 36 = 327
+    Number of processor patches = 9
+    Number of processor faces = 4176
+    Number of boundary faces = 1554
+
+Processor 13
+    Number of cells = 21194
+    Number of faces shared with processor 5 = 580
+    Number of faces shared with processor 9 = 850
+    Number of faces shared with processor 29 = 1021
+    Number of faces shared with processor 33 = 262
+    Number of faces shared with processor 37 = 530
+    Number of processor patches = 5
+    Number of processor faces = 3243
+    Number of boundary faces = 2191
+
+Processor 14
+    Number of cells = 21163
+    Number of faces shared with processor 2 = 295
+    Number of faces shared with processor 6 = 151
+    Number of faces shared with processor 10 = 667
+    Number of faces shared with processor 30 = 756
+    Number of faces shared with processor 38 = 797
+    Number of processor patches = 5
+    Number of processor faces = 2666
+    Number of boundary faces = 2396
+
+Processor 15
+    Number of cells = 21497
+    Number of faces shared with processor 3 = 183
+    Number of faces shared with processor 19 = 657
+    Number of faces shared with processor 21 = 501
+    Number of faces shared with processor 23 = 485
+    Number of faces shared with processor 29 = 567
+    Number of faces shared with processor 31 = 1075
+    Number of faces shared with processor 33 = 460
+    Number of faces shared with processor 39 = 238
+    Number of processor patches = 8
+    Number of processor faces = 4166
+    Number of boundary faces = 1282
+
+Processor 16
+    Number of cells = 21082
+    Number of faces shared with processor 0 = 165
+    Number of faces shared with processor 4 = 372
+    Number of faces shared with processor 7 = 885
+    Number of faces shared with processor 24 = 473
+    Number of faces shared with processor 28 = 632
+    Number of faces shared with processor 32 = 1007
+    Number of faces shared with processor 39 = 324
+    Number of processor patches = 7
+    Number of processor faces = 3858
+    Number of boundary faces = 1546
+
+Processor 17
+    Number of cells = 21461
+    Number of faces shared with processor 1 = 671
+    Number of faces shared with processor 5 = 477
+    Number of faces shared with processor 11 = 552
+    Number of faces shared with processor 21 = 717
+    Number of faces shared with processor 25 = 699
+    Number of faces shared with processor 33 = 346
+    Number of processor patches = 6
+    Number of processor faces = 3462
+    Number of boundary faces = 1858
+
+Processor 18
+    Number of cells = 21419
+    Number of faces shared with processor 0 = 33
+    Number of faces shared with processor 2 = 826
+    Number of faces shared with processor 6 = 417
+    Number of faces shared with processor 8 = 100
+    Number of faces shared with processor 12 = 158
+    Number of faces shared with processor 20 = 770
+    Number of faces shared with processor 22 = 394
+    Number of faces shared with processor 26 = 494
+    Number of faces shared with processor 34 = 451
+    Number of processor patches = 9
+    Number of processor faces = 3643
+    Number of boundary faces = 1839
+
+Processor 19
+    Number of cells = 21496
+    Number of faces shared with processor 1 = 758
+    Number of faces shared with processor 3 = 752
+    Number of faces shared with processor 11 = 534
+    Number of faces shared with processor 15 = 657
+    Number of faces shared with processor 21 = 33
+    Number of faces shared with processor 23 = 49
+    Number of faces shared with processor 33 = 500
+    Number of faces shared with processor 35 = 635
+    Number of faces shared with processor 39 = 83
+    Number of processor patches = 9
+    Number of processor faces = 4001
+    Number of boundary faces = 1407
+
+Processor 20
+    Number of cells = 21464
+    Number of faces shared with processor 0 = 207
+    Number of faces shared with processor 4 = 559
+    Number of faces shared with processor 8 = 818
+    Number of faces shared with processor 12 = 690
+    Number of faces shared with processor 18 = 770
+    Number of faces shared with processor 36 = 674
+    Number of processor patches = 6
+    Number of processor faces = 3718
+    Number of boundary faces = 1700
+
+Processor 21
+    Number of cells = 21239
+    Number of faces shared with processor 5 = 363
+    Number of faces shared with processor 11 = 443
+    Number of faces shared with processor 15 = 501
+    Number of faces shared with processor 17 = 717
+    Number of faces shared with processor 19 = 33
+    Number of faces shared with processor 23 = 1128
+    Number of faces shared with processor 29 = 338
+    Number of faces shared with processor 33 = 483
+    Number of faces shared with processor 37 = 1053
+    Number of processor patches = 9
+    Number of processor faces = 5059
+    Number of boundary faces = 907
+
+Processor 22
+    Number of cells = 21076
+    Number of faces shared with processor 0 = 222
+    Number of faces shared with processor 2 = 616
+    Number of faces shared with processor 6 = 1022
+    Number of faces shared with processor 8 = 858
+    Number of faces shared with processor 18 = 394
+    Number of faces shared with processor 30 = 496
+    Number of faces shared with processor 32 = 275
+    Number of processor patches = 7
+    Number of processor faces = 3883
+    Number of boundary faces = 1621
+
+Processor 23
+    Number of cells = 21478
+    Number of faces shared with processor 7 = 579
+    Number of faces shared with processor 11 = 583
+    Number of faces shared with processor 15 = 485
+    Number of faces shared with processor 19 = 49
+    Number of faces shared with processor 21 = 1128
+    Number of faces shared with processor 27 = 32
+    Number of faces shared with processor 31 = 95
+    Number of faces shared with processor 37 = 60
+    Number of faces shared with processor 39 = 613
+    Number of processor patches = 9
+    Number of processor faces = 3624
+    Number of boundary faces = 1890
+
+Processor 24
+    Number of cells = 21399
+    Number of faces shared with processor 4 = 1054
+    Number of faces shared with processor 8 = 657
+    Number of faces shared with processor 16 = 473
+    Number of faces shared with processor 31 = 459
+    Number of faces shared with processor 32 = 278
+    Number of faces shared with processor 39 = 475
+    Number of processor patches = 6
+    Number of processor faces = 3396
+    Number of boundary faces = 1910
+
+Processor 25
+    Number of cells = 21105
+    Number of faces shared with processor 1 = 324
+    Number of faces shared with processor 5 = 854
+    Number of faces shared with processor 9 = 895
+    Number of faces shared with processor 17 = 699
+    Number of faces shared with processor 33 = 101
+    Number of processor patches = 5
+    Number of processor faces = 2873
+    Number of boundary faces = 2357
+
+Processor 26
+    Number of cells = 21170
+    Number of faces shared with processor 2 = 316
+    Number of faces shared with processor 6 = 518
+    Number of faces shared with processor 10 = 689
+    Number of faces shared with processor 18 = 494
+    Number of faces shared with processor 34 = 112
+    Number of faces shared with processor 38 = 659
+    Number of processor patches = 6
+    Number of processor faces = 2788
+    Number of boundary faces = 2268
+
+Processor 27
+    Number of cells = 21307
+    Number of faces shared with processor 7 = 729
+    Number of faces shared with processor 11 = 716
+    Number of faces shared with processor 23 = 32
+    Number of faces shared with processor 28 = 678
+    Number of faces shared with processor 35 = 1018
+    Number of faces shared with processor 36 = 160
+    Number of processor patches = 6
+    Number of processor faces = 3333
+    Number of boundary faces = 2063
+
+Processor 28
+    Number of cells = 21404
+    Number of faces shared with processor 0 = 305
+    Number of faces shared with processor 4 = 390
+    Number of faces shared with processor 7 = 179
+    Number of faces shared with processor 12 = 953
+    Number of faces shared with processor 16 = 632
+    Number of faces shared with processor 27 = 678
+    Number of faces shared with processor 32 = 120
+    Number of faces shared with processor 35 = 29
+    Number of faces shared with processor 36 = 510
+    Number of processor patches = 9
+    Number of processor faces = 3796
+    Number of boundary faces = 1652
+
+Processor 29
+    Number of cells = 21134
+    Number of faces shared with processor 5 = 45
+    Number of faces shared with processor 13 = 1021
+    Number of faces shared with processor 15 = 567
+    Number of faces shared with processor 21 = 338
+    Number of faces shared with processor 33 = 841
+    Number of faces shared with processor 37 = 479
+    Number of processor patches = 6
+    Number of processor faces = 3291
+    Number of boundary faces = 1889
+
+Processor 30
+    Number of cells = 21350
+    Number of faces shared with processor 0 = 523
+    Number of faces shared with processor 2 = 895
+    Number of faces shared with processor 6 = 360
+    Number of faces shared with processor 14 = 756
+    Number of faces shared with processor 22 = 496
+    Number of faces shared with processor 32 = 374
+    Number of faces shared with processor 38 = 39
+    Number of processor patches = 7
+    Number of processor faces = 3443
+    Number of boundary faces = 1927
+
+Processor 31
+    Number of cells = 21109
+    Number of faces shared with processor 3 = 667
+    Number of faces shared with processor 4 = 89
+    Number of faces shared with processor 15 = 1075
+    Number of faces shared with processor 23 = 95
+    Number of faces shared with processor 24 = 459
+    Number of faces shared with processor 39 = 1135
+    Number of processor patches = 6
+    Number of processor faces = 3520
+    Number of boundary faces = 2178
+
+Processor 32
+    Number of cells = 21243
+    Number of faces shared with processor 0 = 1147
+    Number of faces shared with processor 4 = 314
+    Number of faces shared with processor 8 = 707
+    Number of faces shared with processor 12 = 53
+    Number of faces shared with processor 16 = 1007
+    Number of faces shared with processor 22 = 275
+    Number of faces shared with processor 24 = 278
+    Number of faces shared with processor 28 = 120
+    Number of faces shared with processor 30 = 374
+    Number of processor patches = 9
+    Number of processor faces = 4275
+    Number of boundary faces = 1713
+
+Processor 33
+    Number of cells = 21367
+    Number of faces shared with processor 1 = 1116
+    Number of faces shared with processor 5 = 345
+    Number of faces shared with processor 9 = 528
+    Number of faces shared with processor 11 = 60
+    Number of faces shared with processor 13 = 262
+    Number of faces shared with processor 15 = 460
+    Number of faces shared with processor 17 = 346
+    Number of faces shared with processor 19 = 500
+    Number of faces shared with processor 21 = 483
+    Number of faces shared with processor 25 = 101
+    Number of faces shared with processor 29 = 841
+    Number of processor patches = 11
+    Number of processor faces = 5042
+    Number of boundary faces = 604
+
+Processor 34
+    Number of cells = 21317
+    Number of faces shared with processor 0 = 388
+    Number of faces shared with processor 2 = 1420
+    Number of faces shared with processor 10 = 610
+    Number of faces shared with processor 12 = 721
+    Number of faces shared with processor 18 = 451
+    Number of faces shared with processor 26 = 112
+    Number of processor patches = 6
+    Number of processor faces = 3702
+    Number of boundary faces = 1874
+
+Processor 35
+    Number of cells = 21179
+    Number of faces shared with processor 3 = 1065
+    Number of faces shared with processor 4 = 343
+    Number of faces shared with processor 7 = 278
+    Number of faces shared with processor 11 = 497
+    Number of faces shared with processor 19 = 635
+    Number of faces shared with processor 27 = 1018
+    Number of faces shared with processor 28 = 29
+    Number of faces shared with processor 36 = 493
+    Number of faces shared with processor 39 = 587
+    Number of processor patches = 9
+    Number of processor faces = 4945
+    Number of boundary faces = 659
+
+Processor 36
+    Number of cells = 21318
+    Number of faces shared with processor 3 = 511
+    Number of faces shared with processor 4 = 982
+    Number of faces shared with processor 12 = 327
+    Number of faces shared with processor 20 = 674
+    Number of faces shared with processor 27 = 160
+    Number of faces shared with processor 28 = 510
+    Number of faces shared with processor 35 = 493
+    Number of processor patches = 7
+    Number of processor faces = 3657
+    Number of boundary faces = 1947
+
+Processor 37
+    Number of cells = 21073
+    Number of faces shared with processor 5 = 1284
+    Number of faces shared with processor 13 = 530
+    Number of faces shared with processor 21 = 1053
+    Number of faces shared with processor 23 = 60
+    Number of faces shared with processor 29 = 479
+    Number of processor patches = 5
+    Number of processor faces = 3406
+    Number of boundary faces = 2498
+
+Processor 38
+    Number of cells = 21079
+    Number of faces shared with processor 2 = 152
+    Number of faces shared with processor 6 = 1379
+    Number of faces shared with processor 10 = 237
+    Number of faces shared with processor 14 = 797
+    Number of faces shared with processor 26 = 659
+    Number of faces shared with processor 30 = 39
+    Number of processor patches = 6
+    Number of processor faces = 3263
+    Number of boundary faces = 2365
+
+Processor 39
+    Number of cells = 21424
+    Number of faces shared with processor 3 = 282
+    Number of faces shared with processor 4 = 295
+    Number of faces shared with processor 7 = 1111
+    Number of faces shared with processor 11 = 86
+    Number of faces shared with processor 15 = 238
+    Number of faces shared with processor 16 = 324
+    Number of faces shared with processor 19 = 83
+    Number of faces shared with processor 23 = 613
+    Number of faces shared with processor 24 = 475
+    Number of faces shared with processor 31 = 1135
+    Number of faces shared with processor 35 = 587
+    Number of processor patches = 11
+    Number of processor faces = 5229
+    Number of boundary faces = 687
+
+Number of processor faces = 77956
+Max number of cells = 21497 (0.996007% above average 21285)
+Max number of processor patches = 14 (83.0065% above average 7.65)
+Max number of faces between processors = 6347 (62.8354% above average 3897.8)
+
+Processor 0: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor0/0"
+Processor 1: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor1/0"
+Processor 2: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor2/0"
+Processor 3: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor3/0"
+Processor 4: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor4/0"
+Processor 5: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor5/0"
+Processor 6: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor6/0"
+Processor 7: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor7/0"
+Processor 8: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor8/0"
+Processor 9: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor9/0"
+Processor 10: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor10/0"
+Processor 11: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor11/0"
+Processor 12: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor12/0"
+Processor 13: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor13/0"
+Processor 14: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor14/0"
+Processor 15: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor15/0"
+Processor 16: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor16/0"
+Processor 17: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor17/0"
+Processor 18: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor18/0"
+Processor 19: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor19/0"
+Processor 20: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor20/0"
+Processor 21: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor21/0"
+Processor 22: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor22/0"
+Processor 23: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor23/0"
+Processor 24: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor24/0"
+Processor 25: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor25/0"
+Processor 26: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor26/0"
+Processor 27: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor27/0"
+Processor 28: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor28/0"
+Processor 29: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor29/0"
+Processor 30: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor30/0"
+Processor 31: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor31/0"
+Processor 32: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor32/0"
+Processor 33: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor33/0"
+Processor 34: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor34/0"
+Processor 35: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor35/0"
+Processor 36: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor36/0"
+Processor 37: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor37/0"
+Processor 38: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor38/0"
+Processor 39: copying "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0"
+ to "/share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/processor39/0"
+
+End
+
+
+
+--> FOAM FATAL IO ERROR: 
+Cannot find patchField entry for gtsModel
+
+file: /share/storage/finzeo/Mallas/GTSTunay/gtsconverted26/0/p.boundaryField from line 11 to line 16.
+
+    From function void Foam::GeometricField<Type, PatchField, GeoMesh>::Boundary::readField(const Foam::DimensionedField<TypeR, GeoMesh>&, const Foam::dictionary&) [with Type = double; PatchField = Foam::fvPatchField; GeoMesh = Foam::volMesh]
+    in file /share/apps/OpenFOAM/OpenFOAM-7/src/OpenFOAM/lnInclude/GeometricBoundaryField.C at line 191.
+
+FOAM exiting
+

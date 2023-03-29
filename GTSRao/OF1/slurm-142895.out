@@ -1,0 +1,71 @@
+AutoMPI: SUCCESS: command is:
+ "/share/apps/openmpi/2.1.2/bin/mpiexec" "-np" "20" "/share/apps/paraview/5.6.0/lib/pvserver" "--server-port=39308"
+AutoMPI: starting process server
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[26785,1],0] (PID 34979)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------- server output --------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots
+that were requested by the application:
+  /share/apps/paraview/5.6.0/lib/pvserver
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+AutoMPI: server never started.
+vtkProcessModuleAutoMPIInternals: Server never started.
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/ParaViewCore/ServerManager/Core/vtkSMSession.cxx, line 307
+Failed to automatically launch 'pvserver' for multi-core support. Defaulting to local session.
+
+[VGL] ERROR: in resize--
+[VGL]    128: Window has been deleted by window manager
+[cluster62:34979] *** Process received signal ***
+[cluster62:34979] Signal: Segmentation fault (11)
+[cluster62:34979] Signal code: Address not mapped (1)
+[cluster62:34979] Failing at address: 0x100000007
+[cluster62:34979] [ 0] /lib64/libpthread.so.0[0x3d8ac0f7e0]
+[cluster62:34979] [ 1] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Gui.so.5(_ZN16QAccessibleCache15objectDestroyedEP7QObject+0x50)[0x7fdebee0b9a0]
+[cluster62:34979] [ 2] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZN11QMetaObject8activateEP7QObjectiiPPv+0xa0e)[0x7fdebe8b762e]
+[cluster62:34979] [ 3] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZN7QObject9destroyedEPS_+0x2f)[0x7fdebe8b7bef]
+[cluster62:34979] [ 4] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN7QWidgetD2Ev+0x323)[0x7fdebf6c4543]
+[cluster62:34979] [ 5] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN6QFrameD0Ev+0x9)[0x7fdebf7c6359]
+[cluster62:34979] [ 6] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZN14QObjectPrivate14deleteChildrenEv+0x64)[0x7fdebe8b8154]
+[cluster62:34979] [ 7] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN7QWidgetD2Ev+0x376)[0x7fdebf6c4596]
+[cluster62:34979] [ 8] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN7QWidgetD0Ev+0x9)[0x7fdebf6c4819]
+[cluster62:34979] [ 9] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(+0x28da20)[0x7fded54f2a20]
+[cluster62:34979] [10] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(+0x28db04)[0x7fded54f2b04]
+[cluster62:34979] [11] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN13pqProxyWidget11pqInternalsD1Ev+0x61)[0x7fded54f9965]
+[cluster62:34979] [12] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN13pqProxyWidgetD2Ev+0x4a)[0x7fded54f4490]
+[cluster62:34979] [13] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN13pqProxyWidgetD0Ev+0x18)[0x7fded54f44ee]
+[cluster62:34979] [14] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(+0x26a658)[0x7fded54cf658]
+[cluster62:34979] [15] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(+0x26a6b4)[0x7fded54cf6b4]
+[cluster62:34979] [16] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN17pqPropertiesPanel11pqInternalsD1Ev+0x109)[0x7fded54da007]
+[cluster62:34979] [17] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN17pqPropertiesPanelD1Ev+0x4a)[0x7fded54d066c]
+[cluster62:34979] [18] /share/apps/paraview/5.6.0/lib/libvtkpqComponents-pv5.6.so.1(_ZN17pqPropertiesPanelD0Ev+0x18)[0x7fded54d06ca]
+[cluster62:34979] [19] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZN14QObjectPrivate14deleteChildrenEv+0x64)[0x7fdebe8b8154]
+[cluster62:34979] [20] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN7QWidgetD2Ev+0x376)[0x7fdebf6c4596]
+[cluster62:34979] [21] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN11QDockWidgetD0Ev+0x9)[0x7fdebf7b0799]
+[cluster62:34979] [22] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZN14QObjectPrivate14deleteChildrenEv+0x64)[0x7fdebe8b8154]
+[cluster62:34979] [23] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Widgets.so.5(_ZN7QWidgetD2Ev+0x376)[0x7fdebf6c4596]
+[cluster62:34979] [24] /share/apps/paraview/5.6.0/lib/paraview(_ZN18ParaViewMainWindowD2Ev+0x5e)[0x41361e]
+[cluster62:34979] [25] /share/apps/paraview/5.6.0/lib/paraview(_ZN18ParaViewMainWindowD0Ev+0x18)[0x413658]
+[cluster62:34979] [26] /share/apps/paraview/5.6.0/lib/paraview(_ZN21pqparaviewInitializerD2Ev+0x70)[0x410d38]
+[cluster62:34979] [27] /share/apps/paraview/5.6.0/lib/paraview(main+0x1f7)[0x4109ad]
+[cluster62:34979] [28] /lib64/libc.so.6(__libc_start_main+0x100)[0x3d8a01ed20]
+[cluster62:34979] [29] /share/apps/paraview/5.6.0/lib/paraview[0x4106a9]
+[cluster62:34979] *** End of error message ***
+/share/apps/OpenFOAM/OpenFOAM-8/bin/paraFoam: line 63: 34979 Segmentation fault      LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ParaView_LIB_DIR/mesa paraview "$@"

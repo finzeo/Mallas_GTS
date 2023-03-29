@@ -1,0 +1,43 @@
+Refinamiento sobre la superficie del vehículo:
+	10 capas
+	1.20 growth factor
+	0.65 tamaño en última capa
+	minThickness 0.09 (de forma que 1.20^10 sea menor a 0.65/0.09, ya que así se permite ese crecimiento de tamaño sobre la capa)
+El nivel 1 de refinamiento cubre todo el ancho, y toda la entrada
+nCellsBetweenLevels 3
+level (4 4) para la superficie del GTS (para que esté en concordancia con Explicit feature edge refinement)
+ERROR
+
+Se intenta colocar minThickness 0.1
+ERROR (igual al anterior)
+
+Se coloca 0.3 tamaño en última capa y minThickness 0.04 (quizás llevando hacia abajo los valores, y acercándolos, mejore)
+
+Ahora se coloca 0.3 tamaño en última capa y minThickness 0.01 (quizás llevando hacia abajo los valores, y acercándolos, mejore)
+
+Malla 18
+Ahora se coloca resolveFeatureAngle 15 (antes 30; para resolver mejor las regiones angulosas) y level (4 5) para el surface refinement de la superficie del vehículo
+Se resolvió la falta de capa estructurada de malla en alguna zona en torno al vehículo. Por el momento, ningún defecto de malla a destacar.
+Tiene el inconveniente de que hubo una equivocación en la altura total del dominio (es 32.904, y no 32.6)
+
+Malla 19
+Se cambia la altura total del dominio de 32.6 a 32.904 (tal como indica Rao)
+Se intenta resolver el achaflanado de las esquinas con edge refinement en snappy
+
+Malla 20
+Los .stl usados se crean a partir de celdas hexaédricas fundamentalmente, y con mejor refinamiento (en vista de lograr finalmente una malla lo más simétrica
+posible respecto del plano vertical medio)
+Se usan límites del dominio de blockMesh coincidentes con los del dominio final (antes, se había extendido 1 m en cada borde)
+Se crean más niveles de refinamiento (7), fundamentalmente, cerca del vehículo, y asociados a regiones más alargadas sobre la estela.
+Se pasa de nCellsBetweenLevels=3 a nCellsBetweenLevels=8
+
+Malla 21
+Dado que la malla anterior sobrepasaba el límite de celdas que arbitrariamente elegí (70 M), quité un nivel de refinamiento (ahora son 6), con el último
+nivel muy próximo al vehículo. El refinamiento de la superficie del GTS está dado por (3 6).
+Me detecta los patchs upperWallBB, lowerWallBB, top, lateral, inlet y outlet
+Sí se generan las capas de celdas hexaédricas adyacentes al vehículo
+
+Malla 22
+Se intenta refinar la superficie del GTS con (6 6) e
+incrementar la zona de refinamiento 6 (apenas). Con esto, se lograría reducir aprox en 20 los valores de yplus prom.
+Además, se redimensionan convenientemente los diferentes niveles de refinamiento, a fin de minimizar el número de celdas sin perder la calidad de la malla requerida

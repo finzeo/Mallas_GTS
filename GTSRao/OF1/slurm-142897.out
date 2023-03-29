@@ -1,0 +1,71 @@
+AutoMPI: SUCCESS: command is:
+ "/share/apps/openmpi/2.1.2/bin/mpiexec" "-np" "20" "/share/apps/paraview/5.6.0/lib/pvserver" "--server-port=41016"
+AutoMPI: starting process server
+--------------------------------------------------------------------------
+A process has executed an operation involving a call to the
+"fork()" system call to create a child process.  Open MPI is currently
+operating in a condition that could result in memory corruption or
+other system errors; your job may hang, crash, or produce silent
+data corruption.  The use of fork() (or system() or other calls that
+create child processes) is strongly discouraged.
+
+The process that invoked fork was:
+
+  Local host:          [[49361,1],0] (PID 73847)
+
+If you are *absolutely sure* that your application will successfully
+and correctly survive a call to fork(), you may disable this warning
+by setting the mpi_warn_on_fork MCA parameter to 0.
+--------------------------------------------------------------------------
+-------------- server output --------------
+--------------------------------------------------------------------------
+There are not enough slots available in the system to satisfy the 20 slots
+that were requested by the application:
+  /share/apps/paraview/5.6.0/lib/pvserver
+
+Either request fewer slots for your application, or make more slots available
+for use.
+--------------------------------------------------------------------------
+AutoMPI: server never started.
+vtkProcessModuleAutoMPIInternals: Server never started.
+Generic Warning: In /share/apps/instaladores/ParaView-v5.6.0/ParaViewCore/ServerManager/Core/vtkSMSession.cxx, line 307
+Failed to automatically launch 'pvserver' for multi-core support. Defaulting to local session.
+
+[VGL] ERROR: in getGLXDrawable--
+[VGL]    184: Window has been deleted by window manager
+[cluster62:73847] *** Process received signal ***
+[cluster62:73847] Signal: Segmentation fault (11)
+[cluster62:73847] Signal code: Address not mapped (1)
+[cluster62:73847] Failing at address: (nil)
+[cluster62:73847] [ 0] /lib64/libpthread.so.0[0x3d8ac0f7e0]
+[cluster62:73847] [ 1] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Core.so.5(_ZNK18QThreadStorageData3getEv+0x27)[0x7fb15d3a5b87]
+[cluster62:73847] [ 2] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Gui.so.5(_ZN21QOpenGLContextPrivate17setCurrentContextEP14QOpenGLContext+0x30)[0x7fb15db476a0]
+[cluster62:73847] [ 3] /share/apps/qt/5.6.3/5.6.3/gcc_64/lib/libQt5Gui.so.5(_ZN14QOpenGLContext11makeCurrentEP8QSurface+0x7f)[0x7fb15db4934f]
+[cluster62:73847] [ 4] /share/apps/paraview/5.6.0/lib/libvtkGUISupportQt-pv5.6.so.1(+0x5576b)[0x7fb17194a76b]
+[cluster62:73847] [ 5] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(+0x5d1d70)[0x7fb15c8ded70]
+[cluster62:73847] [ 6] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN9vtkObject11InvokeEventEmPv+0x3d)[0x7fb15c8df277]
+[cluster62:73847] [ 7] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN28vtkGenericOpenGLRenderWindow11MakeCurrentEv+0x22)[0x7fb16b59f3d6]
+[cluster62:73847] [ 8] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN21vtkOpenGLRenderWindow11PushContextEv+0x25)[0x7fb16b5a801f]
+[cluster62:73847] [ 9] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(+0x2b13aa)[0x7fb16b6ea3aa]
+[cluster62:73847] [10] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN16vtkTextureObjectD2Ev+0x4b)[0x7fb16b6d88ed]
+[cluster62:73847] [11] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN16vtkTextureObjectD0Ev+0x18)[0x7fb16b6d89b4]
+[cluster62:73847] [12] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN13vtkObjectBase18UnRegisterInternalEPS_i+0xe5)[0x7fb15c8e147b]
+[cluster62:73847] [13] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN9vtkObject18UnRegisterInternalEP13vtkObjectBasei+0x380)[0x7fb15c8dfb46]
+[cluster62:73847] [14] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN13vtkObjectBase10UnRegisterEPS_+0x30)[0x7fb15c8e1344]
+[cluster62:73847] [15] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN13vtkObjectBase6DeleteEv+0x28)[0x7fb15c8e10b8]
+[cluster62:73847] [16] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(+0x183d6b)[0x7fb16b5bcd6b]
+[cluster62:73847] [17] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN19vtkOpenGLFXAAFilter13FreeGLObjectsEv+0x1c)[0x7fb16b5bbb2c]
+[cluster62:73847] [18] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN19vtkOpenGLFXAAFilter24ReleaseGraphicsResourcesEv+0x19)[0x7fb16b5bb1b1]
+[cluster62:73847] [19] /share/apps/paraview/5.6.0/lib/libvtkRenderingOpenGL2-pv5.6.so.1(_ZN17vtkOpenGLRenderer24ReleaseGraphicsResourcesEP9vtkWindow+0x78)[0x7fb16b66122e]
+[cluster62:73847] [20] /share/apps/paraview/5.6.0/lib/libvtkRenderingCore-pv5.6.so.1(_ZN15vtkRenderWindow14RemoveRendererEP11vtkRenderer+0x47)[0x7fb1645391b9]
+[cluster62:73847] [21] /share/apps/paraview/5.6.0/lib/libvtkPVClientServerCoreRendering-pv5.6.so.1(_ZN15vtkPVRenderViewD1Ev+0xce)[0x7fb170d51fb2]
+[cluster62:73847] [22] /share/apps/paraview/5.6.0/lib/libvtkPVClientServerCoreRendering-pv5.6.so.1(_ZN15vtkPVRenderViewD0Ev+0x18)[0x7fb170d523a2]
+[cluster62:73847] [23] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN13vtkObjectBase18UnRegisterInternalEPS_i+0xe5)[0x7fb15c8e147b]
+[cluster62:73847] [24] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN9vtkObject18UnRegisterInternalEP13vtkObjectBasei+0x380)[0x7fb15c8dfb46]
+[cluster62:73847] [25] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN13vtkObjectBase10UnRegisterEPS_+0x30)[0x7fb15c8e1344]
+[cluster62:73847] [26] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN19vtkSmartPointerBaseD1Ev+0x45)[0x7fb15c98fe9d]
+[cluster62:73847] [27] /share/apps/paraview/5.6.0/lib/libvtkCommonCore-pv5.6.so.1(_ZN19vtkSmartPointerBaseaSEP13vtkObjectBase+0x43)[0x7fb15c98fee3]
+[cluster62:73847] [28] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(+0xce7e7)[0x7fb16f9377e7]
+[cluster62:73847] [29] /share/apps/paraview/5.6.0/lib/libvtkPVServerImplementationCore-pv5.6.so.1(_ZN10vtkSIProxy16DeleteVTKObjectsEv+0x23)[0x7fb16f935543]
+[cluster62:73847] *** End of error message ***
+/share/apps/OpenFOAM/OpenFOAM-8/bin/paraFoam: line 63: 73847 Segmentation fault      LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$ParaView_LIB_DIR/mesa paraview "$@"
